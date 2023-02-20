@@ -4,68 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>레이아웃3 - float 방식</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
         body {
-            background-color: #d0e3c9;
+            background-color: #FFFFFF;
         }
         #wrap {
             width: 1200px;
-            height: 1080px;
-            background-color: #568b89;
             margin: 0 auto;
         }
         #header {
             width: 1200px;
             height: 100px;
-            background-color: #536f85;
+            background-color: #B3E5FC;
         }
         #nav {
             width: 1200px;
             height: 100px;
-            background-color: #db3636;
+            background-color: #81D4FA;
+        }
+        #main {
+            width: 1200px; 
+            overflow: hidden;
         }
         #aside {
-            width: 400px;
+            width: 300px;
             height: 780px;
-            background-color: #3baf4d;
+            background-color: #4FC3F7;
             float: left;
         }
-        #contents {
-            width: 800px;
-            height: 780px;
-            background-color: #373d7f;
+        #article1 {
+            width: 900px;
+            height: 260px;
+            background-color: #29B6F6;
+            float: left;
+        }
+        #article2 {
+            width: 900px;
+            height: 260px;
+            background-color: #03A9F4;
+            float: left;
+        }
+        #article3 {
+            width: 900px;
+            height: 260px;
+            background-color: #039BE5;
             float: left;
         }
         #footer {
             width: 1200px;
             height: 100px;
-            background-color: #db77c4;
-            clear: both;
-        }
-        #aside1 {
-            width: 400px;
-            height: 390px;
-            background-color: #3e314b;
-        }
-        #aside2 {
-            width: 400px;
-            height: 390px;
-            background-color: #80e3e1;
-        }
-        #contents1 {
-            width: 800px;
-            height: 390px;
-            background-color: #afdf62;
-        }
-        #contents2 {
-            width: 800px;
-            height: 390px;
-            background-color: #888e83;
+            background-color: #0288D1;
         }
     </style>
 </head>
@@ -73,15 +66,13 @@
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="aside">
-            <div id="aside1"></div>
-            <div id="aside2"></div>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
         </div>
-        <div id="contents">
-            <div id="contents1"></div>
-            <div id="contents2"></div>
-        </div>
-        <div id=footer></div>
+        <div id="footer"></div>
     </div>
 </body>
 </html>
