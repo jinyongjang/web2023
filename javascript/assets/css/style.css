@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 ul, li, ol {
     list-style: none;
 }
+/* //기본세팅 */
 
 /* 전체 영역*/
 body {
@@ -41,7 +42,6 @@ body {
 #header h1 a {
     font-size: 80px;
     font-weight: 800;
-
     color: #0243f1;
 }
 #header nav ul li {
@@ -63,7 +63,6 @@ body {
     background-color: #0243f1;
     color: #fff;
 }
-
 @media (max-width: 600px){
     body {
         padding: 20px;
@@ -96,7 +95,7 @@ body {
 .main__sample .sample {
     margin-top: 100px;
 }
-.main__sample .sample .sample:first-child {
+.main__sample .sample:first-child {
     margin-top: 0px;
 }
 .main__sample .sample h3 {
@@ -114,7 +113,7 @@ body {
     margin-bottom: 10px;
 }
 .main__sample .notice {
-    border-left: 5px solid color #0243f1;
+    border-left: 5px solid #0243f1;
     padding : 13px 10px 10px 15px;
     background-color: #f6f6f6;  
 }
