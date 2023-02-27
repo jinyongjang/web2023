@@ -110,7 +110,7 @@
         // document.write(num);
 
         // ----완료-----
-        // let table="<table border>";
+        // let table="<table border='1'>";
         // let num = 1;
         //     for(let i=1; i<=5; i++){
         //         table +="<tr>"
@@ -119,6 +119,7 @@
         //             table +="<td>" +num+ "</td>"
         //             num++
         //         };
+        //       table +="</tr>"
         //     };
         // table +="</table>";
         // document.write(table);
@@ -132,16 +133,31 @@
         //         document.write(`<span style='color:blue'>${i}</span>`); 
         //     }
         // }
-        let table = "<table border='1'>"
+        // let table = "<table border='1'>"
+        // let num = 1;
+        //     for(i=1; i<=5; i++){
+        //         table +="<tr>"
+
+        //         for(j=1; j<=5; j++){
+        //             table +="<td>" +num+ "</td>"
+        //             num++
+        //         };
+        //         table +="</tr>"
+        //     }
+        // table +="</table>";
+        // document.write(table);
+
+        let table ="<table border='1'>";
         let num = 1;
-            for(i=1; i<=5; i++){
+            for(let i=1; i<=5; i++){
                 table +="<tr>"
 
-                for(j=1; j<=5; j++){
-                    table +="<td>" +num+ "</td>"
-                    num++
-                };
-                table +="</tr>"
+                    for(let j=1; j<=5; j++){
+                        let color = num % 2 === 0 ? 'blue' : 'red';
+                        table += "<td style='color:" + color + "'>" + num + "</td>";
+                        num++
+                    }
+                table +="</tr>";
             }
         table +="</table>";
         document.write(table);
