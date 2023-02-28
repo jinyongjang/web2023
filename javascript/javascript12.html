@@ -55,6 +55,8 @@
                     <li><a href="#">05.데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
                     <li><a href="#">06.데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
                     <li><a href="#">07.데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
+                    <li><a href="#">08.데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색)</a></li>
+                    <li><a href="#">09.데이터 이펙트 : 테이블 25칸(3의 배수(5의 배수는 빨간색))</a></li>
                 </ul>
              </div>
              <div class="main__sample">
@@ -344,6 +346,45 @@ document.write(table);
                                 3단 3,6,9, ... ,27<br>
                                         ...       <br>
                                 9단 9,18,27, ... ,81
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sameple07 -->
+
+                <div id="sample07" class="sample">
+                    <h3>08.데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색)</h3>
+                    <p>
+                        테이블을 생성하고, 테이블 안에 빨간색과 파란색으로 번갈아가며 셀에 번호를 채우는 코드입니다. 
+                    </p>
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt;table border='1'>";
+        let count = 0;          //count 변수를 0으로 초기화합니다. 이 변수는 테이블 셀 안에 들어갈 숫자를 의미합니다.
+
+        for(let i=0; i&lt;5; i++){           
+            table += "&lt;tr>";
+
+            for(let j=0; j&lt;5; j++){
+                count++;
+                if(count % 2 == 0){
+                    table += "&lt;td style='color:red'>"+count+"&lt;/td>";
+                } else {
+                    table += "&lt;td style='color:blue'>"+count+"&lt;/td>";
+                }
+            }
+            table += "&lt;/tr>";
+        }    
+        table += "&lt;/table>";
+        
+        document.write(table);
+}
+</code></pre>
+                    
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                25칸의 테이블에 1부터 25까지 채워지며 짝수는 빨간색 홀수는 파란색으로 채워집니다.
                             </div>
                         </details>
                     </div>

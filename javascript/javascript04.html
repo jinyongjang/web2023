@@ -53,12 +53,13 @@
                     <li><a href="#">03. 삼항 연산자</a></li>
                     <li><a href="#">04. 다중 if</a></li>
                     <li><a href="#">05. 중첩 if</a></li>
-
                     <li><a href="#">06. switch문</a></li>
+
                     <li><a href="#">07. while문</a></li>
                     <li><a href="#">08. do while문</a></li>
                     <li><a href="#">09. for문</a></li>
                     <li><a href="#">10. 중첩 for문</a></li>
+
                     <li><a href="#">11. break문</a></li>
                     <li><a href="#">12. continue문</a></li>
                 </ul>
@@ -91,8 +92,7 @@
                 </div>
             </div>
             <!-- //sample01 -->
-
-            <div class="main__sample">
+            
                 <div id="sample02" class="sample">
                     <h3>02. if문 생략</h3>
                     <p>if문은 조건에 따라 특정 코드 블록을 실행하도록 하는 제어문입니다. 하지만 때로는 코드를 더 간결하고 읽기 쉽게 만들기 위해 if문을 생략하는 것이 좋을 때가 있습니다</p>
@@ -103,7 +103,7 @@
     // } else {
     //     document.write("실행되었습니다.(false)");
     // }
-
+    const num = 100;
     if(num)document.write("실행되었습니다.(true)");
     else document.write("실행되었습니다.(false)");
 }
@@ -113,21 +113,19 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                실행되었습니다.(true)<br>
-                                실행되었습니다.(false)<br>
+                                true
                             </div>
                         </details>
                     </div>
                 </div>
                 <!-- //sample02 -->
-
-                <div class="main__sample">
-                    <div id="sample03" class="sample">
-                        <h3>03. 삼항 연산자</h3>
-                        <p>삼항 연산자는 조건문을 간단하게 표현할 수 있어서 코드의 가독성을 높일 수 있습니다. 하지만, 복잡한 조건문을 다룰 때는 가독성이 떨어지기 때문에 적절한 사용이 필요합니다.
-                            <br>조건이 참인경우 첫번째 값(true)을 출력하고 거짓인 경우는 두번째 값(false)을 출력합니다.
-                        </p>
-                        <div class="script">
+                
+                <div id="sample03" class="sample">
+                    <h3>03. 삼항 연산자</h3>
+                    <p>삼항 연산자는 조건문을 간단하게 표현할 수 있어서 코드의 가독성을 높일 수 있습니다. 하지만, 복잡한 조건문을 다룰 때는 가독성이 떨어지기 때문에 적절한 사용이 필요합니다.
+                        <br>조건이 참인경우 첫번째 값(true)을 출력하고 거짓인 경우는 두번째 값(false)을 출력합니다.
+                    </p>
+                    <div class="script">
 <pre><code class="language-js"> {
     const num = 100;
 
@@ -140,24 +138,22 @@
     (num == 100) ? document.write("true") : document.write("false");    //많이 쓰이는 방법입니다. 효율성이 좋고 메모리를 덜 차지합니다.
 }
 </code></pre>
-                        </div>
-                        <div class="result">
-                            <details>
-                                <summary>결과 확인하기</summary>
-                                <div>
-                                    true<br>
-                                    
-                                </div>
-                            </details>
-                        </div>
                     </div>
-                    <!-- //sample03 -->
-
-                    <div class="main__sample">
-                        <div id="sample04" class="sample">
-                            <h3>04. 다중 if</h3>
-                            <p>다중 if문은 조건에 따라 여러 개의 명령문을 실행하는 구문입니다. if문 하나로는 모든 조건을 처리할 수 없을 때 사용합니다.</p>
-                            <div class="script">
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                true<br>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+                   
+                <div id="sample04" class="sample">
+                    <h3>04. 다중 if</h3>
+                    <p>다중 if문은 조건에 따라 여러 개의 명령문을 실행하는 구문입니다. if문 하나로는 모든 조건을 처리할 수 없을 때 사용합니다.</p>
+                    <div class="script">
 <pre><code class="language-js"> {
     const num = 100;
 
@@ -172,26 +168,25 @@
     } else {
         document.write("실행되었습니다");
     }
-    // if(num === 90){}                //숫자인지 객체인지 배열인지 확인하는 방법입니다.
+    // if(num === 90){}                //'==='은 숫자인지 객체인지 배열인지 확인하는 방법입니다.
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다(num == 100)
                             </div>
-                            <div class="result">
-                                <details>
-                                    <summary>결과 확인하기</summary>
-                                    <div>
-                                        실행되었습니다(num == 100)
-                                    </div>
-                                </details>
-                            </div>
-                        </div>
-                        <!-- //sample04 -->
-
-                        <div class="main__sample">
-                            <div id="sample05" class="sample">
-                                <h3>05. 중첩 if문</h3>
-                                <p>중첩 if문은 하나 이상의 if문이 서로 포함된 구조를 말합니다. 중첩 if문은 코드의 가독성을 해치기 때문에 가능한 한 사용을 자제하는 것이 좋습니다.</p>
-                                <div class="script">
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample04 -->
+                       
+                <div id="sample05" class="sample">
+                    <h3>05. 중첩 if문</h3>
+                    <p>중첩 if문은 하나 이상의 if문이 서로 포함된 구조를 말합니다. 중첩 if문은 코드의 가독성을 해치기 때문에 가능한 한 사용을 자제하는 것이 좋습니다.</p>
+                    <div class="script">
 <pre><code class="language-js"> {
     const num = 100;
 
@@ -208,57 +203,241 @@
         }
 }
 </code></pre>
-                                </div>
-                                <div class="result">
-                                    <details>
-                                        <summary>결과 확인하기</summary>
-                                        <div>
-                                            실행되었습니다.(1)<br>
-                                            실행되었습니다.(2)<br>
-                                            실행되었습니다.(3)
-                                        </div>
-                                    </details>
-                                </div>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.(1)<br>
+                                실행되었습니다.(2)<br>
+                                실행되었습니다.(3)
                             </div>
-                            <!-- //sample05 -->
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample05 -->
 
-                            <div class="main__sample">
-                                <div id="sample09" class="sample">
-                                    <h3>for문</h3>
-                                    <p>for문으로 초기값 조건식 증감식을 설정하고, if문을 이용하여 1부터 9까지 짝수는 빨간색으로 else로 홀수는 파란색으로 설정하는 예제입니다.</p>
-                                    <div class="script">
+                <div id="sample06" class="sample">
+                    <h3>06. switch문</h3>
+                    <p>JavaScript에서 switch 문은 특정 변수 또는 표현식의 값을 평가하고, 그 값에 따라서 다른 블록을 실행하는 제어문입니다.<br>
+                       switch 문은 if...else 문과 유사한 기능을 제공하지만, 코드를 더 간결하고 가독성있게 작성할 수 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    cosnt num=100;
+
+    switch(num){
+        case 90:
+            document.write("실행90");       //break가 빠지면 모든 값이 실행됨
+            break;
+        case 80:
+            document.write("실행80");
+            break;
+        case 70:
+            document.write("실행70");
+            break;
+        case 60:
+            document.write("실행60");
+            break;
+        case 50:
+            document.write("실행50");
+            break;
+        default:
+            document.write("0");
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                0
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h3>07. while문</h3>
+                    <p>while 문은 특정 조건이 참일 경우에 반복적으로 블록을 실행하는 제어문입니다.<br>
+                       while 문은 조건식을 검사한 후에 블록을 실행하며, 조건식이 참일 경우에 계속해서 반복 실행합니다. 조건식이 거짓이면 블록을 실행하지 않고 while 문을 빠져나갑니다.<br>
+                       다음은 for문을 while문으로 변경하는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    for(let i=0; i&lt;5; i++){         //for문
+        document.write(i);
+    }
+
+    let num = 0;                    //while 문
+    while(num&lt;5){
+        document.write(num);
+        num++;
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                0,1,2,3,4
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample07 -->
+
+                <div id="sample08" class="sample">
+                    <h3>08. do while문</h3>
+                    <p>do-while문은 while문과 유사한 반복문입니다. do-while문은 먼저 코드 블록을 실행한 후에 조건식을 평가합니다.<br>
+                       따라서, 코드 블록은 최소한 한 번은 실행되고, 이후에 조건식을 평가하여 다시 실행할지 결정합니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    let num2 = 0;                   //거의 사용은 안합니다.
+            do {
+                document.write(num2);
+                num2++;
+            } while (num2&lt;5);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                0,1,2,3,4
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample08 -->
+                           
+                <div id="sample09" class="sample">
+                    <h3>09.for문</h3>
+                    <p>for문은 자바스크립트에서 가장 일반적으로 사용되는 반복문 중 하나입니다. for문은 반복 횟수를 제어하기 위해 초기값, 조건식, 증감식을 사용합니다.</p>
+                    <div class="script">
 <pre><code class="language-js">{
-    const arr = [1,2,3,4,5,6,7,8,9]
+    for(let i=1; i&lt;100; i++){
+        document.write(i);
+    }
 
-    for(let i=1; i&lt;=arr.length; i++){
-        if(i % 2 == 0){
-            document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;");
-        } else {
-            document.write(`&lt;span style='color:blue'&gt;${i}&lt;/span&gt;`);         //react에서 사용하는 방법
+    document.write("&lt;br>");
+
+    let num = [1,2,3,4,5,6,7,8,9];
+    let sum = 0;
+
+    for(let i=0; i&lt;num.length; i++){
+        document.write(num[i]);
+        sum += num[i];
+    }
+    document.write("&lt;br>");
+    document.write(sum);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                12345~99<br>
+                                123456789<br>
+                                45                                                                                                                                                                                      
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample09 -->                          
+
+                <div id="sample10" class="sample">
+                    <h3>10. 중첩 for문</h3>
+                    <p>중첩 for문(nested for loop)은 하나의 for문 안에 다른 for문이 중첩되어 있는 구조를 말합니다.<br>
+                       이 구조를 사용하면 각각의 요소를 조합하여 모든 경우의 수를 구할 수 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    for(let i=1; i&lt;=10; i++){
+        for(let j=1; j&lt;=10; j++){
+            document.write(j);
         }
     }
 }
 </code></pre>
-                                    </div>
-                                    <div class="result">
-                                        <details>
-                                            <summary>결과 확인하기</summary>
-                                            <div>
-                                                <span style="color:blue">1</span>                                                                                            
-                                                <span style="color:red">2</span>                                                                                            
-                                                <span style="color:blue">3</span>                                                                                            
-                                                <span style="color:red">4</span>                                                                                            
-                                                <span style="color:blue">5</span>                                                                                            
-                                                <span style="color:red">6</span>                                                                                            
-                                                <span style="color:blue">7</span>                                                                                            
-                                                <span style="color:red">8</span>                                                                                            
-                                                <span style="color:blue">9</span>                                                                                                                                                                                       
-                                            </div>
-                                        </details>
-                                    </div>
-                                </div>
-                                <!-- //sample09 -->
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                12345678910
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample10 -->
 
+                <div id="sample11" class="sample">
+                    <h3>11. break문</h3>
+                    <p>break문은 반복문(for문, while문)에서 특정 조건을 만족할 때 반복문을 강제로 종료하는 역할을 합니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    for(let i=1; i&lt;100; i++){
+        if(i == 10){
+            break;
+        }
+        document.write(i);
+    }
+
+    // for(let i=1; i&lt;100; i++){           ////document.write의 위치에 따라 값이 달라짐
+    //     document.write(i);
+    //     if(i == 10){
+    //         break;
+    //     }
+    // }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                1,2,3,4,5,6,7,8,9
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample11 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. continue문</h3>
+                    <p>continue 문은 여러 프로그래밍 언어에서 사용되는 제어문 중 하나로, 반복문의 일부분을 건너뛰고 다음 반복으로 넘어가도록 하는 제어문입니다. continue 문이 실행되면 현재 반복의 실행을 즉시 중단하고 다음 반복으로 이동합니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    for(let i=1; i&lt;20; i++){
+        if(i == 10){
+            continue;
+        }
+        document.write(i);
+    }
+
+    // for(let i=1; i&lt;20; i++){        //document.write의 위치에 따라 값이 달라짐
+    //     document.write(i);
+    //     if(i == 10){
+    //         continue;
+    //     }
+    // }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                1,2,3,...,9<br>
+                                11,12,13,...,20 
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample12 -->
         </div>
     </main>
     <!-- //main -->
@@ -402,29 +581,190 @@
         
         // 테이블 
 
-        let table = "<table border='1'>";
+        // let table = "<table border='1'>";
 
-            for(let i=0; i<5; i++){
-                table += "<tr>";
+        //     for(let i=0; i<5; i++){
+        //         table += "<tr>";
                     
-                for(let j=0; j<5; j++){
-                    table += "<td>"+j+"</td>";
-                }
-                table +="</tr>";
-            }
-        table +="</table>";
-        document.write(table);
+        //         for(let j=0; j<5; j++){
+        //             table += "<td>"+j+"</td>";
+        //         }
+        //         table +="</tr>";
+        //     }
+        // table +="</table>";
+        // document.write(table);
 
-            //1부터 25까지 출력 for문
-            let num = 0;
-            for(let i=1; i<=25; i++){
+        //     //1부터 25까지 출력 for문
+        //     let num = 0;
+        //     for(let i=1; i<=25; i++){
+        //         document.write(i);
+        //         num++;
+        //     }
+        //     document.write("<br>");
+        //     document.write(num);
+        
+        //01. if문
+        {
+            // null, undefined, "", 0, false  false나옵니다
+            if("")document.write("실행되었습니다.(true)");
+            else document.write("실행되었습니다.(false)");
+            //삼항연산자
+            ("") ? document.write("실행되었습니다.(true)") : document.write("실행되었습니다.(false)");
+        }
+
+        {
+            // for(let i=0; i<5; i++) document.write(i)
+        }
+        //04. 다중 if문 == switch
+        {
+            const num = 100;
+
+            if(num == 90){
+                document.write("실행90");
+            } else if(num == 80){
+                document.write("실행80");
+            } else if(num == 70){
+                document.write("실행70");
+            } else if(num == 60){
+                document.write("실행60");
+            } else if(num == 50){
+                document.write("실행50");
+            } else {
+                document.write("0");
+            }
+        }
+        
+        //05. 중첩 if문
+
+        //06. switch문
+        {
+            const num = 100;
+
+            switch(num){
+                case 90:
+                    document.write("실행90");       //break가 빠지면 모든 값이 실행됨
+                    break;
+                case 80:
+                    document.write("실행80");
+                    break;
+                case 70:
+                    document.write("실행70");
+                    break;
+                case 60:
+                    document.write("실행60");
+                    break;
+                case 50:
+                    document.write("실행50");
+                    break;
+                default:
+                    document.write("0");
+            }
+        }
+
+        // 07. while문
+        {
+            for(let i=0; i<5; i++){         //for문
                 document.write(i);
+            }
+
+            let num = 0;                    //while 문
+            while(num<5){
+                document.write(num);
                 num++;
             }
+        //08
+            let num2 = 0;                   //거의 사용은 안합니다.
+            do {
+                document.write(num2);
+                num2++;
+            } while (num2<5);
+        }
+        document.write("<br>")
+        // 09
+        {
+            for(let i=1; i<100; i++){
+                document.write(i);
+            }
+
             document.write("<br>");
-            document.write(num);
+
+            let num = [1,2,3,4,5,6,7,8,9];
+            let sum = 0;
+
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
+                sum += num[i];
+            }
+            document.write("<br>");
+            document.write(sum);
+        }
+
+        //10 중첩 for
+        {
+            for(let i=1; i<=10; i++){
+                for(let j=1; j<=10; j++){
+                    document.write(j);
+                }
+            }
+
+            //1~25 (3의 배수 25칸(5의 배수 빨간색))
+
+            let table = "<table border='1'>";
+            let count = 0;      
+
+            for(let i=0; i<5; i++){
+                
+                table += "<tr>";
+                for(let j=0; j<5; j++){
+                    count++;
+                    if(count % 2 == 0){
+                        table += "<td style='color:red'>"+count+"</td>";
+                    } else {
+                        table += "<td style='color:blue'>"+count+"</td>";
+                    }
+                }
+                table += "</tr>";
+            }    
+            table += "</table>";
             
-            
+            document.write(table);
+        }
+
+        // 11. break문
+        {
+            for(let i=1; i<100; i++){
+                if(i == 10){
+                    break;
+                }
+                document.write(i);
+            }
+
+            // for(let i=1; i<100; i++){           ////document.write의 위치에 따라 값이 달라짐
+            //     document.write(i);
+            //     if(i == 10){
+            //         break;
+            //     }
+            // }
+        }
+        document.write("<br>");
+
+        // 12. continue문
+        {
+            for(let i=1; i<20; i++){
+                if(i == 10){
+                    continue;
+                }
+                document.write(i);
+            }
+
+            // for(let i=1; i<20; i++){        //document.write의 위치에 따라 값이 달라짐
+            //     document.write(i);
+            //     if(i == 10){
+            //         continue;
+            //     }
+            // }
+        }
+            //1~25 (3의 배수 25칸(5의 배수 빨간색))
     </script>
 
 </body>
