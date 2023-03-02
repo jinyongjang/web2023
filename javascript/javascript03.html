@@ -218,7 +218,7 @@
                     <p>익명함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = () => {
+    const func = () => {
         document.write("실행되었습니다.")
     }
     func();
@@ -261,7 +261,7 @@
 
                 <div id="sample08" class="sample">
                     <h3>08. 화살표 함수 : 리턴값 함수</h3>
-                    <p>변수는 데이터를 저장하는 저장소입니다.</p>
+                    <p>return함수를 화살표 함수로 변경하였습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
     func = () => {
@@ -285,13 +285,13 @@
                 
                 <div id="sample09" class="sample">
                     <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
-                    <p>매개변수 함수의 화살표 함수입니다.</p>
+                    <p>익명함수와 매개변수 리턴함수를 한번에 화살표 함수로 나타내었습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = (str) => {
-        document.write(str)
-    };
-    func("실행되었습니다.")
+    const func = (str) => {
+        return str;
+    }
+    document.write(func("실행되었습니다."));
 }
 </code></pre>
                     </div>
@@ -311,10 +311,10 @@
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = (str) => {
-        document.write(str)
-    };
-    func("실행되었습니다.")
+    const func = str => {       //변수 값이 하나인 경우 괄호 생략 가능
+        return str;
+    }
+    document.write(func("실행되었습니다."));
 }
 </code></pre>
                     </div>
@@ -330,14 +330,13 @@
                 <!-- //sample10 -->
 
                 <div id="sample11" class="sample">
-                    <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호생략</h3>
+                    <h3>화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략</h3>
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = (str) => {
-        document.write(str)
-    };
-    func("실행되었습니다.")
+    const func = str => str;
+
+    document.write(func("실행되었습니다."));
 }
 </code></pre>
                     </div>
@@ -353,14 +352,13 @@
                 <!-- //sample11 -->
 
                 <div id="sample12" class="sample">
-                    <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호생략</h3>
+                    <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략</h3>
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = (str) => {
-        document.write(str)
-    };
-    func("실행되었습니다.")
+    func = str => str;      //단점 this를 사용할 수 없습니다.
+
+    document.write(func("실행되었습니다."));
 }
 </code></pre>
                     </div>
