@@ -7,7 +7,7 @@
     <title>Javascript : 이벤트 객체</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -400,8 +400,9 @@ document.write(table);
         <a href="mailto:ebmdols@naver.com">ebmdols@naver.com</a>
     </footer>
     <!-- //footer -->
-
-    <script src="assets/js/prism.js"></script>
+    
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script>
        // 01. 1부터 100까지 출력하기
        for(let i=1; i<=100; i++){
@@ -462,12 +463,12 @@ document.write(table);
                     for(let j=1; j<=10; j++){
                         table +="<td>" +j+ "</td>";
                     }    
+                    table +="</tr>";
                 }
-                table +="</tr>";
-            }
-            table +="</table>";
-            document.write(table);
-
+                table +="</table>";
+                document.write(table);
+        }
+        
     </script>
 
 </body>
