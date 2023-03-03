@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 grid2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #9571a7;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside section aside2"
+                "aside contents aside2"
+                "footer footer footer";
+            grid-template-rows: 100px 100px 390px 390px 100px;
+            grid-template-columns: 300px 600px 300px;
+        }
+        #header {
+            background-color: #4f466b;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #46157a;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #60049d;
+            grid-area: aside;
+        }
+        #section {
+            background-color: #b144e4;
+            grid-area: section;
+        }
+        #contents {
+            background-color: #350252;
+            grid-area: contents;
+        }
+        #aside2 {
+            background-color: #240c28;
+            grid-area: aside2;
+        }
+        #footer {
+            background-color: #5c2084;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <contents id="contents"></contents>
+        <aside id="aside2"></aside>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

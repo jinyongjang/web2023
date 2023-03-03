@@ -8,21 +8,35 @@
 </head>
 <body>
     <script>
-        let table = "<table border='1'>";
-        for (let i = 1; i <= 5; i++) {
-            table += "<tr>";
-            for (let j = 1; j <= 5; j++) {
-                let number = j + ((i - 1) * 5);
-                    if (number % 3 === 0) {
-                        table += "<td>" + number + "</td>";
-                        } else {
-                        table += "<td></td>";
-                        }
+        //익명함수
+        {
+            const func = function(){
+                document.write("실행되었습니다.")
             }
-        table += "</tr>";
+            func()
         }
-        table += "</table>";
-        document.write(table);
+        //선언적함수
+        {
+            function func(){
+                document.write("실행되었습니다.")
+            }
+            func()
+        }
+        //매개변수
+        {
+            function func(str){
+                document.write(str)
+            }
+            func("실행되었습니다.")
+        }
+        //리턴함수
+        {
+            function func(){
+                const str ="실행되었습니다."
+                return str;
+            }
+            document.write(func());
+        }
     </script>
 </body>
 </html>

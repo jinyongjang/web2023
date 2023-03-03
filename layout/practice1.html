@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 grid1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #edcc91;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "aside section"
+                "aside contents"
+                "footer footer";
+            grid-template-columns: 400px 800px;
+            grid-template-rows: 100px 100px 390px 390px 100px;
+        }
+        #header {
+            grid-area: header;
+            background-color: #f0c358;
+        }
+        #nav {
+            grid-area: nav;
+            background-color: #ee931c;
+        }
+        #aside {
+            grid-area: aside;
+            background-color: #9fba3d;
+        }
+        #section {
+            grid-area: section;
+            background-color: #f03e3e;
+        }
+        #contents {
+            grid-area: contents;
+            background-color: #d1d171;
+        }
+        #footer {
+            grid-area: footer;
+            background-color: #fa9140;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <contents id="contents"></contents>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

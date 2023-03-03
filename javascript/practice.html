@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +8,124 @@
 </head>
 <body>
     <script>
+        //for문 츌력
         {
-            //01.선언적 함수
-            function func(){
-                document.write("01함수가 실행되었습니다.<br>")
+            for(let i=1; i<=50; i++){
+                document.write(i)
             }
-            func();
         }
-        
-            //02.익명함수
-        {    
+        document.write("<br>");
+        // while
+        {
+            let num=1;
+            while(num<=50){
+                document.write(num);
+                num++
+            }
+        }
+        document.write("<br>");
+        // 짝수
+        {
+            for(let i=0; i<=100; i+=2){
+                document.write(i)
+            }
+        }
+        document.write("<br>");
+        // 홀수
+        {
+            for(let i=1; i<=100; i++){
+                if(i % 2 ==1){
+                    document.write(i);
+                }
+            }
+        }
+        document.write("<br>");
+        // 테이블
+        {
+            let table="<table border='1'>"
+            let num=1;
+            for(let i=1; i<=10; i++){
+                table +="<tr>";
+                for(let j=1; j<=5; j++){
+                    table +="<td>"+num+"</td>"
+                    num ++;
+                }
+                table +="</tr>";
+            }
+            table +="</table>";
+            document.write(table);
+        }
+        document.write("<br>");
+        // 구구단
+        {
+            for(let i=2; i<=9; i++){
+                document.write(i + "단" + "<br>")
+                for(let j=1; j<=9; j++){
+                    document.write(i + "*" + j + "=" + i*j +"<br>")
+                }
+            }
+        }
+        document.write("<br>");
+        // 함수 4가지
+        //선언적 함수
+        {
+            function func(){
+                document.write("실행되었습1니다.<br>");
+            }
+            func()
+        }
+        document.write("<br>");
+        //익명함수
+        {
             const func = function(){
-                document.write("02함수가 실행되었습니다.<br>")
+                document.write("실행되었습2니다.<br>");
             }
-            func();
+            func()
         }
+        document.write("<br>");
+        //매개변수
         {
-            //100번실행
-            function func(){
-                document.write("03함수가 실행되었습니다.<br>")
+            function func(str){
+                document.write(str);
             }
+            func("실행되3었습니다.<br>");
+        }
+        //리턴함수
+        {
+            function func(){
+                const str = "실행되었4습니다.<br>"
+                return str;
+            }
+            document.write(func());
+        }
+        //화삺표
+        {
+            func = () => {
+                document.write("실행되었습5니다.<br>");
+            }
+            func()
+        }
+        //익명함수
+        {
+            const func = () => {
+                document.write("실행되었습6니다.<br>");
+            }
+            func()
+        }
+        //매개변수 화살
+        {
+            func = (str) => {
+                document.write(str)
+            }
+            func("실행되었7습니다.<br>");
+        }
+        //리턴함수
+        {
+            func = () => {
+                const str = "실행되었습니8다.<br>"
+                return str;
+            }
+            document.write(func());
         }
     </script>
 </body>

@@ -195,7 +195,7 @@
                        일반적인 함수 선언문과 비교해보면, 매개 변수 리스트와 함수 몸체 사이에 => 기호가 있으며 함수 키워드와 함수 이름을 생략할 수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = () => {
+    func = () =&lt; {
         document.write("실행되었습니다.")
     };
     func();
@@ -218,7 +218,7 @@
                     <p>익명함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    const func = () => {
+    const func = () =&lt; {
         document.write("실행되었습니다.")
     }
     func();
@@ -241,7 +241,7 @@
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = (str) => {
+    func = (str) =&lt; {
         document.write(str)
     };
     func("실행되었습니다.")
@@ -264,7 +264,7 @@
                     <p>return함수를 화살표 함수로 변경하였습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = () => {
+    func = () =&lt; {
         const str ="실행되었습니다."
         return str;
     };
@@ -288,7 +288,7 @@
                     <p>익명함수와 매개변수 리턴함수를 한번에 화살표 함수로 나타내었습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    const func = (str) => {
+    const func = (str) =&lt; {
         return str;
     }
     document.write(func("실행되었습니다."));
@@ -311,7 +311,7 @@
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    const func = str => {       //변수 값이 하나인 경우 괄호 생략 가능
+    const func = str =&lt {       //변수 값이 하나인 경우 괄호 생략 가능
         return str;
     }
     document.write(func("실행되었습니다."));
@@ -330,11 +330,11 @@
                 <!-- //sample10 -->
 
                 <div id="sample11" class="sample">
-                    <h3>화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략</h3>
+                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략</h3>
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    const func = str => str;
+    const func = str =&lt; str;
 
     document.write(func("실행되었습니다."));
 }
@@ -356,7 +356,7 @@
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = str => str;      //단점 this를 사용할 수 없습니다.
+    func = str =&lt; str;      //단점 this를 사용할 수 없습니다.
 
     document.write(func("실행되었습니다."));
 }
