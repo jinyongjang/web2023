@@ -8,24 +8,16 @@
 </head>
 <body>
     <script>
-        {
-            let table = "<table border='1'>";
-            let num=1;
-            for(let i=1; i<=5; i++){
-                table +="<tr>";
-                for(let j=1; j<=5; j++){
-                    if(num % 2 == 0){
-                        table += "<td style='color:red'>"+num+"</td>";
-                    } else {
-                        table += "<td style='color:blue'>"+num+"</td>";
-                    }
-                    num ++;
-                }
-                table +="</tr>";    
+
+            let num = [1,2,3,4,5,6,7,8,9];
+            let sum = 0;
+
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
+                sum += num[i];
             }
-            table += "</table>";
-            document.write(table);
-        }
+            document.write("<br>");
+            document.write(sum);
     </script>
 </body>
 </html>
