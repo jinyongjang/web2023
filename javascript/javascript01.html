@@ -731,28 +731,28 @@
     let a=1, b=2, c=3, result;
     result = ++a + b++ + ++c;
 
-    console.log(result);
-    console.log(a);
-    console.log(b);
-    console.log(c);
+    console.log(result);        // 8 a는 2 b는 2 c는 4
+    console.log(a);             // 2 
+    console.log(b);             // 3 b++는 =보다 우선순위가 낮다
+    console.log(c);             // 4
 
-    let x=7, y=7, result;
+    let x=7, y=7, result;       // let x=7; let y=7; let result;
 
     result = x &gt; y ? ++x : y--;         //x가 실행이 안됨 false이므로 y만 실행
 
-    console.log(result);
-    console.log(x);
-    console.log(y);
+    console.log(result);        // y값이 나오므로 7
+    console.log(x);             // x는 실행이 안됬으므로 그대로 7
+    console.log(y);             // --는 =보다 순위가 낮아서 result값이 나온 후 6이 됨
 
-    let a, b, c, result;
+    let a, b, c, result;        // let a; let b; let c; let result;
     a = 20, b=30, c=30
 
-    result = a &lt; b ? b++ : --c;
+    result = a &lt; b ? b++ : --c;          // b가 a보다 크므로 true 갑인 b++가 출력
 
-    console.log(result);    //30
-    console.log(a);         //20
-    console.log(b + c);     //61
-    console.log(c);         //30
+    console.log(result);    //30            b++는 =보다 순위가 낮으므로 result는 30
+    console.log(a);         //20            a는 실행이 되지 않아서 그대로 20
+    console.log(b + c);     //61            b는 result 이후로 b++에 의해 1이 추가 되어서 31 c는 실행되지 않아서 그대로 30
+    console.log(c);         //30            c는 실행되지 않아서 그대로 30
 }
 </code></pre>
                     </div>
@@ -760,12 +760,22 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                11
-                                10
-                                5
-                                2
-                                2
-                                2
+                                11<br>
+                                10<br>
+                                5<br>
+                                2<br>
+                                2<br>
+                                8<br>
+                                2<br>
+                                3<br>
+                                4<br>
+                                7<br>
+                                7<br>
+                                6<br>
+                                30<br>
+                                20<br>
+                                61<br>
+                                30
                             </div>
                         </details>
                     </div>
