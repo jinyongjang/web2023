@@ -8,16 +8,168 @@
 </head>
 <body>
     <script>
-
-            let num = [1,2,3,4,5,6,7,8,9];
-            let sum = 0;
-
-            for(let i=0; i<num.length; i++){
-                document.write(num[i]);
-                sum += num[i];
-            }
-            document.write("<br>");
-            document.write(sum);
+// 펼침 연산자
+// {
+//     let arr = [100, 200, 300, 400, 500];
+//     let arr2 = [600,700];
+//     //펼침 연산자로 코드를 작성해보세요
+//     console.log(...arr);
+//     // 펼침 연산자로 arr1 arr2 를 묶어서 표출 하세요
+//     console.log(...arr,...arr2);
+// }
+//배열 : 데이터 불러오기 : 배열 구조분해할당
+// {
+//     let a, b, c;
+//     //배열 구조 분해 할당 작성해 보세요.
+//     [a, b, c] = [100, 200, "javascript"];
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+//객체 : 데이터 불러오기 : Object
+{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript"
+    };
+    //배열로 키 값을 가져오는 코드
+    console.log(Object.keys(obj));
+    //배열로 값을 가져오는 코드
+    console.log(Object.values(obj));
+    //배열로 전체를 가져오는 코드
+    console.log(Object.entries(obj));
+}
+//객체 : 데이터 불러오기 : 변수
+{
+    const obj ={
+        a : 100,
+        b : 200,
+        c : "javascript"
+    };
+    const name1 = obj.a;
+    const name2 = obj.b;
+    const name3 = obj.c;
+    console.log();
+    console.log();
+    console.log();
+}
+//객체 : 데이터 불러오기 : for in
+{
+    const obj ={
+        a : 100,
+        b : 200,
+        c : "javascript"
+    };
+    //for(){
+        //키값
+        console.log();
+        // value 값
+        console.log();
+    //}
+}
+//객체 : 데이터 불러오기 : map()
+{
+    const obj =[
+        {a:100, b:300, c: "javascript"}
+    ];
+    obj.map(function(){
+        console.log();
+        console.log();
+        console.log();
+    });
+}
+//객체 : 데이터 불러오기 : hasOwnProperty()
+{
+    const obj ={
+        a : 100,
+        b : 200,
+        c : "javascript"
+    };
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    //in 문을 통해 불러오기
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+}
+//객체 : 데이터 불러오기 :객체 펼침연산자
+{
+    {
+        const obj ={
+            a : 100,
+            b : 200,
+            c : "javascript"
+        };
+        const spread = {...obj};
+        console.log();
+        console.log();
+        console.log();
+    }
+    {
+        const obj ={
+            a : 100,
+            b : 200,
+            c : "javascript"
+        };
+        const spread = {...obj, d:"react"};
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+    }
+    {
+        const obj1 ={
+            a : 100,
+            b : 200,
+        };
+        const obj2 ={
+            c : "javascript",
+            d : "react",
+        };
+        const spread = {...obj1, ...obj2};
+        console.log();
+        console.log();
+        console.log();
+        console.log();
+    }
+}
+//객체 : 데이터 불러오기 : 비구조화 할당(객체구조분해할당)
+{
+    const obj ={
+        a : 100,
+        b : 200,
+        c : "javascript"
+    };
+    const {a, b, c} = obj;
+    const {a:name1, b:name2, c:name3} =obj;
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+}
+//변수 : 지역변수 + 전역 변수 (스코프)
+{
+    let x =100;
+    let y =200;
+    function func(){
+        let x = 300;
+        let y = 400;
+        z = "javascript"
+        console.log();
+        console.log();
+        console.log();
+    }
+    func();
+    console.log();
+    console.log();
+    console.log();
+}
     </script>
 </body>
 </html>

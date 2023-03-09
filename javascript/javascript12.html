@@ -362,11 +362,11 @@
                     </p>
 <pre class="line-numbers"><code class="language-js">{
     for(let i=2; i&lt;=9; i++){
-        document.write(i + "단","<br>")
+        document.write(i + "단","&lt;br&gt;")
     };
     for(let j=1; j&lt;=9; j++){
         document.write(i + "*" + j + "=" + i*j);
-        document.write("<br>");
+        document.write("&lt;br&gt;");
     }
 }
 </code></pre>
@@ -607,6 +607,28 @@
         //     }
         //     document.write(table);
         // }
+
+        {
+                                        let table = "<table border='1'>";
+                                        let count = 0;          //count 변수를 0으로 초기화합니다. 이 변수는 테이블 셀 안에 들어갈 숫자를 의미합니다.
+
+                                            for(let i=0; i<5; i++){           
+                                                table += "<tr>";
+
+                                                for(let j=0; j<5; j++){
+                                                    count++;
+                                                    if(count % 2 == 0){
+                                                        table += "<td style='color:red'>"+count+"</td>";
+                                                    } else {
+                                                        table += "<td style='color:blue'>"+count+"</td>";
+                                                    }
+                                                }
+                                                table += "</tr>";
+                                            }    
+                                            table += "</table>";
+                                            
+                                            document.write(table);
+                                    }
     </script>
 
 </body>

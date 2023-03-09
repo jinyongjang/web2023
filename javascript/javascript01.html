@@ -69,9 +69,9 @@
                     <li><a href="#">19. ++ 연산자(전치,후치), 비트 연산자</a></li>
                     <li><a href="#">20. ++ 형변환, typeof</a></li>
                 </ul>
-                <ul>
+                <!-- <ul>
                     <li>형변화, typeof() 자바스크립트 2번에</li>
-                </ul>
+                </ul> -->
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
@@ -797,8 +797,41 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        AND(&) 연산자: 두 개의 비트를 AND 연산하여 결과를 반환합니다. 예를 들어, 0011 & 0101 = 0001 입니다.<br>
+                        OR(|) 연산자: 두 개의 비트를 OR 연산하여 결과를 반환합니다. 예를 들어, 0011 | 0101 = 0111 입니다.<br>
+                        XOR(^) 연산자: 두 개의 비트를 XOR 연산하여 결과를 반환합니다. XOR 연산은 두 개의 비트가 다를 때 1을 반환하며, 같을 때는 0을 반환합니다. 예를 들어, 0011 ^ 0101 = 0110 입니다.<br>
+                        NOT(~) 연산자: 비트의 값을 반전시켜 결과를 반환합니다. 예를 들어, ~0011 = 1100 입니다.    
+                    </div>
                 </div>
                 <!-- //sample19 -->
+
+                <div id="sample20" class="sample">
+                    <h3> 20. 형변환, typeof</h3>
+                        <p>식별자(identifier)는 변수, 함수, 클래스 등의 이름으로 사용되는 단어나 구문입니다.식별자는 반드시 문자, 밑줄(_), 달러 기호($)로 시작해야 합니다. 식별자는 띄어쓰기 할 수 없습니다.<br>
+                            숫자로 시작하는 식별자는 사용할 수 없습니다.식별자는 대소문자를 구분합니다.식별자는 예약어(reserved word)를 사용할 수 없습니다.식별자는 길이에 제한이 없습니다.<br>
+                            예약어(reserved word)는 언어에서 특별한 의미를 갖는 단어입니다. 이러한 예약어는 변수, 함수, 클래스 등의 이름으로 사용될 수 없습니다.<br>
+                            만약 예약어를 변수, 함수, 클래스 이름으로 사용하려면, 오류가 발생하거나 예상하지 못한 동작을 할 수 있습니다.
+                        </p>
+                        <div class="script">
+<pre><code class="language-js">{
+    var n um = 10;      // 식별자는 띄어쓰기 할 수 없습니다.
+
+    var 1num = 10;      // 식별자는 숫자로 시작할 수 없습니다.
+
+    var %num = 10;      // 식별자는 특수문자로 시작할 수 없습니다.
+
+    var _num = 10;      // _은 예외로 사용 가능 합니다.
+
+    var $num = 10;      // $는 예외로 사용 가능 합니다.
+
+    // break case catch continue const default delete do else finally for function for function if
+    // in instanceof new return switch this throw try typeof this var void while with 등은 모두 예약어 입니다.
+}
+</code></pre>
+
+                </div>
+                <!-- //sample20 -->
 
             </div>
         </div>
