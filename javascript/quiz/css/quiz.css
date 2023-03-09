@@ -9,6 +9,8 @@
     margin-bottom: 100px;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 }
 #header::before {
     content: '';
@@ -32,8 +34,26 @@
 #header h1 em {
     font-size: 0.5em;
 }
-/* main */
-#main {}
+#header ul {
+    padding: 5px;
+}
+#header li {
+    display: inline;
+    z-index: 10;
+    position: relative;
+}
+#header li a {
+    color: #fff;
+    font-family:'NeoDunggeunmo';
+    border: 1px dashed #fff;
+    display: inline-block;
+    padding: 5px;
+}
+#header li.active a,
+#header li a:hover {
+    background-color: #fff;
+    color: #000;
+}
 
 /* footer */
 #footer {
@@ -72,7 +92,7 @@
     flex-wrap: wrap;
 }
 .quiz__wrap .quiz {
-    max-width: 500px;
+    width: 500px;
     background-color: #fff;
     border: 8px ridge #cacaca;
 }
@@ -127,11 +147,33 @@
     padding: 10px 20px;
     font-size: 22px;
 }
+.quiz__answer .input {
+    background-color: #fff;
+    border: 6px groove #cacaca;
+    width: 100%;
+    font-family: 'MYArirangGothic';
+    padding: 10px 20px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
     overflow: hidden;
 }
-
+.quiz__footer {
+    border-top: 6px ridge #cacaca;
+    padding: 20px;
+    font-family: 'MYArirangGothic';
+    background-color: #1ac9b4;
+}
+.quiz__footer::before {
+    content: "💋Tip";
+    color: #F5534F;
+    font-weight: bold;
+}
+.quiz__desc {
+    padding-top: 5px;
+}
 
 /* dog__wrap */
 .dog .tail,
@@ -312,7 +354,7 @@
     position: absolute;
 }
 .dog .tongue::before {
-    top: 10px;
+    top: 6px;
     left: -7px;
     width: 18px;
     height: 0;
