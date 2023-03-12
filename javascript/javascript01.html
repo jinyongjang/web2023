@@ -1064,23 +1064,23 @@
         // 여기까지 연산자 전치 후치
 
         //04. 변수 : 지역변수 + 전역변수(스코프)
-        let x = 100;    //전역 변수
-        let y = 200;    //전역 변수
+        // let x = 100;    //전역 변수
+        // let y = 200;    //전역 변수
 
-        function func(){     
-            let x = 300;        //지역 변수     x앞에 let이 없으면 전역변수로 변경
-            let y = 400;        //지역 변수
-            z = "javascript";   //전역 변수로 취급 string모드 선언하면 에러
+        // function func(){     
+        //     let x = 300;        //지역 변수     x앞에 let이 없으면 전역변수로 변경
+        //     let y = 400;        //지역 변수
+        //     z = "javascript";   //전역 변수로 취급 string모드 선언하면 에러
 
-            console.log("함수 안"+x);       //함수 안의 x값은 지역변수이기 때문에 사용가능
-            console.log("함수 안"+y);
-            console.log("함수 안"+z);
-        }
-        func();
+        //     console.log("함수 안"+x);       //함수 안의 x값은 지역변수이기 때문에 사용가능
+        //     console.log("함수 안"+y);
+        //     console.log("함수 안"+z);
+        // }
+        // func();
 
-        console.log("함수 밖"+x);
-        console.log("함수 밖"+y);
-        console.log("함수 밖"+z);
+        // console.log("함수 밖"+x);
+        // console.log("함수 밖"+y);
+        // console.log("함수 밖"+z);
     </script>
 </body>
 </html>
