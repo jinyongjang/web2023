@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .dog1 {
+            background-color: rgb(168, 168, 206);
+            padding: 20px;
+            margin: 10px 30px 20px 50px;
+            text-align: center;
+            border-radius: 50px;
+            
+        }
+        .dog2 {
+            background-color: #54a0ff;
+        }
+        .ears1 {
+            padding-right: 30%;
+            text-decoration: dashed;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        {
-            let num=0
-            let table = "<table border='1'>"
-            for(let i=1; i<=5; i++){
-                table += "<tr>"
-
-                for(let j=1; j<=5; j++){
-                    num +=5;
-                    if(num % 2 == 0){
-                    table += "<td style='color:red'>" +num+ "</td>"
-                    } else {
-                    table += "<td style = 'color:blue'>" +num+ "</td>"
-                    }
-                }
-                table += "<tr>"
-            }
-            table +="</table>"
-            document.write(table)
-        }
-    </script>
+    <div class="wrap">
+        <div class="dog1">
+            <div class="ears1"><a href="#">1</a></div>
+            <div class="ears2">2</div>
+            <div class="ears3">3</div>
+        </div>
+        <div class="dog2">2</div>
+        <div class="dog3">3</div>
+    </div>
 </body>
 </html>
