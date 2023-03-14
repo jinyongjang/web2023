@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section__small {
+            background-color: rgba(12, 209, 174, 0.64);
+            font-size: 14px;
+            border-radius: 50px;
+            color: black;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 1px 23px;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+        }
+        /* card__type */
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card__inner .card {
+            width: 32.3333%;
+            background-color: #fff;
+        }
+        .card__body {
+            padding: 0px;
+        }
+        .card__body .title{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .card__body .desc{
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .card__body .small__desc {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .card__body .small__desc li {
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+    <section class="card__wrap section nexon">
+        <div class="container">
+            <div class="card__inner">
+                <article class="card">
+                    <span class="section__small">NOTICE</span>
+                    <div class="card__body">   
+                        <h2 class="title">4종류의<br> 사막여우</h2>
+                        <p class="desc">사막 여우는 다양한 종류가 있으며, 이들은 지리적인 위치, 생태학적 특성, 외모 등에서 차이가 있습니다. </p>
+                        <ul class="small__desc">
+                            <li>아라비안 사막여우(Arabian Desert Fox) : 아랍반도와 이스라엘, 요르단 등에서 발견되며, 몸무게는 1~2kg 정도입니다.</li>
+                            <li>모로코 사막여우(Moroccan Sand Fox) : 북아프리카 지역과 산불이 발생한 사막 지역에서 발견됩니다.</li>
+                            <li>사하라 사막여우(Sahara Desert Fox) : 사하라 사막 지역에 서식하며, 몸무게는 1~1.5kg 정도입니다.</li>
+                            <li>미국 사막여우(American Desert Fox) : 북아메리카 지역의 사막 지역에서 발견되며, 몸무게는 1~3kg 정도입니다.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure>
+                        <img src="../asset/img/imagetextType01_01.jpg">
+                    </figure>
+                </article>
+                <article class="card">
+                    <figure>
+                        <img src="../asset/img/imagetextType01_02.jpg">
+                    </figure>
+                </article>
+            </div>
+    </section>
+</body>
+</html>
