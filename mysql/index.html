@@ -164,7 +164,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
                     <h4 id="intro4-1" class="page-header">데이터베이스 보기</h4>
                     <div class="bs-callout bs-callout-info">show databases;</div>
-<pre><code class="language-js">mysql> show databases;
+<pre><code class="language-js">mysql> SHOW databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -178,7 +178,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
                     <h4 id="intro4-2" class="page-header">데이터베이스 만들기</h4>
                     <div class="bs-callout bs-callout-info">create detabase 데이터베이스 이름;</div>
-<pre><code class="language-js">mysql> create database sample01;
+<pre><code class="language-js">mysql> CREATE database sample01;
 Query OK, 1 row affected (0.00 sec)
 
 mysql> show databases;
@@ -197,13 +197,13 @@ mysql> show databases;
 
                     <h4 id="intro4-3" class="page-header">데이터베이스 사용</h4>
                     <div class="bs-callout bs-callout-info">use 데이터베이스 이름;</div>
-<pre><code class="language-js">mysql> use sample01;
+<pre><code class="language-js">mysql> USE sample01;
 Database changed
 </pre></code>
 
                     <h4 id="intro4-4" class="page-header">데이터베이스 삭제</h4>
                     <div class="bs-callout bs-callout-info">drop database 데이터베이스 이름</div>
-<pre><code class="language-js">mysql> drop database sample01;
+<pre><code class="language-js">mysql> DROP database sample01;
 Query OK, 0 rows affected (0.01 sec)
 
 mysql> show databases;
@@ -223,8 +223,8 @@ mysql> show databases;
                 <div class="bs-docs-section">
                     <h3 id="intro5" class="page-header">테이블</h3>
                     <h4 id="intro5-1" class="page-header">테이블 만들기</h4>
-                    <div class="bs-callout bs-callout-info">create table 테이블 이름;</div>
-<pre><code class="language-js">create table member(
+                    <div class="bs-callout bs-callout-info">CREATE table 테이블 이름;</div>
+<pre><code class="language-js">CREATE table member(
 memberID int(10) unsigned auto_increment,
 youEmail varchar(40) NOT NULL,
 youName varchar(10) NOT NULL,
@@ -237,7 +237,7 @@ PRIMARY KEY(memberID)
 </code></pre>
                     <h4 id="intro5-2" class="page-header">테이블 전체보기</h4>
                     <div class="bs-callout bs-callout-info">show tables;</div>
-<pre><code class="language-js">mysql> show tables;
+<pre><code class="language-js">mysql> SHOW tables;
 +--------------------+
 | Tables_in_sample01 |
 +--------------------+
@@ -248,7 +248,7 @@ PRIMARY KEY(memberID)
 </code></pre>
                     <h4 id="intro5-3" class="page-header">테이블 보기</h4>
                     <div class="bs-callout bs-callout-info">desc 테이블 이름</div>
-<pre><code class="language-js">mysql> desc member;
+<pre><code class="language-js">mysql> DESC member;
 +------------+------------------+------+-----+---------+----------------+
 | Field      | Type             | Null | Key | Default | Extra          |
 +------------+------------------+------+-----+---------+----------------+
@@ -264,7 +264,7 @@ PRIMARY KEY(memberID)
 </code></pre>
                     <h4 id="intro5-4" class="page-header">테이블 삭제</h4>
                     <div class="bs-callout bs-callout-info">drop table 테이블 이름;</div>
-<pre><code class="language-js">mysql> drop table member;
+<pre><code class="language-js">mysql> DROP table member;
 Query OK, 0 rows affected (0.00 sec)
 
 mysql> show tables;
@@ -283,8 +283,34 @@ Empty set (0.00 sec)
                     <h3 id="intro6" class="page-header">❤ 테이블 데이터</h3>
                     <h4 id="intro6-1" class="page-header">테이블 입력하기</h4>
                     <div class="bs-callout bs-callout-info"><code>INSERT</code> <code>INTO</code> 테이블명(필드명) <code>VALUES</code></div>
-<pre><code class="language-js">INSERT INTO member2(
-youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ebmdols@naver.com","장진용","1234","19940401","26","03140316");
+<pre><code class="language-js">INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("webstoryboy@naver.com","황상연","1234","19990304","26","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dlscks0930@naver.com","황인찬","1234","19980930","26","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("gp2617@naver.com","천설희","1234","19950313","29","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dsy1943@naver.com","여다슬","1943","20011227","23","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("1346zany@gmail.com","이승연","1234","19991216","25","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ebmdols@naver.com","장진용","1234","19940401","26","03140316");
+    INSERT INTO member(youEmail, youName, youpass, youBirth, youAge, regTime) VALUES("jo0132@naver.com","노지영","1234","19950323","29","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("skadldldl123@gmail.com","안교남","1234","19920923","32","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ehcjswo1@gmail.com","김도현","123","19951003","29","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("goed0522@gmail.com","변우현","1234","20000629","24","03141516");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("yuna243441@naver.com","이유나","1234","20020508","22","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("im.kebab00@gmail.com","이요셉","1234","19990315","26","03140316");
+    INSERT INTO member(youEmail, youName, youpass, youBirth, youAge, regTime) VALUES("ture403@gmail.com","전윤기","1234","19920210","32","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dongjin6539@naver.com","신동진","1234","19960709","28","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("gnsrbdi@naver.com","이훈규","1234","19950227","29","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("jeongyouna_@naver.com","정유나","1234","19950606","29","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("daanbi1345@gmail.com","조은경","1234","19930205","31","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("hunmi961119@gmail.com","진현미","1234","19961119","28","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("getgrovy@gmail.com","정희석","1234","19990101","26","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("kshkmn0929@naver.com","김도현","0929","20020929","22","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("hyejeong3283@gmail.com","이혜정","1234","19940622","30","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.com","이양구","1234","19941212","30","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ghkddn132@naver.com","정황우","1234","19970130","25","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("esansi@naver.com","김현빈","1234","19970524","27","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("lee3ll@naver.com","이은지","1234","19930311","31","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dripidea77@gmail.com","김시연","1234","19930313","31","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("itshena01@gmail.com","조한미","1234","19930211","31","03140316");
+    INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");
 </code></pre>
                     <h4 id="intro6-2" class="page-header">데이터 불러오기</h4>
                     <div class="bs-callout bs-callout-info">
@@ -295,9 +321,9 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ebmdols@naver.com
                     <h4>memberID가 1번인 경우만 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE memeberID = 1;</code></pre>
                     <h4>memberID가 1번이 아닌 경우만 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member WHERE memeberID &lt;> 1;</code></pre>
+<pre><code class="language-js">SELECT * FROM member WHERE memeberID &lt;&gt; 1;</code></pre>
                     <h4>memberID가 5~10번 경우만 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member WHERE memeberID >= 5 AND memberID &lt;=10;</code></pre>
+<pre><code class="language-js">SELECT * FROM member WHERE memeberID &gt;= 5 AND memberID &lt;=10;</code></pre>
                     <h4>youAge가 30~40인 경우</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE youAge BETWEEN 30 and 40</code></pre>
                     <h4>youAge가 30~40이 아닌 경우</h4>
@@ -333,6 +359,15 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ebmdols@naver.com
 
                     <h4>이름만 불러오기</h4>
 <pre><code class="language-js">SELECT youName FROM member;</code></pre>
+                    <h4>이름만 불러오기(DESC) 내림차순</h4>
+<pre><code class="language-js">SELECT youName FROM member ORDER BY youName DESC;</code></pre>
+                    <h4>이름만 불러오기(ASC) 올림차순</h4>
+<pre><code class="language-js">SELECT youName FROM member ORDER BY youName ASC;</code></pre>
+
+                    <h4>이름 갯수 불러오기</h4>
+<pre><code class="language-js">SELECT count(youName) FROM member;</code></pre>
+<pre><code class="language-js">SELECT count(*) FROM member;</code></pre>
+
                     <h4>이름과 나이 불러오기</h4>
 <pre><code class="language-js">SELECT youName, youAge FROM member;</code></pre>
                     <h4>이름과 나이(30살 이상) 불러오기</h4>
@@ -344,16 +379,28 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ebmdols@naver.com
                     <div class="bs-callout bs-callout-info">
                         <code>UPDATE</code> 테이블명 <code>SET</code> 컬럼명 조건
                     </div>
-<pre><code class="language-js">
+                    <h4>모든 회원의 비밀번호를 1234로 수정하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "1234";</code></pre>
+                    <h4>아이디가 3번인 회원만 비밀번호를 9999로 수정하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "9999" WHERE memberID =3;</code></pre>
+                    <h4>아이디가 5-10번인 회원의 비밀번호를 7777로 수정하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "7777" WHERE memberID BETWEEN 5 AND 10;</code></pre>
+                    <h4>비밀번호를 "1234567"로 변경하고 패스워드를 내림차순으로 10개만 변경하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "1234567" ORDER BY youPass DESC LIMIT 10;</code></pre>
 
-</code></pre>
+
                     <h4 id="intro6-4" class="page-header">데이터 삭제하기</h4>
                     <div class="bs-callout bs-callout-info">
                         <code>DELETE</code> <code>FROM</code> 테이블명 <code>WEHRE</code> 조건
                     </div>
-<pre><code class="language-js">
-
-</code></pre>
+                    <h4>아이디가 5번인 멤버 삭제</h4>
+<pre><code class="language-js">DELETE FROM member WHERE memberID = 5;</code></pre>
+                    <h4>회원 비밀번호가 1234인 사람만 삭제하기</h4>
+<pre><code class="language-js">DELETE FROM member WHERE youPass = "1234";</code></pre>
+                    <h4>memberID를 기준으로 5번째 멤버까지 삭제</h4>
+<pre><code class="language-js">DELETE FROM member ORDER BY memberID LIMIT 5;</code></pre>
+                    <h4>memberID를 기준으로 11, 13, 15 멤버</h4>
+<pre><code class="language-js">DELETE FROM member WHERE memberID IN(11, 13, 15);</code></pre>
                 </div>
                 <!-- //intro6 -->
             </div>

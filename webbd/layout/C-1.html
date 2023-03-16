@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            display: flex;
+        }
+        #wrap .container1 .logo{
+            width: 200px;
+            height: 150px;
+            background-color: #472626;
+        }
+        #wrap .container1 .logo1{
+            
+            width: 200px;
+            height: 500px;
+            background-color: #6f5353;
+        }
+        #wrap .container2 .header {
+            width: 800px;
+            height: 350px;
+            background-color: #341010;
+        }
+        #wrap .section .container{
+            width: 800px;
+            height: 200px;
+            background-color: #6c2828;
+            display: flex;
+        }
+        #wrap .section .container .cont1 {
+            width: 33.333%;
+            height: 200px;
+            background-color: #35494b;
+        }
+        #wrap .section .container .cont2 {
+            width: 33.333%;
+            height: 200px;
+            background-color: #339bb3;
+        }
+        #wrap .section .container .cont3 {
+            width: 33.333%;
+            height: 200px;
+            background-color: #663d3d;
+        }
+        #wrap .footer .container{
+            width: 800px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            background-color: #3d2828;
+        }
+        #wrap .footer .container .foot1 {
+            width: 20%;
+            height: 100px;
+            background-color: #571d1d;
+        }
+        #wrap .footer .container .foot2 {
+            width: 80%;
+            height: 50px;
+            background-color: #493333;
+        }
+        #wrap .footer .container .foot3 {
+            width: 80%;
+            height: 50px;
+            background-color: #281c1c;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container1">
+            <div class="logo">로고</div>
+            <div class="logo1"></div>
+        </div>
+        <div class="container2">
+            <header class="header">
+                이미지 슬라이드
+            </header>
+            <article class="section">
+                <div class="container">
+                    <div class="cont1">
+                        공지사항
+                    </div>
+                    <div class="cont2">
+                        배너
+                    </div>
+                    <div class="cont3">
+                        바로가기
+                    </div>
+                </div>
+            </article>  
+            <footer class="footer">
+                <div class="container">
+                    <div class="foot1">
+                        로고
+                    </div>
+                    <div class="foot2">
+                        하단메뉴
+                    </div>
+                    <div class="foot3">
+                        Copyright
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
