@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카드 유형01</title>
+    <title>이미지 텍스트01</title>
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
         /* reset */
         * {
             margin: 0;
             padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
         }
         h1,h2,h3,h4,h5,h6 {
             font-weight: normal;
@@ -19,6 +23,23 @@
             vertical-align: top;
             width: 100%;
         }
+        
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+
+
         /* common */
         .container {
             width: 1160px;
@@ -60,44 +81,43 @@
             font-weight: 300;
         }
         /* card__type */
-        .card__inner {
+        .imgText__inner {
             display: flex;
             justify-content: space-between;
         }
-        .card__inner .card {
+        .imgText__inner .card {
             width: 32.3333%;
             background-color: #fff;
         }
-        .card__body {
+        .imgText__inner {
             padding: 0px;
         }
-        .card__body .title{
+        .imgText__inner .title{
             font-size: 50px;
             margin-bottom: 20px;
         }
-        .card__body .desc{
+        .imgText__inner .desc{
             font-size: 16px;
             color: #666;
             line-height: 1.5;
             margin-bottom: 20px;
         }
-        .card__body .small__desc {
+        .imgText__inner .small__desc {
             font-size: 16px;
             color: #666;
             line-height: 1.6;
         }
-        .card__body .small__desc li {
+        .imgText__inner .small__desc li {
             list-style-position: inside;
         }
     </style>
 </head>
 <body>
-    <section class="card__wrap section nexon">
+    <section class="imgText__wrap section nexon">
         <div class="container">
-            <div class="card__inner">
+            <div class="imgText__inner">
                 <article class="card">
                     <span class="section__small">NOTICE</span>
-                    <div class="card__body">   
                         <h2 class="title">4종류의<br> 사막여우</h2>
                         <p class="desc">사막 여우는 다양한 종류가 있으며, 이들은 지리적인 위치, 생태학적 특성, 외모 등에서 차이가 있습니다. </p>
                         <ul class="small__desc">
@@ -106,7 +126,6 @@
                             <li>사하라 사막여우(Sahara Desert Fox) : 사하라 사막 지역에 서식하며, 몸무게는 1~1.5kg 정도입니다.</li>
                             <li>미국 사막여우(American Desert Fox) : 북아메리카 지역의 사막 지역에서 발견되며, 몸무게는 1~3kg 정도입니다.</li>
                         </ul>
-                    </div>
                 </article>
                 <article class="card">
                     <figure>
