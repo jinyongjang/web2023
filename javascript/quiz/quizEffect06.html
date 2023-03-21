@@ -955,7 +955,7 @@
 
             // 설명 숨기기 
             
-            document.querySelectorAll("quiz__desc").forEach(el => el.style.display = "none");
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
         }
         updateQuiz();
         // 정답 확인
@@ -984,6 +984,8 @@
 
             // 점수 보이기
             document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100)  + "점";
+
+            alert(quizScore + "개 맞았습니다.");
         }
 
         // 정답 클릭
