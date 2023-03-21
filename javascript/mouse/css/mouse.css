@@ -49,7 +49,7 @@ body.bg01::after {
     background-color: rgba(15, 13, 13, 0.5);
 }
 body.bg02::after {
-    background-color: rgba(214, 249, 42, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 body.bg03::after {
     background-color: rgba(252, 124, 50, 0.3);
