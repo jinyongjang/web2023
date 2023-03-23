@@ -5,162 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 10px;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+        }
+        .card {
+            border-radius: 20px;
+            margin-left: 10px;
+            height: 200px;
+            background-color: #8a0909;
+            flex: 1;
+            transition: .3s all ease;
+        }
+        .card:hover {
+            flex: 2;
+            background-color: rgb(207, 207, 207);
+        }
+    </style>
 </head>
 <body>
-    <!-- <table border="1">
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-    </table> -->
-    <script>
-        // let table = "<table border='1'>";
-        //     for(let i=1; i<=5; i++){
-        //         table +="<tr>";
-        //             for(let j=1; j<=5; j++){
-        //                 table +="<td>" +j+ "</td>"
-        //             };
-        //         table +="</tr>";
-        //     }
-        // table +="</table>";
-        // document.write(table);
-
-        // let table = "<table border='1'>";
-        //     for(let i=1; i<=10; i++){
-        //         table +="<tr>";
-        //             for(let j=1; j<=10; j++){
-        //                 table +="<td>" +j+ "</td>"
-        //             };
-        //         table +="</tr>"
-        //     }
-        // table +="</table>"
-        // document.write(table);
-
-        // let table="<table border='1'>"
-        //     for(let i=1; i<=15; i++){
-        //         table +="<tr>";
-        //             for(let j=1; j<=15; j++){
-        //                 table +="<td>" +j+ "<td>"
-        //             };        
-        //         table +="</tr>";           
-        //     }
-        // table +="</table>";
-        // document.write(table);
-
-        // let table ="<table border='1'>";
-        //     for(let i=1; i<=10; i++){
-        //         table +="<tr>";
-        //             for(let j=1; j<=10; j++){
-        //                 table="<td>" +j+ "</td>"
-        //             };
-        //         table +="</tr>";
-        //     }
-        // table +="</table>";
-        // document.wrtie(table);
-
-        // let table ="<table border>";
-        //     for(i=1; i<=10; i++){
-        //         table +="<td>";
-
-        //         for(j=1; j<=10; j++){
-        //             table +="<tr>" +j+ "</tr>"
-        //         }
-        //         table +="</td>";
-        //     }
-        // table ="</table>";
-        // document.write(table);
-
-        // let num = 0;
-        // for(let i=1; i<=25; i++){
-        //     document.write(i);
-        //     num++;
-        // }
-        // document.write("<br>");
-        // document.write(num);
-
-        // ----완료-----
-        // let table="<table border='1'>";
-        // let num = 1;
-        //     for(let i=1; i<=5; i++){
-        //         table +="<tr>"
-
-        //         for(j=1; j<=5; j++){
-        //             table +="<td>" +num+ "</td>"
-        //             num++
-        //         };
-        //       table +="</tr>"
-        //     };
-        // table +="</table>";
-        // document.write(table);
-
-
-
-        // for(let i=1; i<=arr.length; i++){
-        //     if(i % 2 == 0){
-        //         document.write("<span style='color:red'>"+i+"</span>");
-        //     } else {
-        //         document.write(`<span style='color:blue'>${i}</span>`); 
-        //     }
-        // }
-        // let table = "<table border='1'>"
-        // let num = 1;
-        //     for(i=1; i<=5; i++){
-        //         table +="<tr>"
-
-        //         for(j=1; j<=5; j++){
-        //             table +="<td>" +num+ "</td>"
-        //             num++
-        //         };
-        //         table +="</tr>"
-        //     }
-        // table +="</table>";
-        // document.write(table);
-
-        let table ="<table border='1'>";
-        let num = 1;
-            for(let i=1; i<=5; i++){
-                table +="<tr>"
-
-                    for(let j=1; j<=5; j++){
-                        let color = num % 2 === 0 ? 'blue' : 'red';
-                        table += "<td style='color:" + color + "'>" + num + "</td>";
-                        num++
-                    }
-                table +="</tr>";
-            }
-        table +="</table>";
-        document.write(table);
-    </script>
+    <div class="container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
 </body>
 </html>
