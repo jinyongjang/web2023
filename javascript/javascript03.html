@@ -222,7 +222,7 @@
                     <p>익명함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    const func = () =&lt; {
+    const func = () =&gt; {
         document.write("실행되었습니다.")
     }
     func();
@@ -245,7 +245,7 @@
                     <p>매개변수 함수의 화살표 함수입니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = (str) =&lt; {
+    func = (str) =&gt; {
         document.write(str)
     };
     func("실행되었습니다.")
@@ -268,7 +268,7 @@
                     <p>return함수를 화살표 함수로 변경하였습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = () =&lt; {
+    func = () =&gt; {
         const str ="실행되었습니다."
         return str;
     };
@@ -340,7 +340,7 @@
                     </p>
                     <div class="script">
 <pre><code class="language-js"> {
-    const func = str =&lt; str;
+    const func = str =&gt; str;
 
     document.write(func("실행되었습니다."));
 }
@@ -362,7 +362,7 @@
                     <p>익명함수 대신 선언적 함수도 매개변수와 리턴값과 함께 화살표 함수를 사용할 수도 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
-    func = str =&lt; str;      //단점 this를 사용할 수 없습니다.
+    func = str =&gt; str;      //단점 this를 사용할 수 없습니다.
 
     document.write(func("실행되었습니다."));
 }

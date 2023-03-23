@@ -979,11 +979,14 @@
                 }
             });
 
+            // 정답 보이기
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block"); 
+
             // 설명 보이기 
             document.querySelectorAll("quiz__desc").forEach(el => el.style.display = "block");
 
             // 점수 보이기
-            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100)  + "점";
+            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length*100)) + "점";
 
             alert(quizScore + "개 맞았습니다.");
         }
