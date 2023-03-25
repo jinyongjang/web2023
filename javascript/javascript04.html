@@ -604,167 +604,167 @@
         //     document.write(num);
         
         //01. if문
-        {
+        // {
             // null, undefined, "", 0, false  false나옵니다
-            if("")document.write("실행되었습니다.(true)");
-            else document.write("실행되었습니다.(false)");
-            //삼항연산자
-            ("") ? document.write("실행되었습니다.(true)") : document.write("실행되었습니다.(false)");
-        }
+        //     if("")document.write("실행되었습니다.(true)");
+        //     else document.write("실행되었습니다.(false)");
+        //     //삼항연산자
+        //     ("") ? document.write("실행되었습니다.(true)") : document.write("실행되었습니다.(false)");
+        // }
 
-        {
-            // for(let i=0; i<5; i++) document.write(i)
-        }
-        //04. 다중 if문 == switch
-        {
-            const num = 100;
+        // {
+        //     // for(let i=0; i<5; i++) document.write(i)
+        // }
+        // //04. 다중 if문 == switch
+        // {
+        //     const num = 100;
 
-            if(num == 90){
-                document.write("실행90");
-            } else if(num == 80){
-                document.write("실행80");
-            } else if(num == 70){
-                document.write("실행70");
-            } else if(num == 60){
-                document.write("실행60");
-            } else if(num == 50){
-                document.write("실행50");
-            } else {
-                document.write("0");
-            }
-        }
+        //     if(num == 90){
+        //         document.write("실행90");
+        //     } else if(num == 80){
+        //         document.write("실행80");
+        //     } else if(num == 70){
+        //         document.write("실행70");
+        //     } else if(num == 60){
+        //         document.write("실행60");
+        //     } else if(num == 50){
+        //         document.write("실행50");
+        //     } else {
+        //         document.write("0");
+        //     }
+        // }
         
-        //05. 중첩 if문
+        // //05. 중첩 if문
 
-        //06. switch문
-        {
-            const num = 100;
+        // //06. switch문
+        // {
+        //     const num = 100;
 
-            switch(num){
-                case 90:
-                    document.write("실행90");       //break가 빠지면 모든 값이 실행됨
-                    break;
-                case 80:
-                    document.write("실행80");
-                    break;
-                case 70:
-                    document.write("실행70");
-                    break;
-                case 60:
-                    document.write("실행60");
-                    break;
-                case 50:
-                    document.write("실행50");
-                    break;
-                default:
-                    document.write("0");
-            }
-        }
+        //     switch(num){
+        //         case 90:
+        //             document.write("실행90");       //break가 빠지면 모든 값이 실행됨
+        //             break;
+        //         case 80:
+        //             document.write("실행80");
+        //             break;
+        //         case 70:
+        //             document.write("실행70");
+        //             break;
+        //         case 60:
+        //             document.write("실행60");
+        //             break;
+        //         case 50:
+        //             document.write("실행50");
+        //             break;
+        //         default:
+        //             document.write("0");
+        //     }
+        // }
 
-        // 07. while문
-        {
-            for(let i=0; i<5; i++){         //for문
-                document.write(i);
-            }
+        // // 07. while문
+        // {
+        //     for(let i=0; i<5; i++){         //for문
+        //         document.write(i);
+        //     }
 
-            let num = 0;                    //while 문
-            while(num<5){
-                document.write(num);
-                num++;
-            }
-        //08
-            let num2 = 0;                   //거의 사용은 안합니다.
-            do {
-                document.write(num2);
-                num2++;
-            } while (num2<5);
-        }
-        document.write("<br>")
-        // 09
-        {
-            for(let i=1; i<100; i++){
-                document.write(i);
-            }
+        //     let num = 0;                    //while 문
+        //     while(num<5){
+        //         document.write(num);
+        //         num++;
+        //     }
+        // //08
+        //     let num2 = 0;                   //거의 사용은 안합니다.
+        //     do {
+        //         document.write(num2);
+        //         num2++;
+        //     } while (num2<5);
+        // }
+        // document.write("<br>")
+        // // 09
+        // {
+        //     for(let i=1; i<100; i++){
+        //         document.write(i);
+        //     }
 
-            document.write("<br>");
+        //     document.write("<br>");
 
-            let num = [1,2,3,4,5,6,7,8,9];
-            let sum = 0;
+        //     let num = [1,2,3,4,5,6,7,8,9];
+        //     let sum = 0;
 
-            for(let i=0; i<num.length; i++){
-                document.write(num[i]);
-                sum += num[i];
-            }
-            document.write("<br>");
-            document.write(sum);
-        }
+        //     for(let i=0; i<num.length; i++){
+        //         document.write(num[i]);
+        //         sum += num[i];
+        //     }
+        //     document.write("<br>");
+        //     document.write(sum);
+        // }
 
-        //10 중첩 for
-        {
-            for(let i=1; i<=10; i++){
-                for(let j=1; j<=10; j++){
-                    document.write(j);
-                }
-            }
+        // //10 중첩 for
+        // {
+        //     for(let i=1; i<=10; i++){
+        //         for(let j=1; j<=10; j++){
+        //             document.write(j);
+        //         }
+        //     }
 
-            //1~25 (3의 배수 25칸(5의 배수 빨간색))
+        //     //1~25 (3의 배수 25칸(5의 배수 빨간색))
 
-            let table = "<table border='1'>";
-            let count = 0;      
+        //     let table = "<table border='1'>";
+        //     let count = 0;      
 
-            for(let i=0; i<5; i++){
+        //     for(let i=0; i<5; i++){
                 
-                table += "<tr>";
-                for(let j=0; j<5; j++){
-                    count++;
-                    if(count % 2 == 0){
-                        table += "<td style='color:red'>"+count+"</td>";
-                    } else {
-                        table += "<td style='color:blue'>"+count+"</td>";
-                    }
-                }
-                table += "</tr>";
-            }    
-            table += "</table>";
+        //         table += "<tr>";
+        //         for(let j=0; j<5; j++){
+        //             count++;
+        //             if(count % 2 == 0){
+        //                 table += "<td style='color:red'>"+count+"</td>";
+        //             } else {
+        //                 table += "<td style='color:blue'>"+count+"</td>";
+        //             }
+        //         }
+        //         table += "</tr>";
+        //     }    
+        //     table += "</table>";
             
-            document.write(table);
-        }
+        //     document.write(table);
+        // }
 
-        // 11. break문
-        {
-            for(let i=1; i<100; i++){
-                if(i == 10){
-                    break;
-                }
-                document.write(i);
-            }
+        // // 11. break문
+        // {
+        //     for(let i=1; i<100; i++){
+        //         if(i == 10){
+        //             break;
+        //         }
+        //         document.write(i);
+        //     }
 
-            // for(let i=1; i<100; i++){           ////document.write의 위치에 따라 값이 달라짐
-            //     document.write(i);
-            //     if(i == 10){
-            //         break;
-            //     }
-            // }
-        }
-        document.write("<br>");
+        //     // for(let i=1; i<100; i++){           ////document.write의 위치에 따라 값이 달라짐
+        //     //     document.write(i);
+        //     //     if(i == 10){
+        //     //         break;
+        //     //     }
+        //     // }
+        // }
+        // document.write("<br>");
 
-        // 12. continue문
-        {
-            for(let i=1; i<20; i++){
-                if(i == 10){
-                    continue;
-                }
-                document.write(i);
-            }
+        // // 12. continue문
+        // {
+        //     for(let i=1; i<20; i++){
+        //         if(i == 10){
+        //             continue;
+        //         }
+        //         document.write(i);
+        //     }
 
-            // for(let i=1; i<20; i++){        //document.write의 위치에 따라 값이 달라짐
-            //     document.write(i);
-            //     if(i == 10){
-            //         continue;
-            //     }
-            // }
-        }
-            //1~25 (3의 배수 25칸(5의 배수 빨간색))
+        //     // for(let i=1; i<20; i++){        //document.write의 위치에 따라 값이 달라짐
+        //     //     document.write(i);
+        //     //     if(i == 10){
+        //     //         continue;
+        //     //     }
+        //     // }
+        // }
+        //     //1~25 (3의 배수 25칸(5의 배수 빨간색))
     </script>
 
 </body>
