@@ -141,6 +141,22 @@
 .quiz__answer .confirm:hover{
     background-color: #74b3eb;
 }
+.quiz__answer .next {
+    background-color: #248951;
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-family: 'MYArirangGothic';
+    padding: 10px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-shadow: 2px 2px 0px #afbbe6;
+    font-weight: bold;
+}
+.quiz__answer .next:hover{
+    background-color: #306854;
+}
+
 .quiz__answer .result {
     background-color: #fff;
     border: 6px ridge #cacaca;
