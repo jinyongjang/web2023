@@ -86,6 +86,12 @@
 }
 
 /* quiz__wrap */
+.quiz__main h4 {
+    background-color: #3cb0db;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
 .quiz__wrap {
     display: flex;
     justify-content: center;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트05</title>
+    <title>퀴즈 이펙트06</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
@@ -31,6 +31,7 @@
                     <h2 class="quiz__title"></h2>
                 </div>
                 <div class="quiz__main">
+                    <h4></h4>
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
@@ -80,6 +81,8 @@
                         <button class="next">다음 문제</button>
                     </div>
                     <div class="quiz__desc"></div>
+                    <div class="quiz__info">??점</div>
+                    <div class="quiz__check"><span>??</span></div>
                 </div>
             </div>
 
@@ -149,11 +152,11 @@
         
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
+        const quizNumcount = document.querySelector(".quiz__main h4");
         const quizTitle = quizWrap.querySelector(".quiz__title");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
-        const dogWrapCount = quizWrap.querySelector(".dog__wrap .count");
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc")
@@ -194,14 +197,17 @@
                 정답은 ${quizInfo[index].infoAnswer}입니다.<br>
                 ${quizInfo[index].infoDesc}
             `;
-
+            let countTag = `
+                총 ${quizInfo.length-[index]}문제 남았습니다.
+            `;
 
 
             quizTitle.innerHTML = typeTag;
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
-            dogWrapCount.innerText = "총 5문제 남았습니다."
+            quizNumcount.innerHTML = countTag;
+            
 
             // 보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -222,6 +228,8 @@
 
             // 총 문제
             
+            // 정답 확인 갯수
+            
         };
 
         updateQuiz1(quizCount);
@@ -232,11 +240,10 @@
             let currentAnswer = quizInfo[quizCount].infoAnswer;     // 문제 정답
 
             if(userAnswer == currentAnswer){
-                console.log("정답입니다.")
                 dogWrap.classList.add("like");
                 dogWrap.classList.remove("dislike");
+                quizScore++;
             } else {
-                console.log("오답입니다.");
                 dogWrap.classList.add("dislike");
                 dogWrap.classList.remove("like");
             }
@@ -245,6 +252,11 @@
 
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
+
+            if(quizInfo.length - quizCount == 1){
+                document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length*100)) + "점";
+                document.querySelector(".quiz__check span").innerHTML = "맞힌 갯수 " + quizScore + "개";
+            }
         }
 
         
