@@ -149,15 +149,13 @@
                     </ul>
                     <div class="script">
 <pre><code class="Language-js">{
-    "javascript reference".indexOf("javascript");        //0
-    "javascript reference".indexOf("javascripts");       //-1           값이 없으면 -1이 나옴
-    "javascript reference".indexOf("j");                 //0
-    "javascript reference".indexOf("J");                 //-1
-    "javascript reference".indexOf("a");                 //1
-    "javascript reference".indexOf("ja");                //0
-    "javascript reference".indexOf("jv");                //-1
-    "javascript reference".indexOf("reference");         //11
-    "javascript reference".indexOf("r");                 //6
+    "javascript reference".lastIndexOf("javascript");   //0
+    "javascript reference".lastIndexOf("javascripts");   //-1
+    "javascript reference".lastIndexOf("j");   //0
+    "javascript reference".lastIndexOf("a");   //3
+    "javascript reference".lastIndexOf("jv");   //-1
+    "javascript reference".lastIndexOf("reference");   //11
+    "javascript reference".lastIndexOf("r");   //15
 }
 </code></pre>
                     </div>
