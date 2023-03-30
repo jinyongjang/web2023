@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
+        }
+        .container h2{
+            width: 1200px;
+            text-align: center;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>마우스 오버하면 이미지 바꾸기</h2>
+        <img src="img/pic-1.jpg" class="image">
+    </div>
+    <script>
+        const cursor = document.querySelector(".container .image");
+        // const cursor = document.querySelector(".container");
+
+        cursor.addEventListener("mouseover", () => {
+            cursor.src="img/pic-2.jpg"
+        });
+        cursor.addEventListener("mouseout", () => {
+            cursor.src="img/pic-1.jpg"
+        });
+        
+        // document.querySelector(".active").addEventListener("mouseover", function(){
+        //     cursor.classList.add("active");
+        // });
+        // $img = document.querySelector(".container > img");
+
+        // $img.src = `change.img/pic-2.jpg`;
+    </script>
+</body>
+</html>
