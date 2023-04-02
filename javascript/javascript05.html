@@ -348,15 +348,12 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        "javascript".trim("");      //javascript
-        "javascript ".trim("");      //javascript
-        " javascript ".trim("");      //javascript
-        " java script ".trim("");      //java script
-        
-        " javascript ".trimStart("");      //javascript
-        " javascript ".trimEnd("");      // javascript
-
-        console.log(" javascript ".trimEnd(""));
+    let num = [1, 5, 1, 2, 7, 5];
+    for(let i=0; i<6; i++){
+        if((i+2) % 2 == 0){
+            console.log(num[i]);
+        }
+    }
     </script>
 
 

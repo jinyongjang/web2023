@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        ul,li,ol {
+            list-style: none;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 10px;
+        }
+        #header img {
+            width: 150px;
+        }
+        #header ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        #header ul li:last-child {
+            margin-right: 0px;
+        }
+        #notice {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #notice .not1 {
+            border: 1px solid #000;
+            width: 47%;
+            padding: 20px;
+            position: relative;
+        }
+        #notice .not1 li {
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .not1 > div img {
+            width: 20px;
+            position: absolute;
+            top: 20px;right: 15px;
+        }
+        .more {
+            position: absolute;
+            top: 20px;right: 35px;
+        }
+        #notice .not2 {
+            width: 47%;
+        }
+        #card h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card__inner > div {
+            width: 24%;
+            
+        }
+        #footer {
+            border-top: 1px solid #000;
+            margin: 50px 0;
+        }
+        #footer address {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-style: normal;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div>
+                <img src="img/logo.jpg" alt="로고">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">즐길거리</a></li>
+                    <li><a href="#">요금/우대정책</a></li>
+                    <li><a href="#">참여프로그램</a></li>
+                    <li><a href="#">이용서비스</a></li>
+                    <li><a href="#">소통서비스</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section id="banner">
+                <div>
+                    <img src="img/banner.jpg" alt="미라클">
+                </div>
+            </section>
+            <section id="notice">
+                <div class="not1">
+                    <h3>롯데월드 소식</h3>
+                    <ul>
+                        <li><a href="#">사진관</a><span>2023.03.03</span></li>
+                        <li><a href="#">요금</a><span>2023.03.03</span></li>
+                        <li><a href="#">힘내</a><span>2023.03.03</span></li>
+                        <li><a href="#">소주한잔</a><span>2023.03.03</span></li>
+                    </ul>
+                    <div><a href="#" class="more">더보기</a></div>
+                    <div><img src="img/icon.png" alt="코인"></div>
+                </div>
+                <div class="not2">
+                    <img src="img/banner02.jpg" alt="혜택">
+                </div>
+            </section>
+            <section id="card">
+                <h3>경험</h3>
+                <div class="card__inner">
+                    <div>
+                        <img src="img/notice01.jpg" alt="연간">
+                        <span>연간</span>
+                    </div>
+                    <div>
+                        <img src="img/notice02.jpg" alt="투어">
+                        <span>투어</span>
+                    </div>
+                    <div>
+                        <img src="img/notice03.jpg" alt="공연">
+                        <span>공연</span>
+                    </div>
+                    <div>
+                        <img src="img/notice04.jpg" alt="단체">
+                        <span>단체</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <address>
+                서울특별시 송파수 올림픽로 240 호텔롯데 롯데원드 | 대표자 박동기<br>
+                사업자등록번호 : 219-84-00014 | 통신판매업신고번호 | 송파 | 전화 : 1661-2000
+            </address>
+            <strong>COPYRIGHT 2022 LOTTEWORLD.ALL.RIGHT RESERVED</strong>
+        </footer>
+    </div>
+</body>
+</html>
