@@ -151,8 +151,7 @@
     const cbtSubmit = document.querySelector(".cbt__submit");
     
 
-    let quizLength = quizInfo.length - quizCount;
-            dogWrapCount.innerHTML = "총 "+ quizInfo.length + "문제 중에 "+(quizLength-1)+"문제 남았습니다.";
+
 
         let questionAll = []; // 모든 퀴즈 정보
 
@@ -204,6 +203,7 @@
         const newQuestion = () => {
             const exam =[];
             const omr =[];
+
             questionAll.forEach((question, number) => {
                 exam.push(`
                     <div class="cbt">
@@ -244,6 +244,8 @@
                         </label>
                     </div>
                 `);
+                
+
 
             });
             cbtQuiz.innerHTML=exam.join('');
