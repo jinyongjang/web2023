@@ -78,14 +78,12 @@
             <!-- cbt__conts -->
             <div class="cbt__aside">
                 
-                <div class="cbt__info">
-                    
-                        <div class="cbt__title">수험자 : <em>장진용</em></div>
-                        <div class="cbt__score">
-                            <span>전체 문항 : <em>60</em> 문항</span>
-                            <span>남은 문항 : <em>59</em> 문항</span>
-                        </div>
-                    
+                <div class="cbt__info">                   
+                    <div class="cbt__title">수험자 : <em>장진용</em></div>
+                    <div class="cbt__score">
+                        <span>전체 문항 : <em>60</em> 문항</span>
+                        <span>남은 문항 : <em>59</em> 문항</span>
+                    </div>
                 </div>
                 <!-- cbt__info -->
                 <div class="cbt__omr">
@@ -151,6 +149,10 @@
     const cbtQuiz = document.querySelector(".cbt__quiz");
     const cbtOmr = document.querySelector(".cbt__omr");
     const cbtSubmit = document.querySelector(".cbt__submit");
+    
+
+    let quizLength = quizInfo.length - quizCount;
+            dogWrapCount.innerHTML = "총 "+ quizInfo.length + "문제 중에 "+(quizLength-1)+"문제 남았습니다.";
 
         let questionAll = []; // 모든 퀴즈 정보
 
