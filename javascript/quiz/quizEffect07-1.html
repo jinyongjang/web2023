@@ -27,9 +27,8 @@
             <li><a href="quizEffect05.html">5</a></li>
             <li><a href="quizEffect05-1.html">5-1</a></li>
             <li><a href="quizEffect06.html">6</a></li>
-            <li class="active"><a href="quizEffect07.html">7</a></li>
-            <li><a href="quizEffect07-1.html">7-1</a></li>
-
+            <li><a href="quizEffect07.html">7</a></li>
+            <li class="active"><a href="quizEffect07-1.html">7-1</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -79,13 +78,13 @@
             <div class="cbt__aside">
                 
                 <div class="cbt__info">
-                    
+                    <div>
                         <div class="cbt__title">수험자 : <em>장진용</em></div>
                         <div class="cbt__score">
                             <span>전체 문항 : <em>60</em> 문항</span>
                             <span>남은 문항 : <em>59</em> 문항</span>
                         </div>
-                    
+                    </div>
                 </div>
                 <!-- cbt__info -->
                 <div class="cbt__omr">
@@ -156,7 +155,7 @@
 
         //데이터 가져오기
         const dataQuestion = () => {    
-            fetch("json/gisa2020_01.json")
+            fetch("json/gineungsaWD2023_01.json")
             .then(res => res.json())
             .then(items => {
 
