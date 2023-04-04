@@ -1,26 +1,24 @@
 [
     {
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "일반적으로 환경 디자인의 종류에 해당하는 것은?",
         "correct_answer": "스트리트 퍼니처 디자인",
         "incorrect_answers": ["가전제품 디자인","기업이미지 디자인","캘린더 디자인"],
         "keyword": "디자인 패턴",
         "keyword_num": "24",
-        "question_desc": "ddd",
         "question_img": "gisa2020_01_01",
         "desc": "환경 디자인 종류 : 인테리어 디자인, 디스플레이 디자인, Street Furniture 디자인, 무대 디자인 등.."
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "디자인의 원리에서 율동에 해당되는 것은?",
         "correct_answer": "점이, 반복",
         "incorrect_answers": ["유사, 대비","대칭, 비례","통일, 변화"],
         "keyword": "디자인 패턴",
         "keyword_num": "24",
-        "question_desc": "ddd",
         "question_img": "gisa2020_01_01",
         "desc": "율동의 원리는 반복과 교차, 점이(점증), 방사가 있습니다."
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "불투명한 물체가 빛을 반사시킴으로써 나타나는 물체의 색을 의미하는 것은?",
         "correct_answer": "표면색",
         "incorrect_answers": ["광원색","조명색","경영색"],
@@ -28,7 +26,7 @@
         "keyword_num": "22",
         "desc": "색의 종류 : 표면색, 투과색, 거울색, 금속색, 공간색, 광원색<br>- 표면색 : 불투명한 물체가 빛을 반사시킴으로써 나타나는 물체의 색을 의미 <br>물체는 자신과 다른 색을 흡수하고, 같은 색을 반사(녹색 물체는 녹색만 반사) <br>- 광원색 : 광원에서 나오는 빛을 눈으로 볼 때 느껴지는 빛 자체의 색 <br>광원을 이루는 색 파장의 비율에 따라 다르게 나타남"
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "부분과 부분 또는 부분과 전체 사이에 안정되어 관련성을 지니며 서로 함께 속해있는 것처럼 보이는 디자인 원리는?",
         "correct_answer": "조화",
         "incorrect_answers": ["비례","균형","강조"],
@@ -36,98 +34,101 @@
         "keyword": "객체지향 분석 방법론",
         "keyword_num": "23"
     },{
-        "subject": "소프트웨어 설계",
-        "question": "다음과 같은 형상이 나타내는 디자인 원리는?<br><img src='../assets/img/20150405.jpg' alt=''>",
+        "subject": "웹디자인 기능사",
+        "question": "다음과 같은 형상이 나타내는 디자인 원리는?",
         "correct_answer": "비대칭",
+        "question_img":"gineungsaWD2015_03_05",
         "incorrect_answers": ["조화","강조","율동"],
         "desc" : "다음 이미지와 같은 디자인 원리는 비대칭 입니다."
     },{
-        "question": "다음 설명에 해당하는 용어로 가장 적당한 것은?<br><img src='../assets/img/20150406.jpg' alt=''>",
+        "question": "다음 설명에 해당하는 용어로 가장 적당한 것은?",
         "correct_answer": "CIP",
+        "question_desc": "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업 이미지 통합 전략을 의미",
         "incorrect_answers": ["POP","Logo","Symbol"],
         "desc" : "POP : 구매시점광고(Point fo purchase Advertising)<br>Logo : 정식명칭은 Logotype로 회사나 제품의 이름이 독특하게 드러나도록 만들어, 상표처럼 사용되는 글자 또는 형상<br>Symbol : 상징, 기호"
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "지루함을 잊게 해 줄 수 있는 대기실이나 병원 실내의 벽에 대한 배색 계통으로 가장 적당한 것은?",
         "correct_answer": "한색",
         "incorrect_answers": ["난색","중성색","무채색"],
         "desc" : "난색은 따뜻,여유의 느낌을 주고 한색은 시원, 긴장감을 준다. 지루함을 잊게 해주기 위해서는 한색이 적합하다."
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "다음 중 사회 변화에 따른 디자인의 변화에 대한 설명으로 맞는 것은?",
         "correct_answer": "농경 사회 : 의식주, 생존개념, 생활 수공예",
         "incorrect_answers": ["정보화 사회 : 공업의 발달 및 빛의 개념, 디자인 성장","산업 사회 : 기술의 첨단화, 즐기는 개념, 디자인 성숙","후기 산업사회 : 대량생산, 성장개념, 디자인 태동"],
         "desc" : "농경 사회에는 의식주, 생존개념, 생활 수공예와 같은 디자인의 변화가 있었습니다."
     },{
-        "subject": "소프트웨어 설계",
-        "question": "다음과 같이 선명한 빨강 바탕에 주황색을 놓았을 때와 회색 바탕에 주황색을 놓았을 때의 설명으로 옳은 것은?<br><img src='../assets/img/20150409.jpg' alt=''>",
+        "subject": "웹디자인 기능사",
+        "question": "다음과 같이 선명한 빨강 바탕에 주황색을 놓았을 때와 회색 바탕에 주황색을 놓았을 때의 설명으로 옳은 것은?",
         "correct_answer": "회색 바탕의 주황색이 채도가 높아 보인다.",
+        "question_img":"gineungsaWD2015_03_09",
         "incorrect_answers": ["빨강 바탕의 주황색이 채도가 높아 보인다.","두 경우 모두 채도의 변화가 없다.","두 경우 모두 채도가 높아진다."]
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "'빨강 기미의 노랑'과 같이 기본 색명에다 색상, 명도, 채도를 나타내는 수식어를 붙인 색명은?",
         "correct_answer": "일반색명",
         "incorrect_answers": ["관용색명","고유색명","기본색명"],
         "desc" : "관용색명:옛날부터 전해오는 습관적인 색의 이름, 지명, 장소,식물, 동물 등의 고유한 이름을 붙여 넣은 색 ex)밤색, 쥐색, 귤색, 쑥색, 벽돌색, 수박색 등 <br>고유색명: 관용 색명과 같은 말 <br>기본색명: 기본적인 색의 구별,빨강 주황 노랑 연두 초록 청록 파랑 남색 보라 자주 분홍 갈색의 유채색 13색과 하양, 회색, 검정의 무채색 3색으로 표현됨"
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "균형의 가장 정형적인 구성 형식이며, 균형이 잘 잡힌 상태로 통일감을 얻기 쉬우나 딱딱한 느낌을 주는 원리는?",
         "correct_answer": "대칭",
         "incorrect_answers": ["리듬","비례","조회"]
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "조형 디자인에서 점, 선, 면 등이 연장, 발전 되고 밀접한 관계로 변화되는 조형디자인 요소는?",
         "correct_answer": "형태",
         "incorrect_answers": ["색채","빛","질감"]
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "색채조화에서 하나의 색상을 여러 단계의 명도로 배색할 때 나타나는 단계의 조화는?",
         "correct_answer": "명도에 따른 조화",
         "incorrect_answers": ["색상 대비에 따른 조화","보색 대비에 따른 조화","주조색에 따른 조화"],
-        "desc" : "색상 대비에 따른 조화 - 색상의 차이를 크게해서 얻어지는 조화 입니다<br>보색대비에 따른 조화 - 색상환에서 가정 거리가 먼 색상들을 배색해서 얻어지는 조화입니다.<br>명도에 따른 조화 - 하나의 색상을 명도의 차이로 얻어지는 조화 입니다."
+        "desc" : "색상 대비에 따른 조화<br>- 색상의 차이를 크게해서 얻어지는 조화 입니다<br>보색대비에 따른 조화<br>- 색상환에서 가정 거리가 먼 색상들을 배색해서 얻어지는 조화입니다.명도에 따른 조화<br>- 하나의 색상을 명도의 차이로 얻어지는 조화 입니다."
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "다음 중 디자인 시각요소에 대한 분류로 틀린 것은?",
         "correct_answer": "기술",
         "incorrect_answers": ["질감","색","형"],
         "desc" : "디자인의 시각요소 : 형, 색, 질감"
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "인간이 볼 수 있는 가시광선의 파장 범위는?",
         "correct_answer": "380nm ~ 780nm",
         "incorrect_answers": ["850nm ~ 1100nm","1150nm ~ 1400nm","1450nm ~ 1650nm"],
         "desc" : "가시광선 파장범위는 380nm~780nm"
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "새로운 예술이라는 뜻으로 19세기 말과 20세기 초에 걸쳐 프랑스를 중심으로 전 유럽에서 유행한 장식적인 양식은?",
         "correct_answer": "아르누보",
         "incorrect_answers": ["아르데코","큐비즘","다다이즘"],
         "desc" : "1.아르누보: '새로운 미술'이라는 뜻으로 빅토르 오르타와 헨리반데 벨데가 19세기 말~20세기 초에 걸쳐 벨기에와 프랑스를 중심으로 전 유럽에 유행시킨 장식적인 양식을 말한다.<br>2. 아르데코: 1925년 파리 장식 미술박람회에서 나온 명칭으로, 아르누보에 이어 1920~1930년대에 유행된 장식양식을 말한다. 재즈양식, 할리우드 양식으로 불리기도 하였으며, 직선, 동심원, 기하학적인 형태와 반복 패턴을 선호하여 모더니즘과 장식을 결합하였다.<br>3. 큐비즘: 입체파로 불려지며 1900~1914년에 걸쳐 프랑스파리에서 일어난 미술 혁신 운동이다. 르네상스 이래의 사실주의적인 전통에서 해방시킨 회화 혁명으로 불리고 있다.<br>4. 다다이즘: 제1차 세계대전 중 사회적 불안과 허무감으로 나타난 문화 전반적인 운동이다."
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "선(Line)에 대한 설명으로 맞는 것은?",
         "correct_answer": "하나의 점이 이동한 자취이다.",
         "incorrect_answers": ["위치만 있고 크기가 없다.","면이 이동한 것이다.","입체의 한계 또는 교차에 의해 생긴다."],
         "desc" : "2. 점<br>3. 입체 및 공간.<br>4. 입체의 한계 또는 교차 = 면"
     },{
-        "subject": "소프트웨어 설계",
-        "question": "다음 설명에 해당하는 디자인의 조건은?<br><img src='../assets/img/20150418.jpg' alt=''>",
+        "subject": "웹디자인 기능사",
+        "question": "다음 설명에 해당하는 디자인의 조건은?",
         "correct_answer": "합목적성",
+        "question_desc": "건축은 인간이 살기 위해, 포스터는 커뮤니케이션을 위해, 의자는 앉기 위해, 커피 잔은 커피를 마시기 위하여 사용되는 것이다.",
         "incorrect_answers": ["심미성",        
         "독창성",
         "경제성"],
         "desc" : "디자인이 대상과 용도 목적에 따라 이뤄져 있는가를 말하는 것이 합목적성입니다"
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "해질 무렵 정원을 바라보면 어두워짐에 따라 꽃의 빨간색은 거무스레해지고, 그것에 비해 나뭇잎의 녹색은 점차 뚜렸해짐을 볼 수 있다. 이것과 관련된 현상을 무엇이라고 하는가?",
         "correct_answer": "푸르킨예 현상",
-        "incorrect_answers": ["지각 향상성",
-        
+        "incorrect_answers": ["지각 향상성",        
         "착시 현상",
         "게슈탈트의 지각 원리"],
         "desc" : "다음 이미지와 같은 디자인 원리는 비대칭 입니다."
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "기계화와 대량생산에 의해 생활용품의 품질 저하에 반대하여 윌리엄 모리스를 중심으로 영국에서 일어난 수공예 부흥 운동은?", 
         "correct_answer": "미술공예운동(ART AND CRAFTS MOVEMENT)",
         "incorrect_answers": ["구성주의(CONSTRUCTIVISM)",
@@ -136,7 +137,7 @@
         ],
         "desc" : "눈에 주어지는 빛의 휘도가 낮아짐에 따라서, 즉 명소시에서 암소시로 옮겨감에 의해서 일어나는 색지각현상으로서 파랑 쪽의 비시감도가 노랑이나 빨강 쪽의 스펙트럼에 비해서 높아지는 것을 발견한 사람의 이름을 따서 부르는 것이다." 
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "인터넷에서 정보를 수집할 때 사용되는 검색엔진의 설명으로 틀린 것은?", 
         "correct_answer": "검색엔진 자체에 등록된 사이트만을 대상으로 정보를 검색한다.",
         "incorrect_answers": [
@@ -145,11 +146,10 @@
                     "주제별 검색엔진은 계층적인 메뉴를 따라가며 검색할 수 있다."],
         "desc" : ""
     },{
-        "subject": "소프트웨어 설계",
+        "subject": "웹디자인 기능사",
         "question": "스타일시트의 적용 시 우선순위가 높은 것부터 낮은 순으로 차례로 나열한 것은?",
         "correct_answer": "Inline, Id 선택자, Class 선택자, 태그 선택자",
-        "incorrect_answers": ["Inline, Class 선택자, Id 선택자, 태그 선택자",
-        
+        "incorrect_answers": ["Inline, Class 선택자, Id 선택자, 태그 선택자",        
         "Inline, 태그 선택자, Id 선택자, Class 선택자",
         "Inline, 태그 선택자, Class 선택자, Id 선택자"],
         "desc" : "id안에 class를 쓸수 있지만, class안에 id를 쓸수 없다."
@@ -157,10 +157,9 @@
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150423", 
         "question": "검색방식에서 두개 이상의 키워드 간의 관계를 설정하는 것은?", 
-        "correct_answer": "아르누보",
+        "correct_answer": "연산자",
         "incorrect_answers": [
-            "데이터베이스",
-            "연산자",
+            "데이터베이스",           
             "와일드 카드",
             "디렉터리"
         ],
@@ -170,9 +169,8 @@
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150424", 
         "question": "인터넷 익스플로러 6.0 에서 인터넷 옵션의 내용관리자 부분에 대한 설명으로 틀린 것은?", 
-        "correct_answer": "아르누보",
-        "incorrect_answers": [
-            "인증서 : 범주에 따른 등급을 조정할 수 있으며 그 등급에 해당하는 홈페이지로 이동할 수 있도록 추가 정보를 제공한다.",
+        "correct_answer": "인증서 : 범주에 따른 등급을 조정할 수 있으며 그 등급에 해당하는 홈페이지로 이동할 수 있도록 추가 정보를 제공한다.",
+        "incorrect_answers": [            
             "승인된 사이트 : 등급 지정에 관계없이 항상 볼 수 있거나 볼 수 없는 사이트를 지정할 수 있다.",
             "일반 : 사용자 옵션과 감독자 암호를 지정할 수 있는 곳으로, 기본적으로 사용자가 제한된 내용만 보도록 표시되어 있다.",
             "고급 : 사용자가 다른 등급 시스템을 적용하려고 할 때 이용한다."
@@ -183,10 +181,9 @@
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150425", 
         "question": "CGI에 대한 설명으로 틀린 것은?", 
-        "correct_answer": "아르누보",
+        "correct_answer": "Computer Graphic Interface 의 약자이다.",
         "incorrect_answers": [
-            "사용자의 프로그램 수행요구에 대한 표준 인터페이스이다.",
-            "Computer Graphic Interface 의 약자이다.",
+            "사용자의 프로그램 수행요구에 대한 표준 인터페이스이다.",            
             "CGI 프로그래밍 언어로 PHP, JSP, ASP 등이 있다.",
             "클라이언트와 서버 중간에서 정보 전달을 한다."
         ],
@@ -196,11 +193,10 @@
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150426", 
         "question": "자바스크립트의 특징으로 틀린 것은?", 
-        "correct_answer": "아르누보",
+        "correct_answer": "정적 바인딩이다.",
         "incorrect_answers": [
             "변수 타입 선언 없이 사용 가능하다.",
-            "객체 지향적 스트립트 언어이다.",
-            "정적 바인딩이다.",
+            "객체 지향적 스트립트 언어이다.",            
             "HTML 문서 내에 기술한다."
         ],
         "infoAnswer": "3",
@@ -209,11 +205,10 @@
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150427", 
         "question": "HTML 문서에서 &lt;FONT&gt; 태그에서 사용할 수 있는 속성이 아닌 것은?", 
-        "correct_answer": "아르누보",
+        "correct_answer": "input",
         "incorrect_answers": [
             "size",
-            "color",
-            "input",
+            "color",            
             "face"
         ],
         "infoAnswer": "3",
@@ -222,11 +217,10 @@
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150428", 
         "question": "인터넷상의 보안 문제로 특정 네트워크를 격리시키는데 사용되는 시스템으로서 네트워크의 출입 경로를 단절시켜 보안 관리 범위를 좁히고 제어를 효과적으로 할 수 있는 시스템은?", 
-        "correct_answer": "아르누보",
+        "correct_answer": "Firewall",
         "incorrect_answers": [
             "POP server",
-            "TCP",
-            "Firewall",
+            "TCP",            
             "IP"
         ],
         "infoAnswer": "3",
@@ -235,10 +229,9 @@
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150429", 
         "question": "인터넷을 통해 주고 받는 내용을 캐시에 저장해 놓았다가 동일한 자료의 송수신이 발생할 경우 이를 되풀이 하지 않게 함으로써 속도를 향상시킬 수 있는 서버는?", 
-        "correct_answer": "아르누보",
+        "correct_answer": "Proxy 서버",
         "incorrect_answers": [
-            "DNS 서버",
-            "Proxy 서버",
+            "DNS 서버",            
             "HTTP 서버",
             "Gateway 서버"
         ],
@@ -247,21 +240,23 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150430", 
-        "question": "자바스크립트의 Window 객체 중 일반적으로 다음 그림과 같이 다이얼로그 박스를 나타내는 메소드는?<br><img src='../assets/img/20150430.jpg' alt=''>", 
-        "correct_answer": "아르누보",
+        "question_img":"gineungsaWD2015_03_30",
+        "question": "자바스크립트의 Window 객체 중 일반적으로 다음 그림과 같이 다이얼로그 박스를 나타내는 메소드는?", 
+        "correct_answer": "Confirm( )",
         "incorrect_answers": [
             "Open( )",
             "Prompt( )",
-            "Alert( )",
-            "Confirm( )"
+            "Alert( )"
+            
         ],
         "infoAnswer": "4",
         "desc": "사용자에게 메시지를 알려서 확인, 취소를 선택하는 대화상자는 confirm()"
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150431", 
-        "question": "다음이 설명하고 있는 인터넷 서비스는?<br>1988년 핀란드의 Jarkko Oikarinen이라는 학생에 <br>의해 개발된 대화방(채널, channel) 서비스이다?", 
+        "question": "다음이 설명하고 있는 인터넷 서비스는?", 
         "correct_answer": "아르누보",
+        "question_desc": "1988년 핀란드의 Jarkko Oikarine이라는 학생에 의해 개발된 대화방(채널, channel) 서비스이다.",
         "incorrect_answers": [
             "Telnet",
             "FTP",
@@ -416,7 +411,8 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150443", 
-        "question": "다음이 설명하고 있는 기법으로 옳은 것은?<br><img src='../assets/img/20150443.jpg' alt=''>", 
+        "question": "다음이 설명하고 있는 기법으로 옳은 것은?",
+        "question_desc": "- 벽돌이나 자갈처럼 울퉁불퉁한 표현을 할 때 사용<br>- 3차원 컴퓨터 그래픽스에서 다각형으로 표현된 물체 표면에 요철정보를 첨부하는 기법<br>- 흰색 부분은 돌출되어 보이고, 검은색에 가까울수록 들어가 보인다.", 
         "correct_answer": "범프 매핑(Bump Mapping)",
         "incorrect_answers": [
             "리플렉션 매핑(Reflection Mapping)",
@@ -428,7 +424,8 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150444", 
-        "question": "다음이 설명하고 있는 것은?<br><img src='../assets/img/20150444.jpg' alt=''>", 
+        "question": "다음이 설명하고 있는 것은?", 
+        "question_desc": "물체의 색과 바탕색의 중간 값을 정하여 표시하는 방법이며, 계단 모양의 부자연스러움을 없애는 것",
         "correct_answer": "안티-앨리어싱(Anti-aliasing)",
         "incorrect_answers": [
             "패턴(Pattern)",        
@@ -560,7 +557,8 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150455", 
-        "question": "다음은 제 2세대의 컴퓨터 그래픽에 관한 설명이다. ( ) 안에 공통으로 들어갈 알맞은 용어는?<br><img src='../assets/img/20150455.jpg' alt=''>", 
+        "question": "다음은 제 2세대의 컴퓨터 그래픽에 관한 설명이다. ( ) 안에 공통으로 들어갈 알맞은 용어는?", 
+        "question_desc": "1960sus CRT를 이용한 미국의 보잉 737 제트 여객기 설계로 1965년에 ( ) 소프트웨어 개발이 활성화 되었는데 이것은 오늘날 ( )의 기반을 구축하였다.",
         "correct_answer": "Computer Aided Design",
         "incorrect_answers": [ 
             "Computer Graphics",
@@ -572,7 +570,8 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150456", 
-        "question": "다음 설명과 같은 애니메이션 기법은?<br><img src='../assets/img/20150456.jpg' alt=''>", 
+        "question": "다음 설명과 같은 애니메이션 기법은?", 
+        "question_desc": "- 빗방울, 불 연기, 바람 등 자연현상을 표현하는 기법 <br>- 입자들의 집합에 대해 그 행동과 특성을 부여하여 컴퓨터로 시뮬레이션하여 제작하는 기법",
         "correct_answer": "미립자 시스템",
         "incorrect_answers": [
             "모핑",
@@ -596,7 +595,8 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150458", 
-        "question": "다음의 특성을 가진 파일의 확장자는?<br><img src='../assets/img/20150458.jpg' alt=''>", 
+        "question": "다음의 특성을 가진 파일의 확장자는?", 
+        "question_desc": "- 웹에서 스캔 이미지에 비해 파일 용량이 작다. <br>- 사용자와 상호 작용이 가능하며, 확장성과 호환성이 뛰어나다. <br>- 다운로드와 동시에 실시간 플레이가 가능하다. <br>- 확대나 축소 시 이미지 손상이 없이 재생 가능하다.",
         "correct_answer": "SWF",
         "incorrect_answers": [
             "PNG",
@@ -608,7 +608,8 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150459", 
-        "question": "다음 설명에 해당하는 것은?<br><img src='../assets/img/20150459.jpg' alt=''>", 
+        "question": "다음 설명에 해당하는 것은?", 
+        "question_desc": "- 명도 단계를 검은색에서 흰색까지 0에서 255까지 256단계로 구분하는 것이다. <br>- 이미지의 명도분포를 막대 그래프로 표시한 것이다.",
         "correct_answer": "히스토그램",
         "incorrect_answers": [
             "모델링",
