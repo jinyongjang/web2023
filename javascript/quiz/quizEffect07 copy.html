@@ -206,10 +206,11 @@
     //     });
     // }
     // dataQuestion();
+    const cbt = document.querySelectorAll(".cbt")
     const cbtQuiz = document.querySelector(".cbt__quiz");
     const cbtOmr = document.querySelector(".cbt__omr");
     const cbtSubmit = document.querySelector(".cbt__submit");
-    const cbtInfo = document.querySelector(".cbt__info");
+    // const cbtInfo = document.querySelector(".cbt__info");
     // const totalCount = document.querySelector(".total__count");
     // const leftCount = document.querySelector(".left__count");
     const cbtRest = document.querySelector(".cbt__rest")
@@ -257,8 +258,8 @@
                         formattedQuestion.question_img = item.question_img;
                     }
                     //해설이 있으면 출력
-                    if(item.hasOwnProperty("question_desc")){
-                        formattedQuestion.question_desc = item.question_desc;
+                    if(item.hasOwnProperty("desc")){
+                        formattedQuestion.desc = item.desc;
                     }
                     // //전체 문항
                     // totalCount.innerText=items.length;
@@ -343,7 +344,7 @@
         // 정답 확인 
         const answerQuiz = () => {
             const cbtSelects = document.querySelectorAll(".cbt__selects");
-            let remainingCount = 0;
+            // let remainingCount = 0;
 
             questionAll.forEach((question, number) => {
                 const quizSelectsWrap = cbtSelects[number];
@@ -364,6 +365,7 @@
                     label[question.answer-1].classList.add("correct");
                 }
 
+                //설명 숨기기
                 const quizDesc = document.querySelectorAll(".cbt__desc");
 
                 if(quizDesc[number].innerText == "undefined"){
