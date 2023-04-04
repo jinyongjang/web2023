@@ -37,13 +37,13 @@
     <main id="main">
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
-                <h2>2015년 4월 4일 웹디자인 기능사 기출문제</h2>
+                <h2>2020년 1회 정보처리기능사 기출문제</h2>
             </div>
             <div class="cbt__conts">
                 <div class="cbt__quiz">
                     <div class="cbt good">
                         <div class="cbt__question"><span>1. </span>객체지향 프로그램에서 데이터를 추상화하는 단위는 ?</div>
-                        <div class="cbt__question__img"><img src="img/gineungsaJC2023_01_01.jpg" alt="기능사"></div>
+                        <div class="cbt__question__img"><img src="img/gineungsaJC2023_01_01.jpg" ></div>
                         <div class="cbt__selects">
                             <input type="radio" id="select1">
                             <label for="select1"><span>클래스</span></label>
@@ -81,8 +81,8 @@
                 <div class="cbt__info">                   
                     <div class="cbt__title">수험자 : <em>장진용</em></div>
                     <div class="cbt__score">
-                        <span>전체 문항 : <em>60</em> 문항</span>
-                        <span>남은 문항 : <em>59</em> 문항</span>
+                        <span>전체 문항 : <em class="total__count">60</em> 문항</span>
+                        <span>남은 문항 : <em class="left__count">59</em> 문항</span>
                     </div>
                 </div>
                 <!-- cbt__info -->
@@ -149,7 +149,9 @@
     const cbtQuiz = document.querySelector(".cbt__quiz");
     const cbtOmr = document.querySelector(".cbt__omr");
     const cbtSubmit = document.querySelector(".cbt__submit");
-    
+    const cbtInfo = document.querySelector(".cbt__info");
+    const totalCount = document.querySelector(".total__count");
+    const leftCount = document.querySelector(".left__count");
 
 
 
@@ -191,6 +193,11 @@
                     if(item.hasOwnProperty("desc")){
                         formattedQuestion.desc = item.desc;
                     }
+                    //전체 문항
+                    totalCount.innerText=items.length;
+
+                    //남은 문항
+                    leftCount.innerText=items.length;
 
                     return formattedQuestion;
                 });
@@ -200,9 +207,16 @@
         }
 
         //문제 만들기
+        // const updateQuiz = (index) => {
+        //     let questionnumTag = `
+        //         ${cbtQuiz.length}문제중에 ${cbtQuiz.length - index}문제 남았습니다 
+        //     `;
+        // }
+
         const newQuestion = () => {
             const exam =[];
             const omr =[];
+            
 
             questionAll.forEach((question, number) => {
                 exam.push(`
@@ -245,16 +259,18 @@
                     </div>
                 `);
                 
-
-
+                
             });
+                
             cbtQuiz.innerHTML=exam.join('');
             cbtOmr.innerHTML=omr.join('');
+
         }
 
         // 정답 확인 
         const answerQuiz = () => {
             const cbtSelects = document.querySelectorAll(".cbt__selects");
+            let remainingCount = 0;
 
             questionAll.forEach((question, number) => {
                 const quizSelectsWrap = cbtSelects[number];
@@ -286,7 +302,10 @@
         }
 
         const answerSelect = () => {
-
+            const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
+            const remainingCount = questionAll.length - answeredCount;
+            leftCount.innerText = remainingCount;
+            return remainingCount;
         }
 
 
