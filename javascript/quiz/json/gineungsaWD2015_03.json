@@ -6,7 +6,6 @@
         "incorrect_answers": ["가전제품 디자인","기업이미지 디자인","캘린더 디자인"],
         "keyword": "디자인 패턴",
         "keyword_num": "24",
-        "question_img": "gisa2020_01_01",
         "desc": "환경 디자인 종류 : 인테리어 디자인, 디스플레이 디자인, Street Furniture 디자인, 무대 디자인 등.."
     },{
         "subject": "웹디자인 기능사",
@@ -15,7 +14,6 @@
         "incorrect_answers": ["유사, 대비","대칭, 비례","통일, 변화"],
         "keyword": "디자인 패턴",
         "keyword_num": "24",
-        "question_img": "gisa2020_01_01",
         "desc": "율동의 원리는 반복과 교차, 점이(점증), 방사가 있습니다."
     },{
         "subject": "웹디자인 기능사",
@@ -37,7 +35,7 @@
         "subject": "웹디자인 기능사",
         "question": "다음과 같은 형상이 나타내는 디자인 원리는?",
         "correct_answer": "비대칭",
-        "question_img":"gineungsaWD2015_03_05",
+        "question_img":"gineungsaWD2015_03_01",
         "incorrect_answers": ["조화","강조","율동"],
         "desc" : "다음 이미지와 같은 디자인 원리는 비대칭 입니다."
     },{
@@ -62,7 +60,7 @@
         "subject": "웹디자인 기능사",
         "question": "다음과 같이 선명한 빨강 바탕에 주황색을 놓았을 때와 회색 바탕에 주황색을 놓았을 때의 설명으로 옳은 것은?",
         "correct_answer": "회색 바탕의 주황색이 채도가 높아 보인다.",
-        "question_img":"gineungsaWD2015_03_09",
+        "question_img":"gineungsaWD2015_03_02",
         "incorrect_answers": ["빨강 바탕의 주황색이 채도가 높아 보인다.","두 경우 모두 채도의 변화가 없다.","두 경우 모두 채도가 높아진다."]
     },{
         "subject": "웹디자인 기능사",
@@ -240,7 +238,7 @@
     },{ 
         "infoTime": "2015년 4월 4일", 
         "infoNumber": "20150430", 
-        "question_img":"gineungsaWD2015_03_30",
+        "question_img":"gineungsaWD2015_03_03",
         "question": "자바스크립트의 Window 객체 중 일반적으로 다음 그림과 같이 다이얼로그 박스를 나타내는 메소드는?", 
         "correct_answer": "Confirm( )",
         "incorrect_answers": [

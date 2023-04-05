@@ -84,6 +84,7 @@
                     <div class="cbt__score">
                         <span>전체 문항 : <em class="cbt__length">60</em> 문항</span>
                         <span>남은 문항 : <em class="cbt__rest">59</em> 문항</span>
+                        <div class="finish__score">점수</div>
                     </div>
                 </div>
                 <!-- cbt__info -->
@@ -111,6 +112,8 @@
                 <!-- cbt__omr -->
             </div>
             <!-- cbt__aside -->
+            
+            
             <div>
                 <div class="cbt__time">59분 10초</div>
                 <div class="cbt__submit">제출하기</div>
@@ -119,7 +122,7 @@
                 <div class="cbt__modall">
                     <h2>기능사 시험 도전하기</h2>
                     <div class="cbt__choice">
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" id="cbtTime" class="cbt__index" onchange="changeSelect(this)">
                             <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
                             <option value="gineungsaJC2005_04">정보처리기능사 2005년 4회</option>
                             <option value="gineungsaJC2005_05">정보처리기능사 2005년 5회</option>
@@ -143,9 +146,9 @@
                             <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
                             <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
                         </select>
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" id="cbtTime" class="cbt__index" onchange="changeSelect(this)">
                             <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
-                            <option value="gineungsaWD2010_02">웹디자인기능사 2010년 1회</option>
+                            <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
                             <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
                             <option value="gineungsaWD2010_04">웹디자인기능사 2010년 4회</option>
                             <option value="gineungsaWD2010_05">웹디자인기능사 2010년 5회</option>
@@ -159,9 +162,9 @@
                             <option value="gineungsaWD2013_02">웹디자인기능사 2013년 2회</option>
                             <option value="gineungsaWD2013_04">웹디자인기능사 2013년 4회</option>
                             <option value="gineungsaWD2013_05">웹디자인기능사 2013년 5회</option>
-                            <option value="gineungsaWD2045_01">웹디자인기능사 2014년 1회</option>
-                            <option value="gineungsaWD2045_04">웹디자인기능사 2014년 4회</option>
-                            <option value="gineungsaWD2045_05">웹디자인기능사 2014년 5회</option>
+                            <option value="gineungsaWD2014_01">웹디자인기능사 2014년 1회</option>
+                            <option value="gineungsaWD2014_04">웹디자인기능사 2014년 4회</option>
+                            <option value="gineungsaWD2014_05">웹디자인기능사 2014년 5회</option>
                             <option value="gineungsaWD2015_01">웹디자인기능사 2015년 1회</option>
                             <option value="gineungsaWD2015_03">웹디자인기능사 2015년 3회</option>
                             <option value="gineungsaWD2015_04">웹디자인기능사 2015년 4회</option>
@@ -170,7 +173,11 @@
                             <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
                         </select>
                     </div>
-                    <button class="minimal">확인</button>                    
+                    <div class="cbt__view">
+                        당신의 이름은 <input type="text" class="name"> 입니다.<br>
+                        당신은 <span class="subject">웹디자인 기능사 시험</span>을 선택했습니다<div class=""></div>
+                    </div>
+                    <button class="minimal">시작하기</button>                    
                 </div>
             </div>
         </div>
@@ -215,22 +222,51 @@
     // const leftCount = document.querySelector(".left__count");
     const cbtRest = document.querySelector(".cbt__rest")
     const cbtLength = document.querySelector(".cbt__length")
+    const cbtIndex = document.querySelector(".cbt__index")
+    const cbtViewSubject = document.querySelector(".cbt__view .subject");
+    const cbtHeader = document.querySelector(".cbt__header h2")
+    const miniBtn = document.querySelector(".minimal")
+    const cbtTime = document.querySelector(".cbt__time")
+
 
     const cbtStart = document.querySelector(".cbt__start");
-    const miniBtn = document.querySelector(".minimal")
+
+    const cbtName = document.querySelector(".cbt__name")
+    const cbtViewName = document.querySelector(".cbt__view input")
+    
+    
+
     
     miniBtn.addEventListener("click",() => {
         cbtStart.style.display= "none";
+        
     })
-
-
+        
+        let quizScore = 0;
         let questionAll = [];                    // 모든 퀴즈 정보
         let questionLength = 0;                 //전체 문제수
         let questionRest = questionLength;      //남은 문제수
+        let questionTime = "";
+        let questionTimeRemain = "1000";
+
+        // 시작하기
+        const startQuiz = () => {
+            cbtStart.classList.add("hide");     //모달창 제거            
+            
+            const value = cbtViewName.value;
+            
+            cbtName.innerHTML = value;
+
+            //시간 설정
+            questionTime = setInterval(reduceTime, 1000);
+
+        }
+
+
 
         //데이터 가져오기
-        const dataQuestion = () => {    
-            fetch("json/gisa2020_01.json")
+        const dataQuestion = (value) => {    
+            fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`)
             .then(res => res.json())
             .then(items => {
 
@@ -251,7 +287,7 @@
 
                     //문제에 대한 해설이 있으면 출력
                     if(item.hasOwnProperty("question_desc")){
-                        formattedQuestion.questionDesc = item.question_desc;
+                        formattedQuestion.question_desc = item.question_desc;
                     }
                     //문제에 대한 이미지가 있으면 출력
                     if(item.hasOwnProperty("question_img")){
@@ -261,15 +297,12 @@
                     if(item.hasOwnProperty("desc")){
                         formattedQuestion.desc = item.desc;
                     }
-                    // //전체 문항
-                    // totalCount.innerText=items.length;
-
-                    // //남은 문항
-                    // leftCount.innerText=items.length;
 
                     return formattedQuestion;
                 });
-                newQuestion();
+
+                newQuestion();      //문제 만들기
+
                 //전체 문제수
                 questionLength = questionAll.length;
                 cbtLength.innerHTML = questionLength;
@@ -295,7 +328,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"><img src="img/${question.question_img}.jpg" alt=""></div>
+                        <div class="cbt__question__img"><img src="https://kebab000.github.io/web2023/gineungsaJPG/${question.question_img}.jpg" alt="이미지"></div>
                         <div class="cbt__question__desc">${question.question_desc}</div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
@@ -331,21 +364,45 @@
 
             cbtQuiz.innerHTML=exam.join('');
             cbtOmr.innerHTML=omr.join('');
+
+
+            //설명 없는거 제거
+            document.querySelectorAll(".cbt__question__desc").forEach(desc => {
+                if(desc.innerText === "undefined"){
+                    desc.classList.add("hide")
+                }
+            });
+
+            //이미지가 없는거 제거
+            document.querySelectorAll(".cbt__question__img").forEach(img => {
+                let src = img.querySelector("img").src;
+
+                if(src.includes("undefined")){
+                    img.classList.add("hide");
+                }
+            })
+
+
+
+
+            // 문제 설명 숨기기
             
             const cbtQuestionDesc = document.querySelectorAll(".cbt__question__desc")
 
                 cbtQuestionDesc.forEach(function(el){
                     if(el.innerHTML == "undefined"){
-                        el.style.display = "none"
+                        el.style.display = "none";
                     }
                 })
         }
+
+
 
         // 정답 확인 
         const answerQuiz = () => {
             const cbtSelects = document.querySelectorAll(".cbt__selects");
             // let remainingCount = 0;
-
+            
             questionAll.forEach((question, number) => {
                 const quizSelectsWrap = cbtSelects[number];
                 const userSelector = `input[name=select${number}]:checked`;
@@ -356,6 +413,7 @@
                 if(numberAnswer == question.answer){
                     console.log("정답")
                     cbtSelects[number].parentElement.classList.add("good")
+                    quizScore++;
                 } else {
                     console.log("오답")
                     cbtSelects[number].parentElement.classList.add("bad")
@@ -364,15 +422,18 @@
                     const label = cbtSelects[number].querySelectorAll("label")
                     label[question.answer-1].classList.add("correct");
                 }
-
+                
                 //설명 숨기기
                 const quizDesc = document.querySelectorAll(".cbt__desc");
-
+                
                 if(quizDesc[number].innerText == "undefined"){
                     quizDesc[number].classList.add("hide")
                 } else {
                     quizDesc[number].classList.remove("hide")
                 }
+
+                document.querySelector(".finish__score").innerHTML = Math.ceil((quizScore/questionAll.length*100)) + "점";
+                
             });
         }
 
@@ -401,7 +462,66 @@
             const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
             cbtRest.innerHTML =questionLength - answerInputs.length;
         }
+
+        // const changeSelect = () => {
+        //     let selectValue = cbtIndex.options[cbtIndex.selectedIndex].value;
+        //     let selectText = cbtIndex.options[cbtIndex.selectedIndex].text;
+
+        //     alert(selectValue)
+        // }
+
+        // const changeSelect2 = () => {
+        //     let selectValue = cbtIndex2.options[cbtIndex2.selectedIndex].value;
+        //     let selectText = cbtIndex2.options[cbtIndex2.selectedIndex].text;
+
+        //     alert(selectValue)
+        // }
+
+        // 문제 선택
+        const changeSelect = (e) => {
+            let selectValue = e.value;
+            let selectText = e.options[cbtIndex.selectedIndex].text;
+
+            cbtViewSubject.innerText = selectText;
+            cbtHeader.innerText = selectText;
+            
+            dataQuestion(selectValue)
+        }
         
+        // 시간 설정
+        const reduceTime = () => {
+            questionTimeRemain--;
+
+            if(questionTimeRemain == 0) endQuiz ();
+
+            cbtTime.innerText = displayTime();
+        }
+
+        //시간 표시
+        const displayTime = () => {
+            if(questionTimeRemain <= 0){
+                return "0분 00초";
+            } else {
+                let minutes = Math.floor(questionTimeRemain / 60)
+                let seconds = questionTimeRemain % 60;
+
+                if(seconds < 10){
+                    return minutes + "분 " +"0"+ seconds + "초"; 
+                }
+
+                return minutes + "분 " + seconds + "초";
+                //초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
+                
+            }
+        }
+
+        //시험 끝
+        const endQuiz = () => {
+            alert("시험이 끝났습니다.")         
+        }
+
+        
+
         // const answerSelect = () => {
         //     const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
         //     const remainingCount = questionAll.length - answeredCount;
@@ -409,9 +529,8 @@
         //     return remainingCount;
         // }
 
-
+        miniBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
-        dataQuestion();
 
 
 
