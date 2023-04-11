@@ -92,14 +92,11 @@
         let sliderCount = slider.length;
         let sliderInterval = 3000;
 
-        setinterval(() => {
-            let nextIndex = (currentIndex + 1) % sliderCount;
+        setInterval(() => {
+            let nextIndec = (currentIndex + 1) % sliderCount;
 
-            slider[currentIndex].style.opacity = "0"
-            slider[nextIndex].style.opacity = "1"
-
-            currentIndex = nextIndex;
-        },sliderInterval)
+            slider[currentIndex]
+        }, sliderInterval);
     </script>
 
 </body>
