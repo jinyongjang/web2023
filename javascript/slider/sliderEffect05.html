@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>04. 슬라이드 이펙트</title>
+    <title>05. 슬라이드 이펙트</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slider.css">
@@ -26,13 +26,13 @@
         .slider__inner {    /* 이미지 움직이는 영역 */
             display: flex;
             flex-wrap: wrap;
-            width: 4800px;      /* 총 이미지 4800px */
-            height: 450px;
+            width: 800px;      
+            height: 2600px;     /* 총 이미지 2600px */
         }
         .slider {   /* 개별적인 이미지 */
             position: relative;
             width: 800px;
-            height: 450px;
+            height: 520px;
         }
         
     </style>
@@ -45,8 +45,8 @@
             <li><a href="sliderEffect01.html">1</a></li>
             <li><a href="sliderEffect02.html">2</a></li>
             <li><a href="sliderEffect03.html">3</a></li>
-            <li class="active"><a href="sliderEffect04.html">4</a></li>
-            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li class="active"><a href="sliderEffect05.html">5</a></li>
             <li><a href="sliderEffect06.html">6</a></li>
         </ul>
     </header>
@@ -82,34 +82,76 @@
         let currentIndex = 0;                                   //현재 보이는 이미지
         let sliderInterval = 3000;           //이미지 변경되는 시간&간격
         let sliderCount = slider.length;                        //전체 이미지 갯수
-        let sliderWidth = slider[0].offsetWidth;                //이미지 가로값  
+        let sliderWidth = slider[0].offsetHeight;                //이미지 세로값  
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);        //첫번째 이미지 복사
 
         //복사한 첫 번째 이미지 마지막에 붙여넣기
-        sliderInner.appendChild(sliderClone);
+        // sliderInner.appendChild(sliderClone);
 
+        // function sliderEffect(){
+        //     currentIndex++;
+
+        //     sliderInner.style.transition = "all 0.6s";
+        //     sliderInner.style.transform = "translateY(-"+ sliderWidth * currentIndex +"px)"
+
+        //     //마지막 이미지에 위치 했을 때
+        //     if(currentIndex == sliderCount){
+        //         setTimeout(() => {
+        //             sliderInner.style.transition = "0s";
+        //             sliderInner.style.transform = "translateY(0px)";
+        //         }, 700);
+        //         currentIndex = 0;
+        //     }
+
+        // }
+        // setInterval(sliderEffect, sliderInterval);    
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // sliderInner.appendChild(sliderClone);
+        // function sliderEffect(){
+        //     currentIndex++;
+
+        //     gsap.to(".slider__inner", {
+        //         y : -(sliderWidth * currentIndex),
+        //         duration : 1,
+        //     });
+
+        //     //마지막 이미지에 위치 했을 때
+        //     if(currentIndex == sliderCount){
+        //         setTimeout(() => {
+        //             sliderInner.style.transition = "0s";
+        //             sliderInner.style.transform = "translateY(0px)";
+        //         }, 700);
+        //         currentIndex = 0;
+        //     }
+        // }
+        // setInterval(sliderEffect, sliderInterval);
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        sliderInner.appendChild(sliderClone);
         function sliderEffect(){
             currentIndex++;
 
-            sliderInner.style.transition = "all 0.6s";
-            sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)"
-
+            $(".slider__inner").css("position", "relative");
+            $(".slider__inner").animate({top : (-sliderWidth * currentIndex)}, 600)
+            
             //마지막 이미지에 위치 했을 때
             if(currentIndex == sliderCount){
-                setTimeout(() => {
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = "translateX(0px)";
-                }, 700);
+                $(sliderInner).css({
+                    "transition" : "0s",
+                    "transform" : "translateY(0px)"
+                });
                 currentIndex = 0;
             }
-
         }
-
         setInterval(sliderEffect, sliderInterval);
-        
-
     </script>
-
-
 </body>
 </html>
