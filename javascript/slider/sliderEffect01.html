@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,18 +18,21 @@
             align-items: center;
             justify-content: center;
         }
+
         .slider__img {
             position: relative;
             width: 800px;
             height: 450px;
             overflow: hidden;
         }
+
         .slider {
             position: absolute;
             left: 0;
             top: 0;
             transition: all 0.3s;
         }
+
         .slider::before {
             position: absolute;
             left: 5px;
@@ -37,18 +41,49 @@
             color: #fff;
             padding: 5px 10px;
         }
-        .slider:nth-child(1)::before {content: '이미지1';}
-        .slider:nth-child(2)::before {content: '이미지2';}
-        .slider:nth-child(3)::before {content: '이미지3';}
-        .slider:nth-child(4)::before {content: '이미지4';}
-        .slider:nth-child(5)::before {content: '이미지5';}
-        .slider:nth-child(1) {z-index: 5;}
-        .slider:nth-child(2) {z-index: 4;}
-        .slider:nth-child(3) {z-index: 3;}
-        .slider:nth-child(4) {z-index: 2;}
-        .slider:nth-child(5) {z-index: 1;}
+
+        .slider:nth-child(1)::before {
+            content: '이미지1';
+        }
+
+        .slider:nth-child(2)::before {
+            content: '이미지2';
+        }
+
+        .slider:nth-child(3)::before {
+            content: '이미지3';
+        }
+
+        .slider:nth-child(4)::before {
+            content: '이미지4';
+        }
+
+        .slider:nth-child(5)::before {
+            content: '이미지5';
+        }
+
+        .slider:nth-child(1) {
+            z-index: 5;
+        }
+
+        .slider:nth-child(2) {
+            z-index: 4;
+        }
+
+        .slider:nth-child(3) {
+            z-index: 3;
+        }
+
+        .slider:nth-child(4) {
+            z-index: 2;
+        }
+
+        .slider:nth-child(5) {
+            z-index: 1;
+        }
     </style>
 </head>
+
 <body class="img01 bg01 font01">
     <header id="header">
         <h1>Javascript Slider Effect01</h1>
@@ -87,7 +122,7 @@
         const sliderWrap = document.querySelector(".slider__wrap");
         const sliderImg = sliderWrap.querySelector(".slider__img");
         const slider = sliderWrap.querySelectorAll(".slider");
-        
+
 
         let currentIndex = 0;               //현재 보이는 이미지
         let sliderCount = slider.length;    //이미지 갯수
@@ -109,20 +144,21 @@
         // slider[0].style.opacity = "0"; //첫번째 이미지를 안보이게            
         // slider[1].style.opacity = "1"; //두번째 이미지를 보이게
 
-        // slider[1].style.opacity = "0"; //두번째 이미지를 안보이게            
+        // slider[1].style.opacity = "0"; //두번째 이미지를 안보이게
         // slider[2].style.opacity = "1"; //세번째 이미지를 보이게
 
-        // slider[2].style.opacity = "0"; //세번째 이미지를 안보이게            
+        // slider[2].style.opacity = "0"; //세번째 이미지를 안보이게
         // slider[3].style.opacity = "1"; //네번째 이미지를 보이게
 
-        // slider[3].style.opacity = "0"; //네번째 이미지를 안보이게            
+        // slider[3].style.opacity = "0"; //네번째 이미지를 안보이게
         // slider[4].style.opacity = "1"; //다섯번째 이미지를 보이게
 
-        // slider[4].style.opacity = "0"; //다섯번째 이미지를 안보이게            
+        // slider[4].style.opacity = "0"; //다섯번째 이미지를 안보이게
         // slider[0].style.opacity = "1"; //첫번째 이미지를 보이게        
     </script>
 
-    
+
 
 </body>
+
 </html>
