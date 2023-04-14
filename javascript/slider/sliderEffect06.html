@@ -77,7 +77,7 @@
         }
     </style>
 </head>
-<body class="img07 bg01 font07">
+<body class="img07 bg01 font09">
     <header id="header">
         <h1>Javascript Slider Effect04</h1>
         <p>슬라이드 이펙트 : 이미지 슬라이드(버튼, 닷메뉴)</p>
@@ -88,6 +88,7 @@
             <li><a href="sliderEffect04.html">4</a></li>
             <li><a href="sliderEffect05.html">5</a></li>
             <li class="active"><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -140,6 +141,14 @@
 
             // 첫 번째 닷 메뉴한테 활성화 표시하기
             sliderDot.firstChild.classList.add("active")
+            
+            //닷 버튼을 클릭 했을 때 이미지 이동
+            let sliderdotNodes = sliderWrap.querySelectorAll(".slider__dot .dot")
+            sliderdotNodes.forEach((el, index) => {
+                sliderdotNodes[index].addEventListener("click", () => {
+                    gotoSlider(index)
+                })
+            })
         }
         init();
 
