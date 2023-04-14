@@ -79,7 +79,7 @@
 </head>
 <body class="img07 bg01 font09">
     <header id="header">
-        <h1>Javascript Slider Effect04</h1>
+        <h1>Javascript Slider Effect06</h1>
         <p>슬라이드 이펙트 : 이미지 슬라이드(버튼, 닷메뉴)</p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li>
@@ -168,6 +168,7 @@
         sliderBtn.forEach((btn, index) => {
             btn.addEventListener("click", () => {
                 let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount;
+                console.log(prevIndex)
                 let nextIndex = (currentIndex + 1) % sliderCount;     //1 2 3 4 0 1 2 3 4
 
 
