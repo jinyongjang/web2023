@@ -13,16 +13,30 @@
             color: #fff;
             margin: 0 auto;
             padding: 50px;
+            position: relative;
+            text-align: center;
         }
         #main .quote {
             padding: 20px;
             text-decoration: underline;
             color: #d5d2d2;
         }
+        .button {
+            display: inline;
+            position: absolute;
+            width: 50px;
+            height: 30px;
+            background-color: red;
+            color: #fff;
+            text-align: center;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="main">
+        <div class="button">stop</div>
         <h1 class="result"></h1>
         <h2 class="quote"></h2>
     </div>
@@ -35,13 +49,30 @@
             .then(result => {
                 let result1 = document.querySelector(".result")
                 let quote1 = document.querySelector(".quote")
+                let stop = document.querySelector(".button")
 
-                setInterval(() => {
+                let Interval = setInterval(() => {
                     number = Math.floor(Math.random()*30 + 1)
                     
                     result1.innerHTML = result.quotes[number].quote
                     quote1.innerHTML = "- " + result.quotes[number].author
                 }, 1000);
+
+
+                stop.addEventListener("click", () => {
+                    if(Interval){
+                        clearInterval(Interval)
+                        Interval = null;
+                    } else {
+                        Interval = setInterval(() => {
+                            number = Math.floor(Math.random()*30 + 1)
+                            
+                            result1.innerHTML = result.quotes[number].quote
+                            quote1.innerHTML = "- " + result.quotes[number].author
+                }, 1000);
+                    }
+                    
+                })
             })
     </script>
 </body>
