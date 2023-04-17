@@ -8,41 +8,11 @@
 </head>
 <body>
     <script>
-        for(let i=1; i<=8; i++){
-            console.log(i)
-        }
+    let a = 10, b = 5;
 
-        for(let i=0; i<=100; i++){
-            if(i % 2 ==0){
-                console.log(i)
-            }
-        }
-        for(let i=0; i<=100; i++){
-            if(i % 4 ==0){
-                console.log(i)
-            }
-        }
-
-        for(let i=8; i<=8; i++){
-            document.write(i + "단","<br>");
-
-            for(let j=1; j<=9; j++){
-                document.write(i + "*" + j + "=" + i*j)
-                document.write("<br>")
-            }
-        }
-        let table = "<table border='1'>";
-            
-            for(let i=1; i<=15; i++){
-                table +="<tr>"
-
-                for(let j=1; j<=15; j++){
-                    table +="<td>" + j + "</td>"
-                }
-            table +="</tr>"    
-            }
-        table += "</table>"
-        document.write(table)
+console.log(a / b * 2);
+console.log(++a * 3);
+console.log(a > b && a != 5);
     </script>
 </body>
 </html>
