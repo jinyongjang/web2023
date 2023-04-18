@@ -81,6 +81,9 @@
                             
                             result1.innerHTML = result.quotes[number].quote
                             quote1.innerHTML = "- " + result.quotes[number].author
+
+                            const unsplashUrl = `https://source.unsplash.com/random/?na&t=${Date.now()}`;
+                            main1.style.backgroundImage =`url('${unsplashUrl}')`;
                 }, 3000);
                     };
                     
