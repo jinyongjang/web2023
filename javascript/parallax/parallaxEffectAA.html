@@ -92,6 +92,27 @@
             text-align: center;
             font-size: 5vh;
         }
+        .s3-text {
+            width: 50vw;
+            height: 10vh;
+            text-align: center;
+            font-size: 7vh;
+            color: black;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .s3-text:hover {
+            color: transparent;
+            transition: 500ms ease;
+        }
+        .s3-img {
+            width: 100%;
+            height: 60vh;
+            background-size: cover;
+            border: 1vw solid;
+            border-radius: 1vw;
+        }
         .box {
             width: 500px;
             aspect-ratio: 1;
@@ -271,8 +292,18 @@
 
         <div class="box fixed"
             data-7500="width: 20vw; opacity: 0; transform:  translate(-50%, -50%) rotate(0deg);"
-            data-10000="width: 70vw; opacity: 1; transform: translate(-50%, -50%) rotate(360deg) ;"
-            data-13000="width: 70vw; opacity: 0; transform: translate(-50%, -50%) rotate(720deg) ;"
+            data-10000="width: 70vw; opacity: 1; transform: translate(-50%, -50%) rotate(360deg);"
+            data-13000="width: 70vw; opacity: 0; transform: translate(-50%, -50%) rotate(720deg);"
+        ></div>
+        <div class="s3-text fixed"
+            data-12500="width: 200vw; opacity: 0"
+            data-13500="width: 40vw; opacity: 1; transform: translate(-50%, -50%)"
+            data-14500="width: 500vw; opacity: 1; transform: translate(-50%, -470%)"
+        >hope you enjoyed my parallax website!</div>
+
+        <div class="s3-img fixed"
+            data-13800="width: 40vw; opacity: 0; transform:  translate(-50%, -50%) rotate(0deg); background-image: url(img/academy.jpg)"
+            data-15500="width: 40vw; opacity: 1; transform: translate(-50%, -50%) rotate(360deg); background-image: url(img/academy.jpg)"
         ></div>
 
 
