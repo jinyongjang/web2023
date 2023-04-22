@@ -128,7 +128,7 @@
             }
 
             // 해설 숨기기
-            quizDesc.style.display = "block"
+            quizDesc.style.display = "none"
             
         }
         updateQuiz();
@@ -139,16 +139,19 @@
             for(let i=0; i<quizChoice.length; i++){
                 if(quizSelect[i].checked == true){      // 사용자가 보기를 체크한 상태
                     if(quizSelect[i].value == quizInfo[0].infoAnswer){
+                        dogWrap.classList.remove("dislike");
                         dogWrap.classList.add("like");
+                        quizAnswer.style.display = "none";
                     } else {
+                        dogWrap.classList.remove("like");
                         dogWrap.classList.add("dislike");
                     }
                 } 
             }
             // 해설 보이기
             quizDesc.style.display = "block"
-            // 정답 버튼 숨기기
-            quizConfirm.style.display ="none"
+            // 정답 숨기기
+            // quizConfirm.style.display ="none"
         }
         // 정답 클릭
         quizConfirm.addEventListener("click", answerQuiz);

@@ -154,7 +154,6 @@
         
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        // const quizNumcount = document.querySelector(".quiz__main h4");
         const quizTitle = quizWrap.querySelector(".quiz__title");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
@@ -165,9 +164,7 @@
         const quizDesc = quizWrap.querySelector(".quiz__desc")
 
         let quizCount = 0;      // 퀴즈 번호
-        let quizScore = 0;      // 현재 점수
-        
-        
+        let quizScore = 0;      // 현재 점수        
         
         // 문제 출력
         const updateQuiz1 = (index, number) => {
@@ -202,16 +199,11 @@
                 정답은 ${quizInfo[index].infoAnswer}입니다.<br>
                 ${quizInfo[index].infoDesc}
             `;
-            // let countTag = `
-            //     총 ${quizInfo.length-[index]}문제 남았습니다.
-            // `;
-
 
             quizTitle.innerHTML = typeTag;
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
-            // quizNumcount.innerHTML = countTag;
 
             let quizLength = quizInfo.length - quizCount;
             dogWrapCount.innerHTML = "총 "+ quizInfo.length + "문제 중에 "+(quizLength-1)+"문제 남았습니다.";
@@ -220,10 +212,12 @@
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
             const quizChoiceInput= quizWrap.querySelectorAll(".quiz__choice input");
             
+            // forEach문
             // quizChoiceSpan.forEach((span, num) => {
             //     span.setAttribute("onclick", "choiceSelected(this)");
             // })
 
+            // for문
             for(let i=0; i<quizChoiceSpan.length; i++){
                 quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
                 // quizChoiceInput[i].disabled = "true";
@@ -233,12 +227,7 @@
             quizAnswer.style.display = "none";
             quizDesc.style.display = "none";
 
-            // 총 문제
-            
-            // 정답 확인 갯수
-            
         };
-
         updateQuiz1(quizCount);
 
         // 객관식 선택
@@ -276,17 +265,13 @@
             // }
         }
 
-        
-
         // 정답 확인
         quizNext.addEventListener("click", () => {
             quizCount++;
             updateQuiz1(quizCount);
 
             dogWrap.classList.remove("like", "dislike");
-
-        });
-        
+        });        
     </script>
 </body>
 </html>

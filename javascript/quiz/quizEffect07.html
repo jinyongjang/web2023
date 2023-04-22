@@ -18,7 +18,7 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 CBT 유형</em></h1>
+        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인 CBT 유형</em></h1>
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li><a href="quizEffect02.html">2</a></li>
@@ -29,7 +29,6 @@
             <li><a href="quizEffect06.html">6</a></li>
             <li class="active"><a href="quizEffect07.html">7</a></li>
             <li><a href="quizEffect07-1.html">7-1</a></li>
-
         </ul>
     </header>
     <!-- //header -->
@@ -37,12 +36,11 @@
     <main id="main">
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
-                <h2>2020년 1회 정보처리기능사 기출문제</h2>
-                
+                <h2>2020년 1회 정보처리기능사 기출문제</h2>           
             </div>
             <div class="cbt__conts">
                 <div class="cbt__quiz">
-                    <div class="cbt good">
+                    <!-- <div class="cbt good">
                         <div class="cbt__question"><span>1. </span>객체지향 프로그램에서 데이터를 추상화하는 단위는 ?</div>
                         <div class="cbt__question__img"><img src="img/gineungsaJC2023_01_01.jpg" alt="기능사"></div>
                         <div class="cbt__selects">
@@ -73,7 +71,7 @@
                         </div>
                         <div class="cbt__desc">객체지향 언어는 ___입니다.</div>
                         <div class="cbt__keyword">객체지향언어</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- cbt__conts -->
@@ -111,9 +109,7 @@
                 </div>
                 <!-- cbt__omr -->
             </div>
-            <!-- cbt__aside -->
-            
-            
+            <!-- cbt__aside -->         
             <div>
                 <div class="cbt__time">59분 10초</div>
                 <div class="cbt__submit">제출하기</div>
@@ -174,7 +170,7 @@
                         </select>
                     </div>
                     <div class="cbt__view">
-                        당신의 이름은 <input type="text" class="name"> 입니다.<br>
+                        당신의 이름은 <input type="text" class="name"  autofocus placeholder="이름을 적어주세요"> 입니다.<br>
                         당신은 <span class="subject">웹디자인 기능사 시험</span>을 선택했습니다<div class=""></div>
                     </div>
                     <button class="minimal">시작하기</button>                    
@@ -182,14 +178,9 @@
             </div>
         </div>
         <!-- quiz__wrap__cbt -->
-
     </main>
     <!-- //main -->
 
-    <!-- <footer id="footer">
-        <a href="mailto:ebmdols@naver.com">ebmdols@naver.com</a>
-    </footer> -->
-    <!-- //footer -->
     <script>
 
     const cbt = document.querySelectorAll(".cbt")
@@ -203,27 +194,20 @@
     const cbtHeader = document.querySelector(".cbt__header h2")
     const miniBtn = document.querySelector(".minimal")
     const cbtTime = document.querySelector(".cbt__time")
-
-
     const cbtStart = document.querySelector(".cbt__start");
-
     const cbtName = document.querySelector(".cbt__name")
     const cbtViewName = document.querySelector(".cbt__view input")
     
-    
-
-    
     miniBtn.addEventListener("click",() => {
-        cbtStart.style.display= "none";
-        
-    })
+        cbtStart.style.display= "none";    
+    });
         
         let quizScore = 0;
-        let questionAll = [];                    // 모든 퀴즈 정보
+        let questionAll = [];                   //모든 퀴즈 정보
         let questionLength = 0;                 //전체 문제수
         let questionRest = questionLength;      //남은 문제수
-        let questionTime = "";
-        let questionTimeRemain = "1000";
+        let questionTime = "";                  //시간
+        let questionTimeRemain = "1000";        //남은 시간
 
         // 시작하기
         const startQuiz = () => {
@@ -238,15 +222,11 @@
 
         }
 
-
-
         //데이터 가져오기
         const dataQuestion = (value) => {    
             fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`)
             .then(res => res.json())
-            .then(items => {
-
-                
+            .then(items => {            
                 questionAll = items.map((item, index) => {
                     const formattedQuestion ={
                         question: item.question,
@@ -276,7 +256,6 @@
 
                     return formattedQuestion;
                 });
-
                 newQuestion();      //문제 만들기
 
                 //전체 문제수
@@ -294,12 +273,10 @@
         //         ${cbtQuiz.length}문제중에 ${cbtQuiz.length - index}문제 남았습니다 
         //     `;
         // }
-
         const newQuestion = () => {
             const exam =[];
             const omr =[];
             
-
             questionAll.forEach((question, number) => {
                 exam.push(`
                     <div class="cbt">
@@ -333,14 +310,10 @@
                         <label for="omr${number}_4"><span class="label-inner">4</span></label>
                     </div>
                 `)
-                
-                
-
             });
 
             cbtQuiz.innerHTML=exam.join('');
             cbtOmr.innerHTML=omr.join('');
-
 
             //설명 없는거 제거
             document.querySelectorAll(".cbt__question__desc").forEach(desc => {
@@ -358,13 +331,9 @@
                 }
             })
 
-
-
-
             // 문제 설명 숨기기
             
             const cbtQuestionDesc = document.querySelectorAll(".cbt__question__desc")
-
                 cbtQuestionDesc.forEach(function(el){
                     if(el.innerHTML == "undefined"){
                         el.style.display = "none";
@@ -453,7 +422,7 @@
         //     alert(selectValue)
         // }
 
-        // 문제 선택
+        // 문제 선택(this)
         const changeSelect = (e) => {
             let selectValue = e.value;
             let selectText = e.options[cbtIndex.selectedIndex].text;
@@ -468,7 +437,7 @@
         const reduceTime = () => {
             questionTimeRemain--;
 
-            if(questionTimeRemain == 0) endQuiz ();
+            if(questionTimeRemain == 0) endQuiz();
 
             cbtTime.innerText = displayTime();
         }
@@ -495,9 +464,6 @@
         const endQuiz = () => {
             alert("시험이 끝났습니다.")         
         }
-
-        
-
         // const answerSelect = () => {
         //     const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
         //     const remainingCount = questionAll.length - answeredCount;
@@ -507,11 +473,7 @@
 
         miniBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
-
-
-
-
-    
+  
     </script>
 </body>
 </html>

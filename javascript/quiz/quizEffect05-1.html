@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트06</title>
+    <title>퀴즈 이펙트05-1</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
@@ -19,7 +19,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect05-1.html">5-1</a></li>
-            <li><a href="quizEffect06.html">웹디자인 기출</a></li>
+            <li><a href="quizEffect06.html">6</a></li>
             <li><a href="quizEffect07.html">7</a></li>
         </ul>
     </header>
@@ -985,7 +985,7 @@
             document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block"); 
 
             // 설명 보이기 
-            document.querySelectorAll("quiz__desc").forEach(el => el.style.display = "block");
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
 
             // 점수 보이기
             document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length*100)) + "점";
