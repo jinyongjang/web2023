@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <title>GAME Effect</title>
 
     <link rel="stylesheet" href="css/bg.css">
-    <link rel="stylesheet" href="css/resset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/music.css">
 </head>
 <body>
     <div class="cursor">
@@ -38,6 +40,51 @@
                 <span>뮤직 듣기</span>
             </div>
         </div>
+
+        <!-- //뮤직 플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>JIN's recommanded music</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/music_view01.png" alt="음악">
+                        </div>                       
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <p>노래 작가 이름</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/Jane Street - TrackTribe.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:55</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체 반복</span>
+                            <span>이전곡 재상</span>
+                            <span>재생</span>
+                            <span>다음곡 재생</span>
+                            <span>재생 목록</span>
+                            <!-- <span>한곡 반복</span>
+                            <span>랜덤 반복</span>
+                            <span>정지</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer"></div>
+            </div>
+        </div>
+        <!-- //뮤직 플레이어 -->
     </main>
 
     <footer id="footer">
@@ -47,6 +94,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/music.js"></script>
     <script>
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
@@ -128,19 +176,18 @@
             let nowSeconds = now.getSeconds();
             if (nowSeconds < 10) nowSeconds = `0${nowSeconds}`;
 
-            const nowTime = now.getFullYear() + "년 " + (now.getMonth()+1) + "월 " + nowDate + "일 "+ nowHours +"시 "+ nowMinutes +"분 "+ nowSeconds +"초";
+            const nowTime = now.getFullYear() + "년 " + (now.getMonth()+1) + "월 " + nowDate + "일 "+ nowHours +"시 "+ nowMinutes +"분 ";
             clock.innerText = nowTime;            
             setTimeout("printTime()", 1000);
         }
         printTime();        // 오른쪽 상단 시간
-        
-
-        let os = navigator.userAgent.toLowerCase();
-        let sw = screen.width;
-        let sh = screen.height;
-        let info = document.querySelector("#footer .info");
 
         function printAgent(){
+            let os = navigator.userAgent.toLowerCase();
+            let sw = screen.width;
+            let sh = screen.height;
+            let info = document.querySelector("#footer .info");
+
             if (os.indexOf("windows") >= 0) {
                 info.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
             } else if (os.indexOf("macintosh") >= 0) {

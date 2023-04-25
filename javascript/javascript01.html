@@ -12,6 +12,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
 </head>
+<style>
+
+    .goupbtn {
+    top: 60%;
+    left: 80%;
+    width: 50px;
+    height: 50px;
+    border-radius: 80%;
+    background-color: #ffffff;
+    border: red 3px solid;
+    position: fixed;
+    z-index: 2;
+    }
+</style>
 <body>
     <header id="header">
         <h1><a href="index.html">javascript</a></h1>
@@ -73,6 +87,9 @@
                     <li>형변화, typeof() 자바스크립트 2번에</li>
                 </ul> -->
             </div>
+            <div class="border1"></div>
+            <div class="border2"></div>
+            <input class="goupbtn" type="button" value="Top" onclick="clickme()"></div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
                     <h3>01. 변수 : 데이터 저장</h3>
@@ -846,248 +863,9 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        // 상수 
-        //const x = 100, y = 200, z = “javascript”;   //숫자,문자,블린(논리),undefined,null(값이 없는것),객체,배열,심벌 --> 자료형(typeof)
-        //let x = 100;
-        //let y = 200;
-        //let z = “javascript”;
-        //x -= 1000;      // 100 - 1000 = -900
-        //x += 1000;      // -900 + 1000 = 100
-        //console.log(x, y, z);
-
-        // 배열 : 데이터 저장(여러개)
-        // const brr = new Array();
-        // const crr = new Array(200, "react", false); 
-        // const drr = [];
-        // const err = [300, "arrat", true];
-
-        // brr[0] = 100;
-        // brr[1] = "javascrtipt";
-        // brr[2] = true;
-        // drr[0] = 100;
-        // drr[1] = "javascrtipt";
-        // drr[2] = true;
-
-        // console.log(brr[0], brr[1], brr[2]);
-        // console.log(crr[0], crr[1], crr[2]);
-        // console.log(drr[0], drr[1], drr[2]);
-        // console.log(err[0], err[1], err[2]);
-
-        // 객체 : 데이터 저장(키와 값): 표현방법13
-        // 객체는 배열 방식을 그대로 사용할 수 있다.
-        // {
-        //     const obj = new Object();
-
-        //     obj[0] = 100;
-        //     obj[1] = 200;
-        //     obj[2] = "javascript";
-
-        //     console.log(obj[0]);
-        //     console.log(obj[1]);
-        //     console.log(obj[2]);
-        // }
-
-        // // 객체 : 데이터 저장(키와 값): 표현방법14
-        // {
-        //     const obj = new Object();
-
-        //     obj.a = 100;
-        //     obj.b = 200;
-        //     obj.c = "javascript";
-
-        //     console.log(obj.a);
-        //     console.log(obj.b);
-        //     console.log(obj.c);
-        // }
-        // // 객체 : 데이터 저장(키와 값): 표현방법15
-        // {
-        //     const obj = {};
-
-        //     obj.a = 100;
-        //     obj.b = 200;
-        //     obj.c = "javascript";
-
-        //     console.log(obj.a);
-        //     console.log(obj.b);
-        //     console.log(obj.c);
-        // }
-        // // 객체 : 데이터 저장(키와 값): 표현방법16
-        // {
-        //     const obj = {a:100, b:200, c:"javascript"};
-
-        //     console.log(obj.a);
-        //     console.log(obj.b);
-        //     console.log(obj.c);
-        // }
-        // // 객체 : 데이터 저장(키와 값): 표현방법17 : 배열 안에 객체
-        // {
-        //     const obj = [
-        //         {a:100, b:200},
-        //         {c:"javascript"}
-        //     ];
-
-        //     console.log(obj[0].a);
-        //     console.log(obj[0].b);
-        //     console.log(obj[1].c);
-        // }
-        // // 객체 : 데이터 저장(키와 값): 표현방법18 : 객체 안에 배열
-        // {
-        //     const obj = {
-        //         a: 100,
-        //         b: [200, 300],
-        //         c: {x: 400, y: 500},
-        //         d: "javascript"
-        //     }
-
-        //     console.log(obj.a);
-        //     console.log(obj.b[0]);
-        //     console.log(obj.b[1]);
-        //     console.log(obj.c.x);
-        //     console.log(obj.c.y);
-        //     console.log(obj.d);
-
-        //     //100
-        //     //200
-        //     //300
-        //     //400
-        //     //500
-        //     //javascript
-
-            
-        // }
-        // // 객체 : 데이터 저장(키와 값): 표현방법19
-        // {
-        //     const a = 100;
-        //     const b = 200;
-        //     const c = "javascript";
-            
-        //     const obj = {a, b, c};
-
-        //     console.log(a);
-        //     console.log(b);
-        //     console.log(c);
-        // }
-        // // 객체 : 데이터 저장(키와 값): 표현방법20
-        // {
-        //     const j = "javascript";
-            
-        //     const obj = {
-        //         a: 100,
-        //         b: [200,300],
-        //         c: "javascript",
-        //         d: function(){
-        //             console.log("javascript가 실행되었습니다.");
-        //         },
-        //         e: function() {
-        //             console.log(obj.c + "가 실행되었습니다.");
-        //             // console.log(j + "가 실행되었습니다.")
-        //         },
-        //         f: function(){
-        //             console.log(this.c + "가 실행되었습니다.");    //this 자기 자신을 표현하지만 여러가지 표현도 가능
-        //         }
-        //     }
-
-        //     console.log(obj.a);
-        //     console.log(obj.b[0]);
-        //     console.log(obj.b[1]);
-        //     // console.log(obj.b[2]); //undifined
-        //     console.log(obj.c); 
-        //     // console.log(obj.d); //(x)
-        //     obj.d();
-        //     obj.e();
-        //     obj.f(); 
-
-        // }
-
-        // 변수 : 저장문
-        // 상수 : 저장문
-        // 배열 : 저장문
-        // 객체 : 저장문
-        // 함수 : 실행문
-
-        // 연산자(전치, 후치)
-        // var score = 10;
-        // // ++score;    //11
-        // // score++;    //12
-        // var result = ++score;   //11
-        // var result = score++;   //result 10 score 11
-
-        // console.log(result, score); 
-
-        //예시
-        // let hap, j, k, l;
-        // j = k = l = 1;
-        // hap = ++j + k++ + ++l;
-
-        // console.log(hap);    //5
-        // console.log(j);      //2
-        // console.log(k);      //2
-        // console.log(l);      //2
-
-
-        // let sum = 0;
-        // for(let i=0; i<10; i++){    
-        //     sum += i
-        // }
-        // for(let i=10; i>0; i--){    //위의 식과 같음
-        //     sum += i
-        // }
-
-        // 예시
-        // let a=1, b=2, c=3, result;
-        // result = ++a + b++ + ++c;
-
-        // console.log(result);
-        // console.log(a);
-        // console.log(b);
-        // console.log(c);
-
-        // 예시
-        // let x=7, y=7, result;
-
-        // result = x > y ? ++x : y--;         //x가 실행이 안됨 false이므로 y만 실행
-
-        // console.log(result);
-        // console.log(x);
-        // console.log(y);
-
-        // let a, b, c, result;
-        // a = 20, b=30, c=30
-
-        // result = a < b ? b++ : --c;
-
-        // console.log(result);    //30
-        // console.log(a);         //20
-        // console.log(b + c);     //61
-        // console.log(c);         //30
-
-        // 여기까지 연산자 전치 후치
-
-        //04. 변수 : 지역변수 + 전역변수(스코프)
-        // let x = 100;    //전역 변수
-        // let y = 200;    //전역 변수
-
-        // function func(){     
-        //     let x = 300;        //지역 변수     x앞에 let이 없으면 전역변수로 변경
-        //     let y = 400;        //지역 변수
-        //     z = "javascript";   //전역 변수로 취급 string모드 선언하면 에러
-
-        //     console.log("함수 안"+x);       //함수 안의 x값은 지역변수이기 때문에 사용가능
-        //     console.log("함수 안"+y);
-        //     console.log("함수 안"+z);
-        // }
-        // func();
-
-        // console.log("함수 밖"+x);
-        // console.log("함수 밖"+y);
-        // console.log("함수 밖"+z);
-                // let x = 100, y = 200, z = "javascript";   //숫자,문자,블린(논리),undefined,null(값이 없는것),객체,배열,심벌 --> 자료형(typeof)
-    let x = 100;
-    let y = 200;
-    let z = “javascript”;
-    x -= 1000;      // 100 - 1000 = -900
-    x += 1000;      // -900 + 1000 = 100
-    console.log(x, y, z);
+        function clickme() {
+  window.scrollTo({top:0, left:0, behavior:'smooth'});
+}
     </script>
 </body>
 </html>
