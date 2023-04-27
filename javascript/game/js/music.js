@@ -111,7 +111,6 @@ const nextMusic = () =>{
 
 // 뮤직 진행 바
 musicAudio.addEventListener("timeupdate", e => {
-    console.log(e);
     const currentTime = e.target.currentTime;   // 현재 재생 되는 시간
     const duration = e.target.duration;     // 오디오의 총 길이
     let progressWidth = (currentTime/duration) * 100;                   // 전체 길이에서 현재 진행되는 시간을 백분위 단위로 나누면 몇 퍼센트인지 알 수 있다. 
