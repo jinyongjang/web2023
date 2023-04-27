@@ -1,23 +1,249 @@
-html,body {
-    padding: 0;
-    margin: 0;
-    position: relative;
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://www.wallpaperflare.com/static/842/564/890/night-city-5-centimeters-per-second-anime-wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+/* .drips {
+  height: 100vh;
+  background: url('https://png2.kisspng.com/sh/9b0a342fc4f8432beac686c42c540162/L0KzQYm3U8IzN5Dsj5H0aYP2gLBuTgJicZ8yfNHCbnzycbW0hPl0eJ1mkZ97ZYPyfMb7if9vNZRxgeI2YYL3PcPoif4uPZJnTKhuMHXldoG6UMQvPmg7S6IEMEm0RYO4V8c1OGo5T6o7ND7zfri=/kisspng-rain-download-display-resolution-clip-art-rain-5ab46e0ebf0304.6763090915217740947824.png');
+opacity: 0.3;
+animation: fall .3s linear infinite;   
+}
+
+.drips:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: lightning 1.7s linear infinite;
+  opacity: 0;
+}
+
+@keyframes fall {
+  0% {
+    background-position: 20% 100%;
   }
-  div {
-    display: block;
-    position: relative;
+  100% {
+    background-position: 0% 0%;
   }
-  svg {
-    max-width: 100%;
+}
+
+@keyframes lightning {
+  0% {
+    opacity: 0;
   }
-  a {
-    position: fixed;
-    top: 2em;
-    left: 2em;
-    z-index: 99999;
-    text-decoration: none;
-    color: #FFF;
-    padding: .5em;
-    font-family: arial;
-    border: 2px solid #FFF;
+  10% {
+    opacity: 0;
   }
+  11% {
+    opacity: 0;
+  }
+  
+  14% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 0;
+  }
+    
+  26% {
+    opacity: 0;
+  }
+    
+  24% {
+    opacity: 0;
+  }  
+  
+  26% {
+    opacity: 0;
+  }
+    
+  29% {
+    opacity: 0;
+  }
+    
+  34% {
+    opacity: 0;
+  }  
+  38% {
+    opacity: 0;
+  }   
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+.rain {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+}
+
+.rain.back-row {
+  display: none;
+  z-index: 1;
+  bottom: 60px;
+  opacity: 0.5;
+}
+
+body.back-row-toggle .rain.back-row {
+  display: block;
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 15px;
+  height: 120px;
+  pointer-events: none;
+  animation: drop 0.5s linear infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  75% {
+    transform: translateY(90vh);
+  }
+  100% {
+    transform: translateY(90vh);
+  }
+}
+
+.stem {
+  width: 1px;
+  height: 60%;
+  margin-left: 7px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+  animation: stem 0.5s linear infinite;
+}
+
+@keyframes stem {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.splat {
+  width: 15px;
+  height: 10px;
+  border-top: 2px dotted rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
+  animation: splat 0.5s linear infinite;
+  display: none;
+}
+
+body.splat-toggle .splat {
+  display: block;
+}
+
+@keyframes splat {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.toggles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.toggle {
+  position: absolute;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 51px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.toggle:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toggle.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.splat-toggle {
+  top: 20px;
+}
+
+.back-row-toggle {
+  top: 90px;
+  line-height: 12px;
+  padding-top: 14px;
+}
+
+.single-toggle {
+  top: 160px;
+}
+
+body.single-toggle .drop {
+  display: none;
+}
+
+body.single-toggle .drop:nth-child(10) {
+  display: block;
+}
