@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            height: 650px;
+            display: flex;
+        }
+        #aside {
+            width: 200px;
+            height: 650px;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #f2aaaa;
+        }
+        #aside nav {
+            width: 100%;
+            height: 550px;
+            background-color: #f45656;
+        }
+        #main {
+            width: 100%;
+            height: 650px;
+            background-color: #e2dc64;
+        }
+        .section {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            position: relative;
+        }
+        .slide {
+            width: calc(100% - 230px);
+            height: 400px;
+            background-color: #f74747;
+        }
+        .banner {
+            width: 230px;
+            height: 400px;
+            background-color: #db7676;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .notice {
+            width: 100%;
+            height: 250px;
+            background-color: #d88a8a;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        .logo {
+            width: 200px;
+            height: 100px;
+            background-color: #d0f8ff;
+        }
+        .copy {
+            width: calc(100% - 200px);
+            height: 100px;
+            background-color: #6ee6fb;
+        }
+        .fam {
+            width: 200px;
+            height: 100px;
+            background-color: #18dcff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <section class="section">
+                <div class="slide"></div>
+                <div class="banner"></div>
+            </section>
+            <div class="notice"></div>
+        </main>
+    </div>  
+    <footer id="footer">
+        <div class="logo"></div>
+        <div class="copy"></div>
+        <div class="fam"></div>
+    </footer>
+</body>
+</html>

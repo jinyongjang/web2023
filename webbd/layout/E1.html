@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            display: flex;
+        }
+        .aside {
+            width: 200px;
+            height: calc(100vh - 120px);
+        }
+        .aside h1 {
+            width: 100%;
+            height: 10%;
+            background-color: #ffcdcd;
+        }
+        .aside nav {
+            width: 100%;
+            height: 90%;
+            background-color: #fc9191;
+        }
+        .main {
+            width: 400px;
+            height: calc(100vh - 120px);
+        }
+        .banner {
+            width: 100%;
+            height: 15%;
+            background-color: #be9292;
+        }
+        .notice {
+            width: 100%;
+            height: 35%;
+            background-color: #c23d3d;
+        }
+        .gal {
+            width: 100%;
+            height: 35%;
+            background-color: #be1010;
+        }
+        .link {
+            width: 100%;
+            height: 15%;
+            background-color: #c06d6d;
+        }
+        .slide {
+            width: calc(100% - 600px);
+            height: calc(100vh - 120px);
+            background-color: #944747;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        .logo {
+            width: 200px;
+            height: 100px;
+            background-color: #864747;
+        }
+        .logoright {
+            width: calc(100% - 200px);
+            height: 100px;
+        }
+        .menu {
+            width: 100%;
+            height: 50px;
+            background-color: #ecbbbb;
+        }
+        .copy {
+            width: 100%;
+            height: 50px;
+            background-color: #993131;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside class="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main class="main">
+            <div class="banner"></div>
+            <div class="notice"></div>
+            <div class="gal"></div>
+            <div class="link"></div>
+        </main>
+        <section class="slide"></section>
+    </div>
+    <footer id="footer">
+        <div class="logo"></div>
+        <div class="logoright">
+            <div class="menu"></div>
+            <div class="copy"></div>
+        </div>
+    </footer>
+</body>
+</html>

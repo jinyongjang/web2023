@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #9e9b9b;
+        }
+        img {
+            vertical-align: top;
+        }
+        .slider__img {  
+            position: relative; 
+            height: 300px;
+            overflow: hidden;
+        }
+        .slider__inner{  
+            display: flex;
+            flex-wrap: wrap;
+            height: 900px;
+        }
+        .slider { 
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider__img">
+        <div class="slider__inner">
+            <div class="slider"><img src="img/Rectangle 6.png" alt="img1"></div>
+            <div class="slider"><img src="img/Rectangle 7.png" alt="img2"></div>
+            <div class="slider"><img src="img/Rectangle 8.png" alt="img3"></div>
+        </div>
+    </div>
+
+    <script>
+        const sliderImg = document.querySelector(".slider__img");     
+        const sliderInner = document.querySelector(".slider__inner"); 
+        const slider = document.querySelectorAll(".slider");          
+
+        let currentIndex = 0;             
+        let sliderCount = slider.length;    
+        let sliderInterval = 3000;          
+
+        sliderInner.style.transition = "all 0.6s"
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount;   
+
+            sliderInner.style.transform = "translateY("+ -300 * currentIndex + "px)";
+        }, sliderInterval);
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background-color: #fcef5d;
+        }
+        .slide {
+            height: 300px;
+            background-color: #3eff20;
+        }
+        .contents {
+            width: 100%;
+            height: 300px;
+            display: flex;
+        }
+        .contents .notice {
+            width: 33.3%;
+            background-color: #608d55;
+        }
+        .contents .banner {
+            width: 33.3%;
+            background-color: #5ac2ff;
+        }
+        .contents .quick {
+            width: 33.3%;
+            background-color: #308394;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        #footer .logo1 {
+            width: 80%;
+            background-color: #3680a2;
+        }
+        #footer .copy {
+            width: 20%;
+            background-color: #a2ad4a;
+        }
+        #footer .copy .menu {
+            height: 50px;
+            background-color: #ff9292;
+        }
+        #footer .copy .copyright {
+            height: 50px;
+            background-color: #564a4a;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">로고</div>
+        </header>
+        <div class="slide"></div>
+        <div class="contents">
+            <div class="notice"></div>
+            <div class="banner"></div>
+            <div class="quick"></div>
+        </div>
+        <footer id="footer">
+            <div class="logo1"></div>
+            <div class="copy">
+                <div class="menu"></div>
+                <div class="copyright"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01. 슬라이드 이펙트</title>
+    <title>03. 슬라이드 이펙트</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slider.css">
@@ -38,7 +38,7 @@
 </head>
 <body class="img01 bg01 font01">
     <header id="header">
-        <h1>Javascript Slider Effect01</h1>
+        <h1>Javascript Slider Effect03</h1>
         <p>슬라이드 이펙트 : 위/아래로 움직이기</p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li>
@@ -87,12 +87,12 @@
 
     <!-- javascript -->
     <script>
-        sliderInner.style.transform = translateX("-0px");
-        sliderInner.style.transform = translateX("-800px");
-        sliderInner.style.transform = translateX("-1600px");
-        sliderInner.style.transform = translateX("-2400px");
-        sliderInner.style.transform = translateX("-3200px");
-        sliderInner.style.transform = translateX("-0px");
+        sliderInner.style.transform = `translateX(${-0}px)`;
+        sliderInner.style.transform = `translateX(${-800}px)`;
+        sliderInner.style.transform = `translateX(${-1600}px)`;
+        sliderInner.style.transform = `translateX(${-2400}px)`;
+        sliderInner.style.transform = `translateX(${-3200}px)`;
+        sliderInner.style.transform = `translateX(${-0}px)`;
         
         //트랜지션 설정
         sliderInner.style.transition = "all 0.6s"

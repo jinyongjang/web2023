@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background-color: #c92121;
+        }
+        .slide {
+            height: 300px;
+            background-color: #6cc064;
+        }
+        .contents {
+            width: 100%;
+            height: 300px;
+            display: flex;
+        }
+        .contents .notice {
+            width: 33.3%;
+            background-color: #067a7a;
+        }
+        .contents .banner {
+            width: 33.3%;
+            background-color: #6bbcb7;
+        }
+        .contents .quick {
+            width: 33.3%;
+            background-color: #9cecd4;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        #footer .logo1 {
+            width: 20%;
+            background-color: #bdc98e;
+        }
+        #footer .copy {
+            width: 80%;
+        }
+        #footer .copy .menu {
+            height: 50px;
+            background-color: #cd3e3e;
+        }
+        #footer .copy .copyright {
+            height: 50px;
+            background-color: #dd8765;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"></div>
+        </header>
+        <div class="slide"></div>
+        <div class="contents">
+            <div class="notice"></div>
+            <div class="banner"></div>
+            <div class="quick"></div>
+        </div>
+        <footer id="footer">
+            <div class="logo1"></div>
+            <div class="copy">
+                <div class="menu"></div>
+                <div class="copyright"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

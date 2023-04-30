@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            height: 800px;
+            display: flex;
+        }
+        #aside {
+            width: 200px;
+            height: 100%;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 20%;
+            background-color: #f0cef1;
+        }
+        #aside nav {
+            width: 100%;
+            height: 80%;
+            background-color: #ce8af3;
+        }
+        #main {
+            width: 400px;
+            height: 100%;
+        }
+        .banner {
+            width: 100%;
+            height: 20%;
+            background-color: #e26af7;
+        }
+        .notice {
+            width: 100%;
+            height: 40%;
+            background-color: #a328a1;
+        }
+        .gal {
+            width: 100%;
+            height: 40%;
+            background-color: #a806fa;
+        }
+        #section {
+            width: calc(100% - 600px);
+            height: 100%;
+            background-color: #630a93;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        .logo {
+            width: 200px;
+            height: 100px;
+            background-color: #8255c3;
+        }
+        .copy {
+            width: calc(100% - 400px);
+            height: 100px;
+            background-color: #c66ee3;
+        }
+        .sns {
+            width: 200px;
+            height: 100px;
+            background-color: #d900ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <div class="banner"></div>
+            <div class="notice"></div>
+            <div class="gal"></div>
+        </main>
+        <div id="section"></div>
+    </div>
+    <footer id="footer">
+        <div class="logo"></div>
+        <div class="copy"></div>
+        <div class="sns"></div>
+    </footer>
+</body>
+</html>
