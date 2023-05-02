@@ -21,7 +21,10 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 <body>
     <div id="skip">
@@ -36,8 +39,23 @@
     </div>
     <!-- skip -->
 
-    <header id="headerType">
-        <h1></h1>
+    <header class="header__wrap nexon">
+        <div class="header__inner">
+            <h1 class="header__logo">Dessert fox</h1>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">사막여우의 특징</a></li>
+                    <li><a href="#">사막여우의 생활</a></li>
+                    <li><a href="#">사막여우를 키우는 방법</a></li>
+                    <li><a href="#">문화</a></li>
+                    <li><a href="#">전설</a></li>
+                    <li><a href="#">연락처</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+        </div>
     </header>
     <!-- headerType -->
 
@@ -45,7 +63,58 @@
         <section id="sliderType" class="nexon">
             <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">사막여우를 알아가는 사이트</h3>
+                                    <p class="desc">사막여우의 생태, 특징, 생활 습관, 보호 활동 등에 대한 정보를 제공하는 사이트 입니다. </p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">사막여우를 알아가는 사이트</h3>
+                                    <p class="desc">사막여우의 생태, 특징, 생활 습관, 보호 활동 등에 대한 정보를 제공하는 사이트 입니다. </p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">사막여우를 알아가는 사이트</h3>
+                                    <p class="desc">사막여우의 생태, 특징, 생활 습관, 보호 활동 등에 대한 정보를 제공하는 사이트 입니다. </p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>                  
+                </div>
+
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">event</span>
                         <h3 class="title">사막여우를 알아가는 사이트</h3>
@@ -66,9 +135,8 @@
                         <a href="#" class="play"><span class="blind">플레이</span></a>
                         <a href="#" class="stop"><span class="blind">정지</span></a>
                     </div>
-                </div>
-                <!-- <div class="slider"></div>
-                <div class="slider"></div> -->
+                </div>  -->
+
             </div>
         </section> 
         <!-- sliderType -->
@@ -291,5 +359,42 @@
         </div>
     </footer>
     <!-- footerType -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    const btnStop = document.querySelector(".swiper-button-stop");
+    const btnStart = document.querySelector(".swiper-button-play");
+
+    btnStart.style.display = "none";
+
+    btnStop.addEventListener("click", () => {
+        swiper.autoplay.stop();
+        btnStart.style.display = "block";
+        btnStop.style.display = "none";
+    });
+    btnStart.addEventListener("click", () => {
+        swiper.autoplay.start();
+        btnStart.style.display = "none";
+        btnStop.style.display = "block";
+    });
+    </script>
 </body>
 </html>
