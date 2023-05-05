@@ -13,6 +13,24 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/ico/javascript192x192.png">
 </head>
+<style>
+        .scroll-top {
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            z-index: 100;
+            background-color: #ff3939;
+            opacity: .8;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            color: #fff;
+        }
+        .scroll-top:hover {
+            cursor: pointer;
+        }
+</style>
 
 <body>
     <header id="header">
@@ -46,6 +64,9 @@
     </header>
     <!-- //header -->
 
+    <button class="scroll-top" id="js-button">
+        <i class="fa fa-chevron-up" aria-hidden="true">TOP</i>
+    </button>
     <main id="main">
         <div class="container">
             <div class="main__menu">
@@ -226,6 +247,30 @@
         <a href="mailto:ebmdols@naver.com">ebmdols@naver.com</a>
     </footer>
     <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        scrollTop('js-button', 500);
+        function scrollTop(elem,duration) {
+            let target = document.getElementById(elem);
+
+            target.addEventListener('click', function() {
+                let currentY = window.pageYOffset; 
+                let step = duration/currentY > 1 ? 10 : 100;
+                let timeStep = duration/currentY * step;
+                let intervalID = setInterval(scrollUp, timeStep);
+
+                function scrollUp(){
+                    currentY = window.pageYOffset;
+                    if(currentY === 0) {
+                        clearInterval(intervalID);
+                    } else {
+                        scrollBy( 0, -step );
+                    }
+                }
+            });
+        }
+    </script>
     <script>
 
         // {

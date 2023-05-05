@@ -12,6 +12,43 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
 </head>
+<style>
+    .scroll-top {
+        position: fixed;
+        right: 40px;
+        bottom: 40px;
+        z-index: 100;
+        background-color: #ff3939;
+        opacity: .8;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        color: #fff;
+    }
+    .scroll-top:hover {
+        cursor: pointer;
+    }
+</style>
+<style>
+    .scroll-top {
+        position: fixed;
+        right: 40px;
+        bottom: 40px;
+        z-index: 100;
+        background-color: #ff3939;
+        opacity: .8;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        color: #fff;
+    }
+    .scroll-top:hover {
+        cursor: pointer;
+    }
+</style>
+
 <body>
     <header id="header">
         <h1><a href="index.html">javascript</a></h1>
@@ -74,7 +111,9 @@
                         <li><a href="#sample20">20. 객체 : 데이터 불러오기 : 객체 펼침연산자</a></li>
                         <li><a href="#sample21">21. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
                     </ul>
-
+                    <button class="scroll-top" id="js-button">
+                        <i class="fa fa-chevron-up" aria-hidden="true">TOP</i>
+                    </button>
                     <div class="main__sample">
                         <div id="sample01" class="sample">
                             <h3>01. 변수 : 데이터 불러오기</h3>
@@ -805,6 +844,26 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
+        scrollTop('js-button', 500);
+        function scrollTop(elem,duration) {
+            let target = document.getElementById(elem);
+
+            target.addEventListener('click', function() {
+                let currentY = window.pageYOffset; 
+                let step = duration/currentY > 1 ? 10 : 100;
+                let timeStep = duration/currentY * step;
+                let intervalID = setInterval(scrollUp, timeStep);
+
+                function scrollUp(){
+                    currentY = window.pageYOffset;
+                    if(currentY === 0) {
+                        clearInterval(intervalID);
+                    } else {
+                        scrollBy( 0, -step );
+                    }
+                }
+            });
+        }
         // 01. 변수 : 데이터 불러오기
         // 변수안에 저장된 데이터를 불러오는 방법입니다.
         // {
