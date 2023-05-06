@@ -1,63 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>s1</title>
+    <title>JUST 쇼핑몰</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        body {
-            background-color: #9e9b9b;
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
         img {
             vertical-align: top;
+            border: 0;
         }
-        .slider__img {  
-            position: relative; 
-            height: 300px;
-            overflow: hidden;
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
         }
-        .slider__inner{  
-            display: flex;
-            flex-wrap: wrap;
-            height: 900px;
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
         }
-        .slider { 
-            position: relative;
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: #881717;
+        }
+        .header h1 {
+            width: 200px;
+            padding-top: 30px;
+            float: left;
+        }
+        .header h1 a {
+            width: 100%;
+            height: 40px;
+            display: block;
+            background-color: #eee;
+        }
+        .header nav {
+            width: 700px;
+            float: right;
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+        .header nav ul.gnb {width: 100%;}
+        .header nav ul.gnb>li {width: 25%; float: left; text-align: center; position: relative;}
+        .header nav ul.gnb>li>a {display: block; width: 100%; height: 40px; line-height: 40px; background-color: #e22a2a;}
+        .header nav ul.gnb>li>ul.sub {position: absolute; left: 0; top: 40px; width: 100%; display: none;}
+        .header nav ul.gnb>li>ul.sub>li {width: 100%; height: 30px; line-height: 30px; background-color: #700808;}
+        .header nav ul.gnb>li>ul.sub>li>a {display: block; width: 100%; height: 100%;}
+        .main {
             width: 100%;
             height: 300px;
+            background-color: #068740;
+            position: relative;
+            overflow: hidden;
+        }
+        .main ul {
+            position: absolute;
+            width: 300%;
+            height: 300px;
+            left: 0%;
+            top: 0;
+        }
+        .main ul li {
+            width: 33.33%;
+            height: 300px;
+            float: left;
+            text-align: center;
+            color: #000;
+            font-size: 5em;
+        }
+        .main ul li:nth-child(1) {background-image: url(../img/banner02.jpg);}
+        .main ul li:nth-child(2) {background-image: url(../img/banner02.jpg);}
+        .main ul li:nth-child(3) {background-image: url(../img/banner02.jpg);}
+        .main ul li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        .contents {
+            width: 100%;
+            height: 200px;
+            background-color: #b99625;
+        }
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #159b0e;
         }
     </style>
 </head>
 <body>
-    <div class="slider__img">
-        <div class="slider__inner">
-            <div class="slider"><img src="img/Rectangle 6.png" alt="img1"></div>
-            <div class="slider"><img src="img/Rectangle 7.png" alt="img2"></div>
-            <div class="slider"><img src="img/Rectangle 8.png" alt="img3"></div>
-        </div>
+    <div id="wrap">
+        <header class="header">
+            <h1><a href="../img/banner.jpg">로고</a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </main>
+        <div class="contents"></div>
+        <footer class="footer"></footer>
     </div>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        const sliderImg = document.querySelector(".slider__img");     
-        const sliderInner = document.querySelector(".slider__inner"); 
-        const slider = document.querySelectorAll(".slider");          
+        $("nav>ul>li").mouseover(function(){
+            $("ul.sub").stop().slideDown();
+        })
+        $("nav>ul>li").mouseout(function(){
+            $("ul.sub").stop().slideUp();
+        })
+        // $("nav > ul > li").mouseover(function(){
+        //     $(this).find(".submenu").stop().slideDown();
+        // });
+        // $("nav > ul > li").mouseout(function(){
+        //     $(this).find(".submenu").stop().slideUp();
+        // });        
 
-        let currentIndex = 0;             
-        let sliderCount = slider.length;    
-        let sliderInterval = 3000;          
-
-        sliderInner.style.transition = "all 0.6s"
-
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % sliderCount;   
-
-            sliderInner.style.transform = "translateY("+ -300 * currentIndex + "px)";
-        }, sliderInterval);
+        let slideI = 0;
+        setInterval(function(){
+            if(slideI < 2){
+                slideI++;
+            } else {
+                slideI = 0;
+            }
+            $(".main ul").animate({left:(-100*slideI)+'%'},500)
+        },2000);
     </script>
 </body>
 </html>

@@ -26,59 +26,48 @@
             clear: both;
         }
         #wrap {
-            width: 1000px;
+            width: 1200px;
+            margin: 0 auto;
         }
         .header {
-            background-color: #f8d0ad;
-            width: 200px;
-            height: 650px;
-            float: left;
+            width: 100%;
+            height: 100px;
+            background-color: #881717;
         }
         .header h1 {
-            padding: 20px 0;
+            width: 200px;
+            padding-top: 30px;
+            float: left;
         }
         .header h1 a {
             width: 100%;
             height: 40px;
-            background-color: #5cba3f;
             display: block;
+            background-color: #eee;
         }
         .header nav {
-            width: 180px;
-            margin: 0 auto;
-            text-align: center;
+            width: 700px;
+            float: right;
+            margin-top: 30px;
+            margin-right: 30px;
         }
         .header nav ul.gnb {width: 100%;}
-        .header nav ul.gnb>li {width: 100%;}
-        .header nav ul.gnb>li>a {display: block; width: 100%; height: 35px; line-height: 35px; background-color: seashell;}
-        .header nav ul.gnb>li>ul.sub {width: 100%; display: none;}
-        .header nav ul.gnb>li>ul.sub>li {width: 100%; height: 30px; line-height: 30px; background-color: gold;}
+        .header nav ul.gnb>li {width: 25%; float: left; text-align: center; position: relative;}
+        .header nav ul.gnb>li>a {display: block; width: 100%; height: 40px; line-height: 40px; background-color: #e22a2a;}
+        .header nav ul.gnb>li>ul.sub {position: absolute; left: 0; top: 40px; width: 100%; display: none;}
+        .header nav ul.gnb>li>ul.sub>li {width: 100%; height: 30px; line-height: 30px; background-color: #700808;}
         .header nav ul.gnb>li>ul.sub>li>a {display: block; width: 100%; height: 100%;}
-        .con {
-            width: 800px;
-            height: 650px;
-            background-color: #815b8c;
-            float: left;
-        }
-        .con .main {
+        .main {
             width: 100%;
-            height: 350px;
+            height: 300px;
             background-color: #068740;
-            position: relative;
-            overflow: hidden;
         }
-        .con .main ul {width: 100%; position: absolute; top: 0; left: 0;}
-        .con .main ul li {width: 100%; height: 350px;}
-        .main ul li:nth-child(1) {background-image: url(../img/banner02.jpg);}
-        .main ul li:nth-child(2) {background-image: url(../img/banner02.jpg);}
-        .main ul li:nth-child(3) {background-image: url(../img/banner02.jpg);}
-        .con .main ul li a {display: block; width: 100%; height: 350px;}
-        .con .contents {
+        .contents {
             width: 100%;
             height: 200px;
             background-color: #b99625;
         }
-        .con .footer {
+        .footer {
             width: 100%;
             height: 100px;
             background-color: #159b0e;
@@ -86,7 +75,7 @@
     </style>
 </head>
 <body>
-    <div id="wrap" class="clearfix">
+    <div id="wrap">
         <header class="header">
             <h1><a href="../img/banner.jpg">로고</a></h1>
             <nav>
@@ -126,29 +115,19 @@
                 </ul>
             </nav>
         </header>
-        <div class="con">
-            <main class="main">
-                <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-            </main>
-            <div class="contents"></div>
-            <footer class="footer"></footer>
-        </div>
+        <main class="main"></main>
+        <div class="contents"></div>
+        <footer class="footer"></footer>
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $("nav>ul>li").mouseover(function(){
-            $(this).find("ul.sub").stop().slideDown();
-            // $("ul.sub").stop().slideDown();
+            $("ul.sub").stop().slideDown();
         })
         $("nav>ul>li").mouseout(function(){
-            $(this).find("ul.sub").stop().slideUp();
-            // $("ul.sub").stop().slideUp();
+            $("ul.sub").stop().slideUp();
         })
         // $("nav > ul > li").mouseover(function(){
         //     $(this).find(".submenu").stop().slideDown();
@@ -156,15 +135,6 @@
         // $("nav > ul > li").mouseout(function(){
         //     $(this).find(".submenu").stop().slideUp();
         // });        
-        let slideI = 0;
-        setInterval(function(){
-            if(slideI < 2){
-                slideI++;
-            } else {
-                slideI = 0;
-            }
-            $('.main ul').animate({top:-100*slideI+'%'},500)
-        },2000)
     </script>
 </body>
 </html>

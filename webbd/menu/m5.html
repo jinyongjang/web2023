@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST 쇼핑몰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            border: 0;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #wrap {
+            width: 1000px;
+        }
+        .header {
+            background-color: #f8d0ad;
+            width: 200px;
+            height: 650px;
+            float: left;
+        }
+        .header h1 {
+            padding: 20px 0;
+        }
+        .header h1 a {
+            width: 100%;
+            height: 40px;
+            background-color: #5cba3f;
+            display: block;
+        }
+        .header nav {
+            width: 180px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header nav ul.gnb {width: 100%;}
+        .header nav ul.gnb>li {width: 100%;}
+        .header nav ul.gnb>li>a {display: block; width: 100%; height: 35px; line-height: 35px; background-color: seashell;}
+        .header nav ul.gnb>li>ul.sub {width: 100%; display: none;}
+        .header nav ul.gnb>li>ul.sub>li {width: 100%; height: 30px; line-height: 30px; background-color: gold;}
+        .header nav ul.gnb>li>ul.sub>li>a {display: block; width: 100%; height: 100%;}
+        .con {
+            width: 800px;
+            height: 650px;
+            background-color: #815b8c;
+            float: left;
+        }
+        .con .main {
+            width: 100%;
+            height: 350px;
+            background-color: #068740;
+            position: relative;
+        }
+        .con .main ul {width: 100%; height: 350px;}
+        .con .main ul li {width: 100%; height: 350px; position: absolute; top: 0; left: 0;}
+        .main ul li:nth-child(1) {background-image: url(../img/banner02.jpg);}
+        .main ul li:nth-child(2) {background-image: url(../img/bannercook.jpg);}
+        .main ul li:nth-child(3) {background-image: url(../img/banner.jpg);}
+        .con .main ul li a {display: block; width: 100%; height: 350px;}
+        .con .contents {
+            width: 100%;
+            height: 200px;
+            background-color: #b99625;
+        }
+        .con .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #159b0e;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="clearfix">
+        <header class="header">
+            <h1><a href="../img/banner.jpg">로고</a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="con">
+            <main class="main">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </main>
+            <div class="contents"></div>
+            <footer class="footer"></footer>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $("nav>ul>li").mouseover(function(){
+            $(this).find("ul.sub").stop().slideDown();
+            // $("ul.sub").stop().slideDown();
+        })
+        $("nav>ul>li").mouseout(function(){
+            $(this).find("ul.sub").stop().slideUp();
+            // $("ul.sub").stop().slideUp();
+        })
+        // $("nav > ul > li").mouseover(function(){
+        //     $(this).find(".submenu").stop().slideDown();
+        // });
+        // $("nav > ul > li").mouseout(function(){
+        //     $(this).find(".submenu").stop().slideUp();
+        // });    
+        
+        $(".main ul li").eq(0).siblings().hide();
+        let slideI = 0;
+        setInterval(function(){
+            if(slideI < 2){
+                slideI++;
+            } else {
+                slideI = 0;
+            }
+            $(".main ul li").eq(slideI).siblings().fadeOut();
+            $(".main ul li").eq(slideI).fadeIn();
+        },2000)
+    </script>
+</body>
+</html>

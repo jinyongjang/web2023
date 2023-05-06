@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST 쇼핑몰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            border: 0;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: #fe9191;
+            position: relative;
+        }
+        .header h1 {
+            width: 200px;
+            padding-top: 30px;
+            float: left;
+        }
+        .header h1 a {
+            width: 100%;
+            height: 40px;
+            display: block;
+            background-color: #eee;
+        }
+        .header nav {
+            width: 700px;
+            float: right;
+            margin-top: 60px;
+            margin-right: 30px;
+            background-color: #14a32c;
+        }
+        .header nav .nav__bg {
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            height: 120px;
+            background-color: #bd14df;
+            display: none;
+        }
+        .header nav ul.gnb {width: 100%;}
+        .header nav ul.gnb>li {width: 25%; float: left; text-align: center; position: relative;}
+        .header nav ul.gnb>li:hover {
+            background-color: #8e1515;
+        }
+        .header nav ul.gnb>li>a {display: block; width: 100%; height: 40px; line-height: 40px;}
+        .header nav ul.gnb>li>ul.sub {position: absolute; left: 0; top: 40px; width: 100%; display: none;}
+        .header nav ul.gnb>li>ul.sub>li {width: 100%; height: 30px; line-height: 30px;}
+        .header nav ul.gnb>li>ul.sub>li:hover {
+            background-color: #bd9595;
+        }
+        .header nav ul.gnb>li>ul.sub>li>a {display: block; width: 100%; height: 100%;}
+        .main {
+            width: 100%;
+            height: 300px;
+            background-color: #068740;
+        }
+        .main ul {}
+        .main ul li {}
+        .main ul li a {}
+        .contents {
+            width: 100%;
+            height: 200px;
+            background-color: #b99625;
+        }
+        .contents .c1 {width: 400px; height: 200px; background-color: #2d1b73;}
+        .contents .c2 {width: 400px; height: 200px; background-color: #c0cb44;}
+        .contents .c3 {width: 400px; height: 200px; background-color: #2a6c31;}
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #d4bf79;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1><a href="../img/logo.jpg">로고</a></h1>
+            <nav>
+                <div class="nav__bg"></div>
+                <ul class="gnb">
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바바</a>
+                        <ul class="sub">
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                            <li><a href="#">자자</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </main>
+        <div class="contents">
+            <div class="c1">
+                <h2>공지사항</h2>
+                <h2>갤러리</h2>
+            </div>
+            <div class="c2">
+                <h2>배너</h2>
+            </div>
+            <div class="c3">
+                <h2>바로가기</h2>
+            </div>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $("nav>ul>li, .nav__bg").mouseover(function(){
+            $("ul.sub, .nav__bg").stop().slideDown();
+        })
+        $("nav>ul>li, .nav__bg").mouseout(function(){
+            $("ul.sub, .nav__bg").stop().slideUp();
+        })
+        // $("nav > ul > li").mouseover(function(){
+        //     $(this).find(".submenu").stop().slideDown();
+        // });
+        // $("nav > ul > li").mouseout(function(){
+        //     $(this).find(".submenu").stop().slideUp();
+        // });        
+    </script>
+</body>
+</html>
