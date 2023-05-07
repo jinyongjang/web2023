@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUST 쇼핑몰</title>
+    <title>m6</title>
     <style>
         * {
             margin: 0;
@@ -25,6 +25,25 @@
             display: block;
             clear: both;
         }
+        .modal {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 200;
+            display: none;
+        }
+        .modal .modal__inner {
+            width: 700px;
+            height: 500px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .modal .modal__inner button {
+            width: 50px; height: 50px;
+        }
         #wrap {
             width: 1200px;
             margin: 0 auto;
@@ -34,6 +53,7 @@
             height: 100px;
             background-color: #fe9191;
             position: relative;
+            z-index: 100;
         }
         .header h1 {
             width: 200px;
@@ -78,18 +98,46 @@
             width: 100%;
             height: 300px;
             background-color: #068740;
+            overflow: hidden;
+            position: relative;
         }
-        .main ul {}
-        .main ul li {}
-        .main ul li a {}
+        .main ul {width: 300%; height: 300px; position: absolute; top: 0; left: 0;}
+        .main ul li {width: 33.33%; height: 300px; float: left;}
+        .main ul li a {width: 100%; height: 100%; display: block;}
+        .main ul li a:nth-child(1) {background-image: url(../img/banner02.jpg);}
+        .main ul li a:nth-child(2) {background-image: url(../img/banner02.jpg);}
+        .main ul li a:nth-child(3) {background-image: url(../img/banner02.jpg);}
         .contents {
             width: 100%;
             height: 200px;
             background-color: #b99625;
         }
-        .contents .c1 {width: 400px; height: 200px; background-color: #2d1b73;}
-        .contents .c2 {width: 400px; height: 200px; background-color: #c0cb44;}
-        .contents .c3 {width: 400px; height: 200px; background-color: #2a6c31;}
+        .contents h2 {
+            background-color: #ff5a5a;
+            color: #fff;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .contents .c1 {width: 400px; height: 200px; background-color: #2d1b73; float: left; position: relative;}   
+        .contents .c1 h2 {float: left; cursor: pointer;}
+        .contents .c1 h2.on {background-color: #4bff2f;}
+        .contents .c1 ul {
+            width: 100%;
+            height: 170px;
+            background-color: #fff;
+            position: absolute;
+            top: 30px; left: 0;
+            display: none;
+        }
+        .contents .c1 ul.on {
+            display: block;
+        }
+        .contents .c2 {width: 400px; height: 200px; background-color: #c0cb44; float: left;}
+        .contents .c3 {width: 400px; height: 200px; background-color: #2a6c31; float: left;}
         .footer {
             width: 100%;
             height: 100px;
@@ -98,6 +146,11 @@
     </style>
 </head>
 <body>
+    <div class="modal">
+        <div class="modal__inner">
+            <button>닫기</button>
+        </div>
+    </div>
     <div id="wrap">
         <header class="header">
             <h1><a href="../img/logo.jpg">로고</a></h1>
@@ -148,8 +201,20 @@
         </main>
         <div class="contents">
             <div class="c1">
-                <h2>공지사항</h2>
+                <h2 class="on">공지사항</h2>
+                <ul class="notice on">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
                 <h2>갤러리</h2>
+                <ul class="gal">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
             </div>
             <div class="c2">
                 <h2>배너</h2>
@@ -175,7 +240,30 @@
         // });
         // $("nav > ul > li").mouseout(function(){
         //     $(this).find(".submenu").stop().slideUp();
-        // });        
+        // });
+        let slideI = 0;
+        setInterval(function(){
+            if(slideI < 2){
+                slideI++;
+            } else {
+                slideI = 0;
+            }
+            $('main ul').animate({left:-100*slideI + '%'},500)
+        },2000)
+
+
+        $('.c1 h2').click(function(){
+            $('.c1 ul, .c1 h2').removeClass('on');
+            $(this).addClass('on').next('ul').addClass('on')
+        })
+
+        
+        $('.contents .c1 ul.notice li').eq(0).click(function(){
+            $('.modal').fadeIn()
+        })
+        $('.modal button').click(function(){
+            $('.modal').fadeOut();
+        })
     </script>
 </body>
 </html>
