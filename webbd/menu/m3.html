@@ -7,113 +7,149 @@
     <title>m3</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0;padding: 0;
+        }
+        img {
+            max-width: 100%;
         }
         a {
             text-decoration: none;
             color: inherit;
         }
-        ul {
+        ul,li {
             list-style: none;
         }
         .clearfix::after {
-            content: '';
+            content:'';
             display: block;
             clear: both;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
+            display: flex;
         }
         #header {
-            width: 100%;
-            height: 100px;
-            background-color: #e79d9d;
+            width: 300px; 
+            height: 800px;
+            background-color: #fffb2b;
         }
         #header h1 {
-            width: 200px;
-            padding-top: 30px;
-            background-color: #482b2b;
+            padding: 20px;
         }
-        #header nav {
-            width: 700px;
-            background-color: #974040;
+        #header h1 a {
+            width: 160px;
+            height: 40px;
+            background-color: #5adb43;
+            display: block;
         }
-        #header nav ul .gnb {
-            width: 100%;
+        #main {
+            width: 900px;
+            height: 800px;
+            background-color: #1890ff;
         }
-        #header nav ul .gnb>li {
-            width: 25%;
-            float: left;
-            text-align: center;
-        }
-        #header nav ul .gnb>li a {}
-        #header nav ul .gnb>li>ul .sub {}
-        #header nav ul .gnb>li>ul .sub>li {}
-        #header nav ul .gnb>li>ul .sub>li a {}
-
+        nav {width: 180px; text-align: center; margin: 0 auto; margin-top: 100px;}
+        nav .gnb {}
+        nav .gnb li {}
+        nav .gnb>li>a {display: block; background-color: #34983b; height: 40px; line-height: 40px;}
+        nav .gnb li>ul.sub {width: 100%; display: none;}
+        nav .gnb li>ul.sub>li {}
+        nav .gnb li>ul.sub>li>a {display: block; background-color: #58d8ff; height: 30px; line-height: 30px;}
         .slide {
             width: 100%;
-            height: 300px;
-            background-color: #7a0707;
+            height: 500px;
+            background-color: #961313;
+            /* overflow: hidden; */
         }
-        .content {
+        .slide ul {
+            width: 300%;
+            height: 500px;
+            display: flex;
+        }
+        .slide ul li {
             width: 100%;
-            height: 300px;
-            background-color: #b7aeae;
+            height: 500px;
         }
-        #footer {
-            width: 100%;
-            height: 100px;
-            background-color: #44c3f9;
-        }
+        .slide ul li:nth-child(1) {background-image: url(../img/banner02.jpg);}
+        .slide ul li:nth-child(2) {background-image: url(../img/banner02.jpg);}
+        .slide ul li:nth-child(3) {background-image: url(../img/banner02.jpg);}
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <h1>로고</h1>
+        <header id="header" class="clearfix">
+            <h1><a href="#">로고</a></h1>
             <nav>
                 <ul class="gnb">
-                    <li><a href="#">탑</a>
+                    <li><a href="#">가가</a>
                         <ul class="sub">
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">아우터</a>
+                    <li><a href="#">가가</a>
                         <ul class="sub">
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">팬츠</a>
+                    <li><a href="#">가가</a>
                         <ul class="sub">
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">악세사리</a>
+                    <li><a href="#">가가</a>
                         <ul class="sub">
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
+                            <li><a href="#">다다</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div class="slide"></div>
-        <div class="content"></div>
-        <footer id="footer"></footer>
+        <main id="main">
+            <div class="slide">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </div>
+            <div class="content"></div>
+            <div class="baro"></div>
+        </main>
     </div>
+    <div id="footer"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $('nav .gnb>li').mouseover(function(){
+            $(this).find("ul.sub").stop().slideDown();
+        })
+        $('nav .gnb>li').mouseout(function(){
+            $(this).find('ul.sub').stop().slideUp();
+        })
+
+        let slideI = 0
+        setInterval(function(){
+            if(slideI < 2){
+                slideI++;
+            } else {
+                slideI = 0;
+            }
+            $(".slide ul").animate({left:-100*slideI + '%'},500)
+        }, 1000)
+
+    
+    </script>
 </body>
 </html>
