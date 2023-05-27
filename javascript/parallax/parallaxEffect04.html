@@ -4,20 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴랙스 이펙트01</title>
+    <title>패럴랙스 이펙트04</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
+    <style>
+        /* 한번에 나타자기 */
+        /* .parallax__wrap > section {
+            opacity: 0;
+            transition: all 1s;
+        }
+        .parallax__wrap > section.show{
+            opacity: 1;
+        } */
+
+        /* 개별적으로 나타나기 */
+        .parallax__wrap > section .parallax__item__num {
+            opacity: 0;
+            transform: translateY(200px);
+            transition: all 0.6s 0.1s cubic-bezier(0, 0.71, 0.25, 1);
+        }
+
+        .parallax__wrap > section .parallax__item__title {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.6s 0.3s cubic-bezier(0, 0.71, 0.25, 1);
+        }
+        .parallax__wrap > section .parallax__item__imgWrap {
+            opacity: 0;
+            transform: translateY(200px) rotate(30deg) skew(20deg);
+            transition: all 0.6s 0.6s cubic-bezier(0, 0.71, 0.25, 1);
+        }
+        .parallax__wrap > section .parallax__item__desc {
+            opacity: 0;
+            transform: translateX(600px) rotate(20deg) skew(180deg);
+            transition: all 1s 0.9s cubic-bezier(0.17, 0.37, 0.43, 0.79);
+        }
+        .parallax__wrap > section:nth-child(even) .parallax__item__title {
+            transform: translateX(100px);
+        }
+        .parallax__wrap > section:nth-child(even) .parallax__item__desc {
+            transform: translateX(200px);
+        }
+
+        .parallax__wrap > section.show .parallax__item__num {
+            transform: translateY(0);
+            opacity: 0.07;
+        }
+        .parallax__wrap > section.show .parallax__item__title {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .parallax__wrap > section.show .parallax__item__imgWrap {
+            transform: translateY(0) rotate(0) skew(0);
+            opacity: 1;
+        }
+        .parallax__wrap > section.show .parallax__item__desc {
+            transform: translateY(0) rotate(0) skew(0);
+            opacity: 1;
+        }
+
+        
+    </style>
 </head>
 <body class="img01 bg01 font01">
     <header id="header">
         <h1>Javascript Parallax Effect01</h1>
-        <p>패럴랙스 이펙트 : 메뉴 효과</p>
+        <p>패럴랙스 이펙트 : 나타나기</p>
         <ul>
-            <li class="active"><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect01.html">1</a></li>
             <li><a href="parallaxEffect02.html">2</a></li>
             <li><a href="parallaxEffect03.html">3</a></li>
-            <li><a href="parallaxEffect04.html">4</a></li>
+            <li class="active"><a href="parallaxEffect04.html">4</a></li>
             <li><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
             <li><a href="parallaxEffect07.html">7</a></li>
@@ -28,20 +86,6 @@
     </header>
     <!-- //header -->
 
-    <nav class="parallax__nav">
-        <ul>
-            <li class="active"><a href="#section1">메뉴1</a></li>
-            <li><a href="#section2">메뉴2</a></li>
-            <li><a href="#section3">메뉴3</a></li>
-            <li><a href="#section4">메뉴4</a></li>
-            <li><a href="#section5">메뉴5</a></li>
-            <li><a href="#section6">메뉴6</a></li>
-            <li><a href="#section7">메뉴7</a></li>
-            <li><a href="#section8">메뉴8</a></li>
-            <li><a href="#section9">메뉴9</a></li>
-        </ul>
-    </nav>
-    <!-- //parallax__nav -->
 
     <main id="main">
         <div class="parallax__wrap">
@@ -130,101 +174,24 @@
     </main>
     <!-- //main -->
 
-    <aside class="parallax__info">
-        <div class="scroll">scrollTop : <span>0</span>px</div>
-        <div class="info">
-            <ul>
-                <li>#section1 offset() : <span class="offset1">0</span>px</li>
-                <li>#section2 offset() : <span class="offset2">0</span>px</li>
-                <li>#section3 offset() : <span class="offset3">0</span>px</li>
-                <li>#section4 offset() : <span class="offset4">0</span>px</li>
-                <li>#section5 offset() : <span class="offset5">0</span>px</li>
-                <li>#section6 offset() : <span class="offset6">0</span>px</li>
-                <li>#section7 offset() : <span class="offset7">0</span>px</li>
-                <li>#section8 offset() : <span class="offset8">0</span>px</li>
-                <li>#section9 offset() : <span class="offset9">0</span>px</li>
-            </ul>
-        </div>
-    </aside>
-    <!-- parallax__info -->
-
     <footer id="footer">
         <a href="mailto:ebmdols@naver.com">ebmdols@naver.com</a>
     </footer>
     <!-- footer -->
 
-
     <script>
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+        function scroll(){
+            let scrollTop = window.pageYOffset || window.scrollY;
 
-            document.querySelectorAll(".parallax__item").forEach((item, index) => {
-                if(scrollTop >= item.offsetTop -2){
-                    document.querySelectorAll(".parallax__nav li").forEach((li) => {
-                        li.classList.remove("active");
-                    });
-                    document.querySelector(".parallax__nav li:nth-child("+(index+1)+")").classList.add("active")
+            document.querySelectorAll(".parallax__item").forEach(item => {
+                if(scrollTop > item.offsetTop - window.innerHeight/2){
+                    item.classList.add("show");
                 }
             });
 
-            document.querySelectorAll(".parallax__nav li a").forEach(li => {
-                li.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    document.querySelector(li.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    })
-                })
-            })
-            
-
-
-            //info
-            document.querySelector(".scroll span").innerText = parseInt(scrollTop);
-
-            // document.querySelector(".info .offset1").innerText = document.getElementById("section1").offsetTop;
-            // document.querySelector(".info .offset2").innerText = document.getElementById("section2").offsetTop;
-            // document.querySelector(".info .offset3").innerText = document.getElementById("section3").offsetTop;
-            // document.querySelector(".info .offset4").innerText = document.getElementById("section4").offsetTop;
-            // document.querySelector(".info .offset5").innerText = document.getElementById("section5").offsetTop;
-            // document.querySelector(".info .offset6").innerText = document.getElementById("section6").offsetTop;
-            // document.querySelector(".info .offset7").innerText = document.getElementById("section7").offsetTop;
-            // document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop;
-            // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop;
-            
-
-
-            //for
-            // for(let i=1; i<10; i++){
-            //     document.querySelector(`.info .offset${[i]}`).innerText = document.getElementById(`section${[i]}`).offsetTop;
-            // }
-
-            //forEach
-            // document.querySelectorAll(".info li span").forEach((el, index) => {
-            //     document.querySelectorAll(".info li span")[index].innerText = document.getElementById(`section${index+1}`).offsetTop + "px";
-            // });
-
-            //for in
-            const arr = document.querySelectorAll(".info li span");
-            let arrIndex = 0;
-
-            for(let el in arr){
-                if(arr.hasOwnProperty(el)){
-                    arrIndex++;
-                    arr[el].innerText = document.getElementById(`section${arrIndex}`).offsetTop + "px"; 
-                }
-            }
-
-            //for of
-            // const arr = document.querySelectorAll(".info li span");
-            // let arrIndex = 0;
-
-            // for(let el of arr){
-            //     arrIndex++;
-            //     el.innerText = document.getElementById(`section${arrIndex}`).offsetTop + "px"; 
-            // }
-
-            
-        });
+            requestAnimationFrame(scroll);              //1초에 60번 실행
+        }
+        scroll();
     </script>
 </body>
 </html>
