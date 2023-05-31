@@ -552,11 +552,55 @@
 
 
   <!-- script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="assets/js/jquery-1.9.1.min.js"></script>
   <script src="assets/js/bootstrap-collapse.js"></script>
   <script src="assets/js/bootstrap-transition.js"></script>
   <script src="assets/js/jquery.isotope.min.js"></script>
   <script>
+
+  //tom 드래그
+  const draggable = ($target) => {
+    let isPress = false,
+        prevPosX = 0,
+        prevPosY = 0;
+    
+    $target.onmousedown = start;
+    $target.onmouseup = end;
+      
+    // 상위 영역
+    window.onmousemove = move;
+  
+    function start(e) {
+      prevPosX = e.clientX;
+      prevPosY = e.clientY;
+
+      isPress = true;
+    }
+
+    function move(e) {
+      if (!isPress) return;
+
+      const posX = prevPosX - e.clientX; 
+      const posY = prevPosY - e.clientY; 
+      
+      prevPosX = e.clientX; 
+      prevPosY = e.clientY;
+      
+      $target.style.left = ($target.offsetLeft - posX) + "px";
+      $target.style.top = ($target.offsetTop - posY) + "px";
+    }
+
+    function end() {
+      isPress = false;
+    }
+  }
+
+  window.onload = () => {
+    const $target = document.querySelector(".header_tit img");
+    
+    draggable($target);
+  }
     //운영체제 정보 알아내기
     let os = navigator.userAgent.toLowerCase();
     let sw = screen.width;
