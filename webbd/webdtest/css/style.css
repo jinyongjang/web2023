@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+img {
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+#wrap {
+    width: 100%;
+    display: flex;
+}
+#header {
+    width: 200px;
+    height: 850px;
+    background-color: #2f3c13;
+}
+#header h1 {
+    background-image: url(../images/Rectangle\ 11202.png);
+    padding: 30px;
+    color: #fff;
+}
+#header nav {
+    width: 100%;
+    position: relative;
+}
+.nav__bg {
+    z-index: 10;
+    width: 100vw;
+    height: 270px;
+    background-color: #98c180;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    display: none;
+}
+#header nav > ul {
+    width: 100%;
+}
+#header nav > ul > li {
+    position: relative; 
+    padding: 20px; 
+    text-align: center;
+    background-color: #98c53d;
+    font-size: 20px;
+}
+#header nav > ul > li:hover {
+    background-color: #74972f;
+}
+#header nav > ul > li a{
+    display: inline-block;
+    width: 100%;
+}
+#header nav > ul > li > ul.sub {
+    display: none;
+    /* display: flex; */
+    position: absolute; 
+    width: 100vw;
+    top: 0; 
+    left: 200px; 
+    text-align: left;
+    z-index: 10;
+}
+#header nav > ul > li > ul.sub > li {
+    padding: 20px;
+}
+#header nav > ul > li > ul.sub > li a {
+    display: inline;
+    width: 100%;
+}
+#header nav > ul > li > ul.sub > li a:hover {
+    background-color: #536c22;
+}
+
+
+
+
+#main {
+    width: calc(100% - 200px);
+    height: 850px;
+}
+.slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.slider__wrap {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.sliderImg1 {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/Rectangle\ 11199.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sliderImg2 {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/Rectangle\ 11199.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sliderImg3 {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/Rectangle\ 11199.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider .linkS {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.link1{
+    height: 100px;
+    background-image: url(../images/Rectangle\ 11200.png);
+}
+.link2{
+    height: 100px;
+    background-image: url(../images/Rectangle\ 11201.png);
+}
+.link3{
+    height: 100px;
+    background-image: url(../images/Rectangle\ 11202.png);
+}
+
+
+
+.section {
+    width: 100%;
+    height: 200px;
+    background-color: #94c239;
+    display: flex;
+}
+.sectionImg {
+    padding: 50px 0 50px 50px;
+}
+.section__desc {
+    padding: 50px;
+}
+
+.content {
+    width: 100%;
+    height: 250px;
+    background-color: #66832a;
+    overflow: hidden;
+}
+.cont__inner {
+    padding: 40px;
+    position: relative;
+    display: flex;
+}
+.cont__inner ul {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+}
+.cont__inner li {
+    padding: 10px 0;
+}
+.cont__inner h3 {
+    margin-bottom: 20px;
+}
+
+
+/* .notice {
+    padding: 30px;
+}
+.content h3 {
+    display: inline-block;
+    border: 2px solid #000;
+    border-bottom: none;
+}
+.notice p {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+}
+.notice p span {
+    padding-left: 520px;
+} */
+
+#footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+#footer .left {
+    width: 200px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    background-image: url(../images/Rectangle\ 11201.png);
+    background-size: cover;
+    background-position: center;
+    line-height: 120px;
+}
+#footer .right {
+    width: calc(100% - 200px);
+    height: 120px;
+    background-color: #344415;
+}
+.footer__menu {
+    width: 100%;
+    height: 60px;
+    background-color: #344415;
+    text-align: left;
+    line-height: 60px;
+    margin-left: 30px;
+}
+.footer__menu a {
+    font-size: 20px;
+}
+.footer__adress {
+    width: 100%;
+    height: 60px;
+    background-color: #5d840e;
+    line-height: 60px;
+    padding-left: 30px;
+}
+.modal {
+    display: none;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    position: absolute;
+}
