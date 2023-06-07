@@ -91,6 +91,7 @@ main {
     position: relative;
     padding-top: 8vw;
 }
+
 .parallax__item:nth-child(even){
     margin-left: 0;
     text-align: right;
@@ -131,7 +132,12 @@ main {
     background-position: center center;
     background-size: cover;
     filter: saturate(0%);
-    transition: filter 1s;
+    transition: all 1s;
+}
+.parallax__item:hover .parallax__item__img{
+    filter:saturate(100%);
+    transform: scale(1.025);
+    cursor: pointer;
 }
 .parallax__item:nth-child(1) .parallax__item__img {
     background-image: url(../img/pic-1.jpg);
