@@ -169,6 +169,7 @@
                 <!-- //section6 -->
                 <section id="section7" class="parallaxs__item">
                     <span class="parallaxs__item__num">07</span>
+                    <div class="parallaxs__item__text">section7</div>
                     <div class="parallaxs__item__img"></div>
                 </section>
                 <!-- //section7 -->
@@ -182,6 +183,12 @@
                     <div class="parallaxs__item__img"></div>
                 </section>
                 <!-- //section9 -->
+                <section id="section10" class="parallaxs__item">
+                    <span class="parallaxs__item__num">10</span>
+                    <div class="parallaxs__item__img"></div>
+                </section>
+                <!-- //section9 -->
+
             </div>
         </main>
         <!-- //main -->
@@ -301,23 +308,77 @@
 
 
             const ani6 = gsap.timeline();
-            ani6.from("#section6 .parallaxs__item__num", {x:0}, "a")
-            ani6.to("#section6 .parallaxs__item__num", {x:-500, y:0}, "a")
-            ani6.from("#section6 .parallaxs__item__num", {x:-500, y:0}, "a")
-            ani6.to("#section6 .parallaxs__item__num", {x:0, y:500}, "a")
-
+            ani6.from("#section6 .parallaxs__item__num", {x:0, y:0,  duration: 0.2})
+            ani6.to("#section6 .parallaxs__item__num", {x:-500, y:0,  duration: 0.4})
+            ani6.to("#section6 .parallaxs__item__num", {x:0, y:500,  duration: 0.4})
+            ani6.to("#section6 .parallaxs__item__num", {x:-250, y:-200,  duration: 0.6})
+            ani6.to("#section6 .parallaxs__item__num", {x:-500, y:500,  duration: 0.8})
+            ani6.to("#section6 .parallaxs__item__num", {x:0, y:0,  duration: 1})
 
             ScrollTrigger.create({
                 animation: ani6,
                 trigger: "#section6",
                 start: "top top",
-                end: "+=2000",
+                end: "+=3000",
                 scrub: true,
                 pin: true,
                 anticipatePin: 1,
                 markers: true
             });
-            
+
+            const ani7 = gsap.timeline();
+            ani7.from("#section7 .parallaxs__item__text", {x:0, y:0, rotation:360, duration: 0.2})
+            ani7.from("#section7 .parallaxs__item__text", {x:0, y:200, rotation:0, duration: 0.8})
+
+            ScrollTrigger.create({
+                animation: ani7,
+                trigger: "#section7",
+                start: "top top",
+                end: "+=3000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers: true
+            });
+
+            const ani8 = gsap.timeline();
+            ani8.from("#section8 .parallaxs__item__img", {x:0, y:0, scale:0.5, duration: 0.8})
+            ani8.from("#section8 .parallaxs__item__img", {x:0, y:200, scale:3, duration: 0.8})
+
+            ScrollTrigger.create({
+                animation: ani8,
+                trigger: "#section8",
+                start: "top top",
+                end: "+=3000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers: true
+            });
+
+            const ani9 = gsap.timeline();
+            ani9.fromTo(box9,
+                {x:-900, y:-200},
+                {x:-500, y:0}
+            )
+            ani9.to(box9, {x:-300, y:-100, duration: 2})
+            ani9.to(box9, {x:-100, y:0, duration: 2})
+            ani9.to(box9, {x:-50, y:-50, duration: 2})
+            ani9.to(box9, {x:-30, y:0, duration: 2})
+            ani9.to(box9, {x:-10, y:-10, duration: 2})
+            ani9.to(box9, {x:0, y:0, duration: 2})
+
+
+            ScrollTrigger.create({
+                animation: ani9,
+                trigger: "#section9",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers : true,
+            })
 
 
         </script>

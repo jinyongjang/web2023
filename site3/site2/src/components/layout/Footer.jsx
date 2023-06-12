@@ -6,7 +6,7 @@ function Footer(props) {
           <h5>ebmdols</h5>
           <p>
             질문 환영 <br />
-            궁금한 사항은 메일로 연락주세요!
+            궁금한 사항은 메일로 연락주세요! <br />
             <a href="mailto:ebmdols@naver.com">ebmdols@naver.com</a>
           </p>
           <ul className="sns">
