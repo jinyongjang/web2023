@@ -1,0 +1,44 @@
+#wrap {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins';
+    font-weight: 200;
+}
+.scrollarrow {
+    position: absolute;
+    right: 2vw;
+    bottom: 6vh;
+}
+.scrollDownText {
+    font-size: 0.8vw;
+    position: absolute;
+    right: 2.6vw;
+    bottom: 30vh;
+    writing-mode : vertical-lr;
+}
+.movingText {
+    width: 100vw;
+    padding: 1vh 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+
+.movingText p {
+    font-size: 5vw;
+    white-space: nowrap;
+    animation: marqueeText 100s linear infinite;
+}
+.movingText p em {
+    color: #d0e33e;
+    font-weight: 400;
+}
+
+@keyframes marqueeText {
+    0% {
+      transform: translateX(0%); /* 시작 위치 */
+    }
+    100% {
+      transform: translateX(-200%); /* 종료 위치 */
+    }
+  }

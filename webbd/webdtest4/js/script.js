@@ -1,12 +1,12 @@
-let i = 0
-setInterval(() => {
-    if(i < 2){
-        i++;
-    } else {
-        i = 0;
-    }
-    $(".slide__inner").animate({left:-2000 * i +"px"},500)
-}, 3000)
+// let i = 0
+// setInterval(() => {
+//     if(i < 2){
+//         i++;
+//     } else {
+//         i = 0;
+//     }
+//     $(".slide__inner").animate({left:-2000 * i +"px"},500)
+// }, 3000)
 
 let y = 0
 setInterval(() => {
